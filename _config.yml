@@ -21,12 +21,12 @@ footer-links:
   email: obedjunias.cs17@bmsce.ac.in
   facebook: https://www.facebook.com/ImJunias
   flickr:
-  github: github.com/obedjunias
+  github: https://github.com/obedjunias
   instagram:
   linkedin: https://www.linkedin.com/in/obed-junias/
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
