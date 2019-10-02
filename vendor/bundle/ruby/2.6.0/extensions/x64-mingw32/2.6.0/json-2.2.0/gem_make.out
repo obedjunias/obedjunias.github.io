@@ -1,0 +1,13 @@
+current directory: F:/my-site/vendor/bundle/ruby/2.6.0/gems/json-2.2.0/ext/json
+D:/Ruby26-x64/bin/ruby.exe -I D:/Ruby26-x64/lib/ruby/2.6.0 -r ./siteconf20191002-14532-iuoflb.rb extconf.rb
+creating Makefile
+
+current directory: F:/my-site/vendor/bundle/ruby/2.6.0/gems/json-2.2.0/ext/json
+make "DESTDIR=" clean
+
+current directory: F:/my-site/vendor/bundle/ruby/2.6.0/gems/json-2.2.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: F:/my-site/vendor/bundle/ruby/2.6.0/gems/json-2.2.0/ext/json
+make "DESTDIR=" install
