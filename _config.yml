@@ -85,4 +85,6 @@ exclude:
   - README.md
   - CNAME
 
+exclude: [vendor]
+
 theme: jekyll-theme-architect
