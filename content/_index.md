@@ -78,7 +78,7 @@ sections:
         - title: Robot Process Automation (RPA) Developer
           company: Hewlett Packard Enterprises (HPE)
           company_url: ''
-          company_logo: org-hpe
+          company_logo: org-x
           location: Bengaluru, KA, India
           date_start: '2021-02-25'
           date_end: '2021-07-15'
