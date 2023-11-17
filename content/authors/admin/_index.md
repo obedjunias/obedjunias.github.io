@@ -117,5 +117,5 @@ social:
 highlight_name: true
 ---
 
-Immersed in the dynamic field of NLP, my research converges on two pivotal fronts: NLP for Social Good and NLP for Public Health, with a particular emphasis on mental well-being. I'm passionate about leveraging language technology to address societal challenges. In the realm of A.I., fairness, ethics, and trustworthiness are non-negotiable. As I innovate, I'm committed to ensuring that the potential benefits of NLP are realized with compassion and integrity, fostering a future where technology is a genuine force for societal well-being.
+Immersed in the dynamic field of NLP, my research converges on two pivotal fronts: NLP for Social Good and NLP for Public Health, with a particular emphasis on mental well-being. I'm passionate about leveraging language technology to address societal challenges across diverse linguistic landscapes. In the realm of AI, fairness, ethics, and trustworthiness are non-negotiable. As I innovate, I'm committed to ensuring that the potential benefits of multilingual NLP are realized with compassion and integrity, fostering a future where technology is a genuine force for societal well-being, accessible to all.
 {style="text-align: justify;"}
