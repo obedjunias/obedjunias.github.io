@@ -165,15 +165,15 @@ sections:
           date_end: ''
           date_start: '2023-06-15'
           description:  |2-
-              Responsibilities include:
+              Specialization includes:
 
-              * Developed automation processes using Groovy on the Workfusion platform.
+              * Natural Language Processing with Classification and Vector Spaces [https://coursera.org/share/55142459ca2667e0d946f18e9c71f15f]
               * Developed Computer-Vision based tools to extract data from documents
               * Implemented NLP models to extract meaningful data from unstructured data.
               * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
           organization: Coursera
           organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
+          title: Natural Language Processing Specialization
           url: ''
         - certificate_url: https://www.edx.org
           date_end: ''
