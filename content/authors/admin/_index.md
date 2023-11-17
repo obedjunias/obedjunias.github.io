@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Software Development Engineer in Test at Oracle
+role: 'Words That Heal, Data That Matters: NLP Shaping a Healthier Tomorrow.'
 
 # Organizations/Affiliations to show in About widget
 # organizations:
@@ -25,18 +25,22 @@ role: Software Development Engineer in Test at Oracle
 #     url: https://www.stanford.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include Natural Language Processing (NLP)  and Machine Learning (ML).
 
 # Interests to show in About widget
 interests:
   - Artificial Intelligence
   - Natural Language Processing (NLP)
+  - NLP for Social Good
+  - Intersection of NLP and Public Health (esp. Mental Health)
+
 
 # Education to show in About widget
 education:
   courses:
     - course: B.E. in Computer Science and Engineering
       institution: B.M.S College of Engineering
+      grade: 9.13/10
       year: 2017-2021
 
 # Skills Currently Commenting
@@ -113,5 +117,5 @@ social:
 highlight_name: true
 ---
 
-I am Obed Junias. An Engineer at Oracle Corporation, Bangalore.
+Immersed in the dynamic field of NLP, my research converges on two pivotal fronts: NLP for Social Good and NLP for Public Health, with a particular emphasis on mental well-being. I'm passionate about leveraging language technology to address societal challenges. In the realm of A.I., fairness, ethics, and trustworthiness are non-negotiable. As I innovate, I'm committed to ensuring that the potential benefits of NLP are realized with compassion and integrity, fostering a future where technology is a genuine force for societal well-being.
 {style="text-align: justify;"}
