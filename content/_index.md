@@ -92,6 +92,48 @@ sections:
 
     design:
       columns: '2'
+  - block: experience
+    content:
+      title: Research Experience
+      # Date format for experience
+      #   Refer to https://wowchemy.com/docs/customization/#date-format
+      date_format: Jan 2006
+      # Experiences.
+      #   Add/remove as many `experience` items below as you like.
+      #   Required fields are `title`, `company`, and `date_start`.
+      #   Leave `date_end` empty if it's your current employer.
+      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+      items:
+        - title: Member of Technical Staff
+          company: Oracle Corporation
+          company_url: ''
+          company_logo: org-gc
+          location: Bengaluru, KA, India
+          date_start: '2021-08-31'
+          date_end: ''
+          description: |2-
+              Responsibilities include:
+
+              * Analysing
+              * Modelling
+              * Deploying
+        - title: Robot Process Automation (RPA) Developer
+          company: Hewlett Packard Enterprises (HPE)
+          company_url: ''
+          company_logo: org-x
+          location: Bengaluru, KA, India
+          date_start: '2021-02-25'
+          date_end: '2021-07-15'
+          description: |2-
+              Responsibilities include:
+
+              * Developed automation processes using Groovy on the Workfusion platform.
+              * Developed Computer-Vision based tools to extract data from documents
+              * Implemented NLP models to extract meaningful data from unstructured data.
+              * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
+
+    design:
+      columns: '2'
   - block: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
