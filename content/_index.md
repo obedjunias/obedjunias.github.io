@@ -104,26 +104,26 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Member of Technical Staff
-          company: Oracle Corporation
+        - title: Undergraduate Researcher
+          company: B.M.S College of Engineering
           company_url: ''
           company_logo: org-gc
           location: Bengaluru, KA, India
-          date_start: '2021-08-31'
-          date_end: ''
+          date_start: '2020-08-16'
+          date_end: '2021-04-16'
           description: |2-
               Responsibilities include:
 
               * Analysing
               * Modelling
               * Deploying
-        - title: Robot Process Automation (RPA) Developer
-          company: Hewlett Packard Enterprises (HPE)
+        - title: AI Research Intern
+          company: Samsung Research Institute
           company_url: ''
           company_logo: org-x
           location: Bengaluru, KA, India
-          date_start: '2021-02-25'
-          date_end: '2021-07-15'
+          date_start: '2022-02-05'
+          date_end: '2022-07-18'
           description: |2-
               Responsibilities include:
 
