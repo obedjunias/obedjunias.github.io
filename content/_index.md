@@ -151,20 +151,26 @@ sections:
   - block: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
+      title: 'Accomplishments'
       subtitle:
       # Date format: https://wowchemy.com/docs/customization/#date-format
-      date_format: Jan 2006
+      date_format: Nov 2023
       # Accomplishments.
       #   Add/remove as many `item` blocks below as you like.
       #   `title`, `organization`, and `date_start` are the required parameters.
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
+        - certificate_url: https://coursera.org/share/94d45e8d9db4e255577d626bd6752317
           date_end: ''
-          date_start: '2021-01-25'
-          description: ''
+          date_start: '2023-06-15'
+          description:  |2-
+              Responsibilities include:
+
+              * Developed automation processes using Groovy on the Workfusion platform.
+              * Developed Computer-Vision based tools to extract data from documents
+              * Implemented NLP models to extract meaningful data from unstructured data.
+              * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
           organization: Coursera
           organization_url: https://www.coursera.org
           title: Neural Networks and Deep Learning
