@@ -131,9 +131,23 @@ sections:
               * Developed Computer-Vision based tools to extract data from documents
               * Implemented NLP models to extract meaningful data from unstructured data.
               * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
+        - title: ML Research Intern
+          company: AXISCADES Technologies Limited
+          company_url: ''
+          company_logo: org-x
+          location: Bengaluru, KA, India
+          date_start: '2019-07-05'
+          date_end: '2019-09-05'
+          description: |2-
+              Responsibilities include:
+
+              * Developed automation processes using Groovy on the Workfusion platform.
+              * Developed Computer-Vision based tools to extract data from documents
+              * Implemented NLP models to extract meaningful data from unstructured data.
+              * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
 
     design:
-      columns: '2'
+      columns: '3'
   - block: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
