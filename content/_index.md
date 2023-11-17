@@ -67,7 +67,7 @@ sections:
           company_url: ''
           company_logo: org-gc
           location: California
-          date_start: '2021-01-01'
+          date_start: '2021-08-31'
           date_end: ''
           description: |2-
               Responsibilities include:
@@ -78,7 +78,7 @@ sections:
         - title: Robot Process Automation (RPA) Developer
           company: Hewlett Packard Enterprises (HPE)
           company_url: ''
-          company_logo: org-x
+          company_logo: org-hpe
           location: Bengaluru, KA, India
           date_start: '2021-02-25'
           date_end: '2021-07-15'
@@ -86,9 +86,9 @@ sections:
               Responsibilities include:
 
               * Developed automation processes using Groovy on the Workfusion platform.
-              * Designed and Developed Computer-Vision based tools to extract data from documents
-              * Implemented NLP models to extract meaningful data from streams of unstructured data.
-              * Developed a Proof of Concept (PoC) on Intelligent Business Process Management Software (iBPMS) tools.
+              * Developed Computer-Vision based tools to extract data from documents
+              * Implemented NLP models to extract meaningful data from unstructured data.
+              * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
 
     design:
       columns: '2'
