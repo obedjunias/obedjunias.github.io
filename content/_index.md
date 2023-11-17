@@ -80,8 +80,8 @@ sections:
           company_url: ''
           company_logo: org-x
           location: Bengaluru, KA, India
-          date_start: '2021-25-02'
-          date_end: '2021-15-07'
+          date_start: '2021-02-25'
+          date_end: '2021-07-15'
           description: |2-
               Responsibilities include:
 
