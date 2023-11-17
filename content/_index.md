@@ -167,7 +167,7 @@ sections:
           description:  |2-
               Specialization includes:
 
-              * Natural Language Processing with Classification and Vector Spaces [https://coursera.org/share/55142459ca2667e0d946f18e9c71f15f]
+              * [Natural Language Processing with Classification and Vector Spaces] (https://coursera.org/share/55142459ca2667e0d946f18e9c71f15f)
               * Developed Computer-Vision based tools to extract data from documents
               * Implemented NLP models to extract meaningful data from unstructured data.
               * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
