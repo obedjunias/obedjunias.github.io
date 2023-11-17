@@ -85,9 +85,10 @@ sections:
           description: |2-
               Responsibilities include:
 
-              * Developed automation processes using Groovy programming language on the Workfusion platform, which eliminated manual effort and streamlined business processes.
-              * Designed and Developed Computer-Vision based tools to extract data from documents and implemented NLP models to extract meaningful data from streams of unstructured data.
-              * Developed and demonstrated a Proof of Concept (PoC) to the stakeholders on Intelligent Business Process Management Software (iBPMS) tools.
+              * Developed automation processes using Groovy on the Workfusion platform.
+              * Designed and Developed Computer-Vision based tools to extract data from documents
+              * Implemented NLP models to extract meaningful data from streams of unstructured data.
+              * Developed a Proof of Concept (PoC) on Intelligent Business Process Management Software (iBPMS) tools.
 
     design:
       columns: '2'
