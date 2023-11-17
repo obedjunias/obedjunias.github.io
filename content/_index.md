@@ -42,14 +42,14 @@ sections:
       title: Biography
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-  - block: skills
-    content:
-      title: Skills
-      text: ''
-      # Choose a user to display skills from (a folder name within `content/authors/`)
-      username: admin
-    design:
-      columns: '1'
+  # - block: skills
+  #   content:
+  #     title: Skills
+  #     text: ''
+  #     # Choose a user to display skills from (a folder name within `content/authors/`)
+  #     username: admin
+  #   design:
+  #     columns: '1'
   - block: experience
     content:
       title: Experience
@@ -62,12 +62,12 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
+        - title: Member of Technical Staff
+          company: Oracle Corporation
           company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
+          company_logo: org-oracle
+          location: Bengaluru, KA, India
+          date_start: '2021-31-01'
           date_end: ''
           description: |2-
               Responsibilities include:
@@ -75,14 +75,19 @@ sections:
               * Analysing
               * Modelling
               * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
+        - title: Robot Process Automation (RPA) Developer
+          company: Hewlett Packard Enterprises (HPE)
           company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+          company_logo: org-hpe
+          location: Bengaluru, KA, India
+          date_start: '2021-25-02'
+          date_end: '2021-15-07'
+          description: |2-
+              Responsibilities include:
+
+              * Developed automation processes using Groovy programming language on the Workfusion platform, which eliminated manual effort and streamlined business processes.
+              * Designed and Developed Computer-Vision based tools to extract data from documents and implemented NLP models to extract meaningful data from streams of unstructured data.
+              * Developed and demonstrated a Proof of Concept (PoC) to the stakeholders on Intelligent Business Process Management Software (iBPMS) tools.
     design:
       columns: '2'
   - block: accomplishments
