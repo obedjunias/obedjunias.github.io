@@ -92,7 +92,7 @@ sections:
               * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
 
     design:
-      columns: '2'
+      columns: '3'
   - block: experience
     content:
       title: Research Experience
@@ -153,7 +153,7 @@ sections:
   - block: accomplishments
     content:
       # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Certifications'
+      title: 'Accomplishments'
       subtitle:
       # Date format: https://wowchemy.com/docs/customization/#date-format
       date_format: Jan 2006
@@ -199,7 +199,7 @@ sections:
           title: 'Neural Networks and Deep Learning'
           url: 'https://www.coursera.org/learn/neural-networks-deep-learning'
     design:
-      columns: '2'
+      columns: '3'
   - block: collection
     id: posts
     content:
