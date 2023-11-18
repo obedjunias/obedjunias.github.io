@@ -51,6 +51,7 @@ sections:
   #   design:
   #     columns: '1'
   - block: experience
+    id: experience
     content:
       title: Industry Experience
       # Date format for experience
