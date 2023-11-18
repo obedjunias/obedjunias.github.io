@@ -165,7 +165,7 @@ sections:
           date_end: ''
           date_start: '2023-06-15'
           description:  |2-
-              Specialization includes:
+              Courses completed:
 
               * Natural Language Processing with Classification and Vector Spaces
               * Natural Language Processing with Probabilistic Models
@@ -175,22 +175,27 @@ sections:
           organization_url: https://www.coursera.org
           title: Natural Language Processing Specialization
           url: ''
-        - certificate_url: https://www.edx.org
+        - certificate_url: https://coursera.org/share/190d91faab3e6ceada329a8d3d8d8c76
           date_end: ''
           date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-        - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
-          description: ''
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
+          description: |2-
+              Courses completed:
+
+              * Supervised Machine Learning: Regression and Classification 
+              * Advanced Learning Algorithms
+              * Unsupervised Learning, Recommenders, Reinforcement Learning
+          organization: DeepLearning.AI & Stanford University on Coursera
+          organization_url: https://www.coursera.org
+          title: Machine Learning Specialization
+          url: https://www.coursera.org/specializations/machine-learning-introduction
+        - certificate_url: https://coursera.org/share/031591fc0ae52f71c1f2c9bc7c8214e3
+          date_end: ''
+          date_start: '2020-01-25'
+          description: 'Learnt the foundational concept of neural networks and deep learning. '
+          organization: DeepLearning.AI on Coursera
+          organization_url: https://www.coursera.org
+          title: 'Neural Networks and Deep Learning'
+          url: 'https://www.coursera.org/learn/neural-networks-deep-learning'
     design:
       columns: '2'
   - block: collection
