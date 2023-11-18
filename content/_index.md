@@ -72,9 +72,10 @@ sections:
           description: |2-
               Responsibilities include:
 
-              * Analysing
-              * Modelling
-              * Deploying
+              * Research, design and develop automation tools for testing Oracle Rest Data Services (ORDS).
+              * Drive the testing of Database Tools projects on Autonomous Databases-Serverless (ADBS) on Oracle Cloud Infrastructure (OCI).
+              * Develop automation test suites using the Java programming language and deploy them on Jenkins.
+              * Write detailed Test Specifications for new features on the OCI platform.
         - title: Robot Process Automation (RPA) Developer
           company: Hewlett Packard Enterprises (HPE)
           company_url: ''
@@ -83,10 +84,10 @@ sections:
           date_start: '2021-02-25'
           date_end: '2021-07-15'
           description: |2-
-              Responsibilities include:
+              Key Achievements:
 
               * Developed automation processes using Groovy on the Workfusion platform.
-              * Developed Computer-Vision based tools to extract data from documents
+              * Developed Computer-Vision based tools to extract data from documents.
               * Implemented NLP models to extract meaningful data from unstructured data.
               * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
 
@@ -114,9 +115,10 @@ sections:
           description: |2-
               Responsibilities include:
 
-              * Analysing
-              * Modelling
-              * Deploying
+              * Led a team to tackle bad expense management by creating an innovative AI app for my capstone project.
+              * Conducted research, developing an advanced product categorization module integrating NLP and ML sub-modules.
+              * Engineered the NLP sub-module, utilizing cutting-edge techniques for robust text data pre-processing and analysis.
+              * Spearheaded the design and implementation of a stack-based ensemble ML model, achieving an accuracy rate of 97%.
         - title: AI Research Intern
           company: Samsung Research Institute
           company_url: ''
@@ -127,10 +129,11 @@ sections:
           description: |2-
               Responsibilities include:
 
-              * Developed automation processes using Groovy on the Workfusion platform.
-              * Developed Computer-Vision based tools to extract data from documents
-              * Implemented NLP models to extract meaningful data from unstructured data.
-              * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
+              * Improved the Wi-Fi mesh network by implementing a Reinforcement Learning (RL) model integrated into Raspberry Pi devices.
+              * Enabled interoperability among wireless devices, achieving a substantial boost in overall network performance.
+              * Achieved significant improvement in client throughput (30%) and client/band steering time.
+              * Conducted in-depth research on AI algorithms, wireless protocols (IEEE 802.11ac & 802.11ax), and QoS mechanisms.
+              * Designed and implemented a reinforcement learning model based on the Q-learning algorithm to enhance network adaptability.
         - title: ML Research Intern
           company: AXISCADES Technologies Limited
           company_url: ''
@@ -141,10 +144,9 @@ sections:
           description: |2-
               Responsibilities include:
 
-              * Developed automation processes using Groovy on the Workfusion platform.
-              * Developed Computer-Vision based tools to extract data from documents
-              * Implemented NLP models to extract meaningful data from unstructured data.
-              * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
+              * Worked on development of a proprietary plugin that uses automatic speech recognition (ASR) for transcription
+              * Studied various research papers on ASR, including Listen, Attend and Spell by William Chan et al.
+              *  Utilized ASR technology to enable real-time transcription and improve accessibility for users.
 
     design:
       columns: '3'
@@ -174,7 +176,7 @@ sections:
           organization: DeepLearning.AI on Coursera
           organization_url: https://www.coursera.org
           title: Natural Language Processing Specialization
-          url: ''
+          url: 'https://www.coursera.org/specializations/natural-language-processing'
         - certificate_url: https://coursera.org/share/190d91faab3e6ceada329a8d3d8d8c76
           date_end: ''
           date_start: '2021-01-01'
