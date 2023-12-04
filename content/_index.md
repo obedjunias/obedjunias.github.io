@@ -123,7 +123,7 @@ sections:
         - title: AI Research Intern
           company: Samsung Research Institute
           company_url: ''
-          company_logo: org-x
+          company_logo: org-srib
           location: Bengaluru, KA, India
           date_start: '2022-02-05'
           date_end: '2022-07-18'
