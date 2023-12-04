@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 'Juggling Code and Coffee, Navigating the Quirks of Tech with a Grin'
+role: 'Juggling Code and Coffee, Navigating the Quirks of Tech with a Grin😁'
 
 # Organizations/Affiliations to show in About widget
 # organizations:
