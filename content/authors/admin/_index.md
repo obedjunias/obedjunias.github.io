@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: 'Words That Heal, Data That Matters: NLP Shaping a Healthier Tomorrow.'
+role: 'Juggling Code and Coffee, Navigating the Quirks of Tech with a Grin'
 
 # Organizations/Affiliations to show in About widget
 # organizations:
@@ -31,8 +31,7 @@ bio: My research interests include Natural Language Processing (NLP)  and Machin
 interests:
   - Artificial Intelligence
   - Natural Language Processing (NLP)
-  - NLP for Social Good
-  - Intersection of NLP and Public Health (esp. Mental Health)
+  - NLP for Social Good and Health Applications
 
 
 # Education to show in About widget
@@ -117,5 +116,5 @@ social:
 highlight_name: true
 ---
 
-Immersed in the dynamic field of NLP, my research converges on two pivotal fronts: NLP for Social Good and NLP for Public Health, with a particular emphasis on mental well-being. I'm passionate about leveraging language technology to address societal challenges across diverse linguistic landscapes. In the realm of AI, fairness, ethics, and trustworthiness are non-negotiable. As I innovate, I'm committed to ensuring that the potential benefits of multilingual NLP are realized with compassion and integrity, fostering a future where technology is a genuine force for societal well-being, accessible to all.
+Heyy!! I'm Obed Junias. My research converges on two pivotal fronts: NLP for Social Good and NLP for Public Health coupled with a focus on Ethics and Interpretability in AI. I'm passionate about leveraging language technology to address societal challenges across diverse linguistic landscapes. As I innovate, I'm committed to ensuring that the potential benefits of NLP are realized with compassion and integrity, fostering a future where technology is a genuine force for societal well-being, accessible to all. Because, let's face it, making the world a better place has become as clichéd as my code comments; I'm on a mission to make lives easier and more symbiotic – where technology and humanity engage in a dance of mutual understanding! But, but, but wait! When lives become easier, doesn't it spark a ripple effect of positivity, creating a chain reaction that ultimately makes the world a better and brighter place? ✨🌍
 {style="text-align: justify;"}
