@@ -66,7 +66,7 @@ sections:
         - title: Member of Technical Staff
           company: Oracle Corporation
           company_url: ''
-          company_logo: org-oracle.svg
+          company_logo: org-gc
           location: Bengaluru, KA, India
           date_start: '2021-08-31'
           date_end: ''
