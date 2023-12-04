@@ -66,7 +66,7 @@ sections:
         - title: Member of Technical Staff
           company: Oracle Corporation
           company_url: ''
-          company_logo: org-orcl
+          company_logo: org-orcl1
           location: Bengaluru, KA, India
           date_start: '2021-08-31'
           date_end: ''
@@ -109,7 +109,7 @@ sections:
         - title: Undergraduate Researcher
           company: B.M.S College of Engineering
           company_url: ''
-          company_logo: org-gc
+          company_logo: org-gc1
           location: Bengaluru, KA, India
           date_start: '2020-08-16'
           date_end: '2021-04-16'
