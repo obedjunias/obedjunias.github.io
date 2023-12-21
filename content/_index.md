@@ -63,7 +63,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Member of Technical Staff
+        - title: Senior Member of Technical Staff
           company: Oracle Corporation
           company_url: ''
           company_logo: org-orcl1
@@ -73,23 +73,24 @@ sections:
           description: |2-
               Responsibilities include:
 
+              * Develop solution to test machine learning driven Oracle Autonomous Databases-Serverless (ADBS) on OCI.
+              * Drive the testing of Database Tools projects on Oracle Cloud Infrastructure (OCI)
               * Research, design and develop automation tools for testing Oracle Rest Data Services (ORDS).
-              * Drive the testing of Database Tools projects on Autonomous Databases-Serverless (ADBS) on Oracle Cloud Infrastructure (OCI).
               * Develop automation test suites using the Java programming language and deploy them on Jenkins.
-              * Write detailed Test Specifications for new features on the OCI platform.
+              * Write detailed specification documents for features on the OCI platform.
         - title: Robot Process Automation (RPA) Developer
           company: Hewlett Packard Enterprises (HPE)
           company_url: ''
-          company_logo: org-x
+          company_logo: org-hpe
           location: Bengaluru, KA, India
           date_start: '2021-02-25'
           date_end: '2021-07-15'
           description: |2-
               Key Achievements:
 
-              * Developed automation processes using Groovy on the Workfusion platform.
+              * Developed intelligent automation to streamline business processes using Groovy and Workfusion.
               * Developed Computer-Vision based tools to extract data from documents.
-              * Implemented NLP models to extract meaningful data from unstructured data.
+              * Implemented text extraction module to extract meaningful data from unstructured data using Workfusion’s IDP
               * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
 
     design:
@@ -116,10 +117,11 @@ sections:
           description: |2-
               Responsibilities include:
 
-              * Led a team to tackle bad expense management by creating an innovative AI app for my capstone project.
+              * Led a team to tackle offline overspending and bad expense management by creating an innovative AI app for my capstone project.
               * Conducted research, developing an advanced product categorization module integrating NLP and ML sub-modules.
+              * Curated a comprehensive dataset by scraping e-commerce websites and annotating them manually.
               * Engineered the NLP sub-module, utilizing cutting-edge techniques for robust text data pre-processing and analysis.
-              * Spearheaded the design and implementation of a stack-based ensemble ML model, achieving an accuracy rate of 97%.
+              * Spearheaded the design and implementation of a stack-based ensemble ML model, achieving an average F1 Score of 0.97.
         - title: AI Research Intern
           company: Samsung Research Institute
           company_url: ''
@@ -131,23 +133,23 @@ sections:
               Responsibilities include:
 
               * Improved the Wi-Fi mesh network by implementing a Reinforcement Learning (RL) model integrated into Raspberry Pi devices.
+              * Designed and implemented a reinforcement learning model based on the Q-learning algorithm to enhance network adaptability.
               * Enabled interoperability among wireless devices, achieving a substantial boost in overall network performance.
               * Achieved significant improvement in client throughput (30%) and client/band steering time.
               * Conducted in-depth research on AI algorithms, wireless protocols (IEEE 802.11ac & 802.11ax), and QoS mechanisms.
-              * Designed and implemented a reinforcement learning model based on the Q-learning algorithm to enhance network adaptability.
         - title: ML Research Intern
           company: AXISCADES Technologies Limited
           company_url: ''
-          company_logo: org-x
+          company_logo: org-axiscades
           location: Bengaluru, KA, India
           date_start: '2019-07-05'
           date_end: '2019-09-05'
           description: |2-
               Responsibilities include:
 
-              * Worked on development of a proprietary plugin that uses automatic speech recognition (ASR) for transcription
+              * Worked on development of a proprietary plugin that uses automatic speech recognition (ASR) system for transcription.
+              * Utilized ASR technology by training over the LibriSpeech Dataset to enable real-time transcription and improve accessibility for users.
               * Studied various research papers on ASR, including Listen, Attend and Spell by William Chan et al.
-              *  Utilized ASR technology to enable real-time transcription and improve accessibility for users.
 
     design:
       columns: '3'
