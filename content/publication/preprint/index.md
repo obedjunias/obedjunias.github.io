@@ -2,20 +2,23 @@
 title: "ProEns: Ensemble Technique for Product Category Classification"
 authors:
 - admin
+- Niranjan VS
+- Shankru Guggari
+- Umadevi V
 date: "2019-04-07T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: ""
+publishDate: "2023-12-21T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["article"]
+publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "ProEns: Ensemble Technique for Product Category Classification"
-publication_short: "ProEns"
+publication: "Economic Computation & Economic Cybernetics Studies & Research"
+publication_short: "ECECSR"
 
 abstract: In the contemporary era of rapid technological advancements, the generation of vast amounts of information within mere seconds underscores the critical need for its meaningful utilization. Within the E-commerce industry, where an abundance of data surrounds product information, the pivotal task of categorizing products accurately remains paramount. Machine learning models emerge as highly effective tools in accomplishing this objective. This study introduces an innovative automatic homogeneous ensemble model designed for product classification into specific categories based on product descriptions. The ensemble model leverages Support Vector Machine and Logistic Regression models, employing a proprietary database created through web scraping for performance evaluation. The assessment of model efficacy is conducted through metrics such as Precision, Recall, F1-score, and classification accuracy, juxtaposing its efficiency against other state-of-the-art models. The proposed ProEns technique demonstrates approximately 1% enhancement in both recall and precision, establishing its novelty and competitive edge in comparison to existing methodologies.
 
