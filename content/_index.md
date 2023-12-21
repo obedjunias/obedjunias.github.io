@@ -232,6 +232,17 @@ sections:
           url: 'https://www.coursera.org/learn/neural-networks-deep-learning'
     design:
       columns: '3'
+    - block: collection
+    id: featured
+    content:
+      title: Featured Projects
+      filters:
+        folders:
+          - publication
+        featured_only: true
+    design:
+      columns: '2'
+      view: card
   - block: collection
     id: posts
     content:
@@ -268,17 +279,6 @@ sections:
   #   design:
   #     columns: '1'
   - block: collection
-    id: featured
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      columns: '2'
-      view: card
-  - block: collection
     content:
       title: Recent Publications
       text: |-
@@ -292,16 +292,16 @@ sections:
     design:
       columns: '2'
       view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - event
-    design:
-      columns: '2'
-      view: compact
+  # - block: collection
+  #   id: talks
+  #   content:
+  #     title: Recent & Upcoming Talks
+  #     filters:
+  #       folders:
+  #         - event
+  #   design:
+  #     columns: '2'
+  #     view: compact
   - block: tag_cloud
     content:
       title: Popular Topics

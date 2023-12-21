@@ -1,12 +1,12 @@
 ---
-title: "An example preprint / working paper"
+title: "ProEns: Ensemble Technique for Product Category Classification"
 authors:
 - admin
 date: "2019-04-07T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: ""
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -14,13 +14,13 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["article"]
 
 # Publication name and optional abbreviated publication name.
-publication: ""
-publication_short: ""
+publication: "ProEns: Ensemble Technique for Product Category Classification"
+publication_short: "ProEns"
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: In the contemporary era of rapid technological advancements, the generation of vast amounts of information within mere seconds underscores the critical need for its meaningful utilization. Within the E-commerce industry, where an abundance of data surrounds product information, the pivotal task of categorizing products accurately remains paramount. Machine learning models emerge as highly effective tools in accomplishing this objective. This study introduces an innovative automatic homogeneous ensemble model designed for product classification into specific categories based on product descriptions. The ensemble model leverages Support Vector Machine and Logistic Regression models, employing a proprietary database created through web scraping for performance evaluation. The assessment of model efficacy is conducted through metrics such as Precision, Recall, F1-score, and classification accuracy, juxtaposing its efficiency against other state-of-the-art models. The proposed ProEns technique demonstrates approximately 1% enhancement in both recall and precision, establishing its novelty and competitive edge in comparison to existing methodologies.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: This study presents ProEns, an innovative ensemble model utilizing Support Vector Machine and Logistic Regression for precise product categorization in E-commerce. Leveraging web-scraped data, ProEns outperforms state-of-the-art models, showcasing 1% improvement in recall and precision, affirming its novelty and competitiveness.
 
 tags:
 - Source Themes
@@ -58,11 +58,11 @@ projects:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+# slides: example
 ---
 
-{{% callout note %}}
+<!-- {{% callout note %}}
 Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
+{{% /callout %}} -->
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://wowchemy.com/docs/content/writing-markdown-latex/).
+<!-- Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://wowchemy.com/docs/content/writing-markdown-latex/). -->
