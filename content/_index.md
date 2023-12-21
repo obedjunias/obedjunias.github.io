@@ -232,7 +232,7 @@ sections:
           url: 'https://www.coursera.org/learn/neural-networks-deep-learning'
     design:
       columns: '3'
-    - block: collection
+  - block: collection
     id: featured
     content:
       title: Featured Projects
