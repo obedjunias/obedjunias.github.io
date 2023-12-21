@@ -238,7 +238,7 @@ sections:
       title: Featured Projects
       filters:
         folders:
-          - publication
+          - project
         featured_only: true
     design:
       columns: '2'
