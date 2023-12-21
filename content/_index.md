@@ -94,7 +94,7 @@ sections:
               * Designed a PoC on Intelligent Business Process Management Software (iBPMS) tools.
 
     design:
-      columns: '3'
+      columns: '2.5'
   - block: experience
     content:
       title: Research Experience
