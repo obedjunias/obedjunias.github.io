@@ -153,8 +153,23 @@ sections:
 
     design:
       columns: '2.5'
+  - block: collection
+  id: publications
+    content:
+      title: Recent Publications
+      text: |-
+        {{% callout note %}}
+        Quickly discover relevant content by [filtering publications](./publication/).
+        {{% /callout %}}
+      filters:
+        folders:
+          - publication
+        exclude_featured: true
+    design:
+      columns: '2'
+      view: compact
   - block: portfolio
-    id: projects
+    id: allprojects
     content:
       title: Projects
       filters:
@@ -233,7 +248,7 @@ sections:
     design:
       columns: '2'
   - block: collection
-    id: featured
+    id: fprojects
     content:
       title: Featured Projects
       filters:
@@ -278,20 +293,7 @@ sections:
   #       {{< gallery album="demo" >}}
   #   design:
   #     columns: '1'
-  - block: collection
-    content:
-      title: Recent Publications
-      text: |-
-        {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
-        {{% /callout %}}
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: citation
+
   # - block: collection
   #   id: talks
   #   content:
