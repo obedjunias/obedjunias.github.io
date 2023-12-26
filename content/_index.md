@@ -152,7 +152,7 @@ sections:
               * Studied various research papers on ASR, including Listen, Attend and Spell by William Chan et al.
 
     design:
-      columns: '3'
+      columns: '2.5'
   - block: portfolio
     id: projects
     content:
@@ -231,7 +231,7 @@ sections:
           title: 'Neural Networks and Deep Learning'
           url: 'https://www.coursera.org/learn/neural-networks-deep-learning'
     design:
-      columns: '3'
+      columns: '2.5'
   - block: collection
     id: featured
     content:
