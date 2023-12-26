@@ -154,7 +154,7 @@ sections:
     design:
       columns: '2.5'
   - block: collection
-  id: publications
+    id: publications
     content:
       title: Recent Publications
       text: |-
