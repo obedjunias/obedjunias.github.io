@@ -14,7 +14,7 @@ publishDate: "2023-12-23T00:00:00Z"
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types = ["8"]
+publication_types: ["patent"]
 
 # Publication name and optional abbreviated publication name.
 publication: " Office of the Controller General of Patents, Designs and Trade Marks (CGPDTM)"
