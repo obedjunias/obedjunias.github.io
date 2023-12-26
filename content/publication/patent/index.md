@@ -3,7 +3,7 @@ title: "Innovations in Natural Language Processing for Efficient Data Privacy an
 authors:
 - Levina T
 - admin
-- et al.
+- et al
 author_notes:
 date: "2023-10-06T00:00:00Z"
 doi: ""
@@ -14,7 +14,7 @@ publishDate: "2023-12-23T00:00:00Z"
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["8"]
+publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: " Office of the Controller General of Patents, Designs and Trade Marks (CGPDTM)"
