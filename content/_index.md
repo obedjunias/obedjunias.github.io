@@ -231,7 +231,7 @@ sections:
           title: 'Neural Networks and Deep Learning'
           url: 'https://www.coursera.org/learn/neural-networks-deep-learning'
     design:
-      columns: '2.5'
+      columns: '2'
   - block: collection
     id: featured
     content:
