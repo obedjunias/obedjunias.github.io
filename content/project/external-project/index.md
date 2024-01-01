@@ -1,12 +1,12 @@
 ---
-title: External Project
-summary: An example of linking directly to an external project website using `external_link`.
+title: Intent-based Chatbot for Mental Health Information and Uplifting
+summary: "Developed and deployed a purpose-driven mental health chatbot using Streamlit servers. The project aims to create a positive impact by fostering a supportive virtual environment."
 tags:
-  - Demo
-date: "2016-04-27T00:00:00Z"
+  - NLP
+date: '2023-12-20T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://example.org
+external_link: https://jj-chatbotapp-aeqqi6ckiinivb9ektnpbv.streamlit.app/
 
 featured: true
 

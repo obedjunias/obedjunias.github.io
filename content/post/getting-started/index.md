@@ -1,12 +1,12 @@
 ---
-title: Welcome to Wowchemy, the website builder for Hugo
-subtitle: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
+title: JollyJunias - Intent-based Chatbot for Mental Health Information and Uplifting
+subtitle: In an era where technology continues to redefine our daily lives, its potential to positively impact mental health should not be overlooked.
 
 # Summary for listings and search engines
-summary: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
+summary: "Developed and deployed a purpose-driven mental health chatbot using Streamlit servers. The project aims to create a positive impact by fostering a supportive virtual environment."
 
 # Link this post with a project
-projects: []
+projects: [example]
 
 # Date published
 date: '2020-12-13T00:00:00Z'
@@ -18,7 +18,7 @@ lastmod: '2020-12-13T00:00:00Z'
 draft: false
 
 # Show this page in the Featured widget?
-featured: false
+featured: true
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
@@ -30,15 +30,16 @@ image:
 
 authors:
   - admin
-  - 吳恩達
 
 tags:
   - Academic
-  - 开源
+  - NLP
 
 categories:
   - Demo
-  - 教程
+  - NLP
+  - Mental Health
+  - Well-being
 ---
 
 ```python
@@ -46,65 +47,36 @@ import libr
 print('hello')
 ```
 
-## Overview
+# Inspired by the need for accessible and uplifting support, I embarked on a project to develop an intent-based chatbot dedicated to mental health awareness.
 
-1. The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site
-2. The template can be modified and customised to suit your needs. It's a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a **no-code solution (write in Markdown and customize with YAML parameters)** and having **flexibility to later add even deeper personalization with HTML and CSS**
-3. You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more
+## Project Overview:
+My goal was clear — to create a virtual companion capable of providing valuable information and fostering uplifting conversations. The chatbot, a fusion of natural language processing and intent classification, emerged as a beacon for mental well-being.
 
-[![The template is mobile first with a responsive design to ensure that your site looks stunning on every device.](https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/main/starters/academic/preview.png)](https://wowchemy.com)
+## Intent Classification Model:
+Key to the project's success was the intent classification model. Leveraging a gradient-boosting classifier, I trained the chatbot to understand user intentions accurately. This not only enabled the chatbot to provide relevant information but also facilitated empathetic and uplifting conversations.
 
-## Get Started
+### Data Preparation:
+The first step in creating an intent classification model is to prepare the data. This involves collecting a labeled dataset where each instance is associated with a specific intent. To kick off the project, I started by collecting a diverse dataset, meticulously labeled with various user intents related to mental health.
 
-- 👉 [**Create a new site**](https://wowchemy.com/templates/)
-- 📚 [**Personalize your site**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=%23MadeWithWowchemy&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-themes/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Tutorial](https://wowchemy.com/docs/hugo-tutorials/update/) and [Release Notes](https://wowchemy.com/updates/)
+### Feature Extraction:
+For natural language processing tasks like intent classification, converting text data into a format suitable for machine learning is essential. This typically involves techniques such as tokenization, stemming, and vectorization. With the dataset in hand, I transformed raw text into a numerical format suitable for the model. Each user input was converted into a feature vector, capturing the essence of the text.
 
-## Crowd-funded open-source software
+### Model Selection:
+For the intent classification task, I opted for scikit-learn's gradient boosting algorithm, a powerful ensemble learning technique. Given the sequential nature of this algorithm, it proved ideal for capturing the nuances in user inputs over time, continuously improving the model's accuracy.
 
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
+### Model Training:
+Scikit-learn made the model training process straightforward. I initialized the model, calculated initial predictions, and employed the GradientBoostingClassifier to iteratively train new trees, correcting errors and enhancing the model's predictive capabilities.
 
-### [❤️ Click here to become a sponsor and help support Wowchemy's future ❤️](https://wowchemy.com/sponsor/)
+### Deployment with Streamlit:
+To make this resource widely available, I opted for Streamlit servers. The deployment process was seamless, ensuring that users could access the chatbot effortlessly. Streamlit's user-friendly interface enhanced the overall experience, making mental health support just a click away.
 
-As a token of appreciation for sponsoring, you can **unlock [these](https://wowchemy.com/sponsor/) awesome rewards and extra features 🦄✨**
+## Promoting Awareness:
+Beyond just being a chatbot, this project aimed to contribute to mental health awareness. By creating a positive and supportive virtual environment, the chatbot became more than a tool — it became a resource fostering understanding and compassion.
 
-## Ecosystem
+## Impactful Conversations:
+The heart of the project lies in the conversations it initiates. Users interact with the chatbot not only to seek information but also to find solace and encouragement. Each conversation adds to the collective effort of breaking down mental health stigma and promoting well-being.
 
-- **[Hugo Academic CLI](https://github.com/wowchemy/hugo-academic-cli):** Automatically import publications from BibTeX
+## Conclusion:
+As technology continues to evolve, so does its potential to make a positive impact on our lives. This intent-based chatbot project stands as a testament to the power of technology harnessed for mental well-being. By deploying a user-friendly solution that combines informative content with empathetic interactions, we take a step towards a more supportive and understanding future.
 
-## Inspiration
-
-[Check out the latest **demo**](https://academic-demo.netlify.com/) of what you'll get in less than 10 minutes, or [view the **showcase**](https://wowchemy.com/user-stories/) of personal, project, and business sites.
-
-## Features
-
-- **Page builder** - Create _anything_ with [**widgets**](https://wowchemy.com/docs/page-builder/) and [**elements**](https://wowchemy.com/docs/content/writing-markdown-latex/)
-- **Edit any type of content** - Blog posts, publications, talks, slides, projects, and more!
-- **Create content** in [**Markdown**](https://wowchemy.com/docs/content/writing-markdown-latex/), [**Jupyter**](https://wowchemy.com/docs/import/jupyter/), or [**RStudio**](https://wowchemy.com/docs/install-locally/)
-- **Plugin System** - Fully customizable [**color** and **font themes**](https://wowchemy.com/docs/customization/)
-- **Display Code and Math** - Code highlighting and [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics) supported
-- **Integrations** - [Google Analytics](https://analytics.google.com), [Disqus commenting](https://disqus.com), Maps, Contact Forms, and more!
-- **Beautiful Site** - Simple and refreshing one page design
-- **Industry-Leading SEO** - Help get your website found on search engines and social media
-- **Media Galleries** - Display your images and videos with captions in a customizable gallery
-- **Mobile Friendly** - Look amazing on every screen with a mobile friendly version of your site
-- **Multi-language** - 34+ language packs including English, 中文, and Português
-- **Multi-user** - Each author gets their own profile page
-- **Privacy Pack** - Assists with GDPR
-- **Stand Out** - Bring your site to life with animation, parallax backgrounds, and scroll effects
-- **One-Click Deployment** - No servers. No databases. Only files.
-
-## Themes
-
-Wowchemy and its templates come with **automatic day (light) and night (dark) mode** built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the [Demo](https://academic-demo.netlify.com/) to see it in action! Day/night mode can also be disabled by the site admin in `params.toml`.
-
-[Choose a stunning **theme** and **font**](https://wowchemy.com/docs/customization) for your site. Themes are fully customizable.
-
-## License
-
-Copyright 2016-present [George Cushen](https://georgecushen.com).
-
-Released under the [MIT](https://github.com/wowchemy/wowchemy-hugo-themes/blob/master/LICENSE.md) license.
+# Let's continue to explore innovative ways technology can contribute to the well-being of individuals, making mental health support accessible to all.
