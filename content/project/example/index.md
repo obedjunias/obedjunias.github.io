@@ -1,12 +1,12 @@
 ---
-title: Example Project
-summary: An example of using the in-built project page.
+title: Intent-based Chatbot for Mental Health Information and Uplifting
+summary: "Developed and deployed a purpose-driven mental health chatbot using Streamlit servers. The project aims to create a positive impact by fostering a supportive virtual environment."
 tags:
-  - Deep Learning
-date: '2016-04-27T00:00:00Z'
+  - NLP
+date: '2023-12-20T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: ''
+external_link: 'https://jj-chatbotapp-aeqqi6ckiinivb9ektnpbv.streamlit.app/'
 
 image:
   caption: Photo by rawpixel on Unsplash
@@ -17,10 +17,10 @@ links:
     icon_pack: fab
     name: Follow
     url: https://twitter.com/georgecushen
-url_code: ''
-url_pdf: ''
-url_slides: ''
-url_video: ''
+url_code: 'https://github.com/obedjunias19/JJ-ChatbotApp/'
+# url_pdf: ''
+# url_slides: ''
+# url_video: ''
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -30,12 +30,36 @@ url_video: ''
 slides: example
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+In an era where technology continues to redefine our daily lives, its potential to positively impact mental health should not be overlooked. Inspired by the need for accessible and uplifting support, I embarked on a project to develop an intent-based chatbot dedicated to mental health awareness.
 
-Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.
+## Project Overview:
+My goal was clear — to create a virtual companion capable of providing valuable information and fostering uplifting conversations. The chatbot, a fusion of natural language processing and intent classification, emerged as a beacon for mental well-being.
 
-Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.
+## Intent Classification Model:
+Key to the project's success was the intent classification model. Leveraging a gradient-boosting classifier, I trained the chatbot to understand user intentions accurately. This not only enabled the chatbot to provide relevant information but also facilitated empathetic and uplifting conversations.
 
-Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.
+### Data Preparation:
+The first step in creating an intent classification model is to prepare the data. This involves collecting a labeled dataset where each instance is associated with a specific intent. To kick off the project, I started by collecting a diverse dataset, meticulously labeled with various user intents related to mental health.
 
-Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.
+### Feature Extraction:
+For natural language processing tasks like intent classification, converting text data into a format suitable for machine learning is essential. This typically involves techniques such as tokenization, stemming, and vectorization. With the dataset in hand, I transformed raw text into a numerical format suitable for the model. Each user input was converted into a feature vector, capturing the essence of the text.
+
+### Model Selection:
+For the intent classification task, I opted for scikit-learn's gradient boosting algorithm, a powerful ensemble learning technique. Given the sequential nature of this algorithm, it proved ideal for capturing the nuances in user inputs over time, continuously improving the model's accuracy.
+
+### Model Training:
+Scikit-learn made the model training process straightforward. I initialized the model, calculated initial predictions, and employed the GradientBoostingClassifier to iteratively train new trees, correcting errors and enhancing the model's predictive capabilities.
+
+### Deployment with Streamlit:
+To make this resource widely available, I opted for Streamlit servers. The deployment process was seamless, ensuring that users could access the chatbot effortlessly. Streamlit's user-friendly interface enhanced the overall experience, making mental health support just a click away.
+
+## Promoting Awareness:
+Beyond just being a chatbot, this project aimed to contribute to mental health awareness. By creating a positive and supportive virtual environment, the chatbot became more than a tool — it became a resource fostering understanding and compassion.
+
+## Impactful Conversations:
+The heart of the project lies in the conversations it initiates. Users interact with the chatbot not only to seek information but also to find solace and encouragement. Each conversation adds to the collective effort of breaking down mental health stigma and promoting well-being.
+
+## Conclusion:
+As technology continues to evolve, so does its potential to make a positive impact on our lives. This intent-based chatbot project stands as a testament to the power of technology harnessed for mental well-being. By deploying a user-friendly solution that combines informative content with empathetic interactions, we take a step towards a more supportive and understanding future.
+
+# Let's continue to explore innovative ways technology can contribute to the well-being of individuals, making mental health support accessible to all.
