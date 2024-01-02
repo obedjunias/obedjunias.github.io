@@ -28,7 +28,8 @@ summary: This paper addresses the lack of protective mechanisms for data subject
 tags:
 - NLP
 - Publications
-featured: true
+
+featured: false
 
 # links:
 # - name: ""
