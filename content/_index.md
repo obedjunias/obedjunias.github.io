@@ -110,7 +110,7 @@ sections:
         - title: Undergraduate Researcher
           company: B.M.S College of Engineering
           company_url: ''
-          company_logo: org-gc1
+          company_logo: org-bms
           location: Bengaluru, KA, India
           date_start: '2020-08-16'
           date_end: '2021-04-16'
