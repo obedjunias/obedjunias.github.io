@@ -1,6 +1,6 @@
 ---
 title: Emotion Analysis using Trees and Bi-LSTM with LIME Interpretability
-subtitle: Decoding Emotions: Trees, Bi-LSTM, and LIME Unveiling the Sentiment Spectrum
+subtitle: Decoding Emotions - Trees, Bi-LSTM, and LIME Unveiling the Sentiment Spectrum
 summary: Embark on a journey into the realm of emotion analysis as we deploy decision trees and Bi-LSTM models to predict the sentiment of textual expressions. Witness the power of interpretability with LIME, shedding light on the intricate decisions made by our models. A fusion of traditional and advanced approaches achieves an 84% accuracy milestone, bringing us closer to understanding the emotional nuances encoded in language.
 authors:
   - admin
