@@ -92,7 +92,7 @@ social:
     link: '/#contact'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/neuralNavigatr
+    link: https://twitter.com/obed_junias
     label: Follow me on Twitter
     display:
       header: true
