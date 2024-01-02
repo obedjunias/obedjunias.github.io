@@ -52,9 +52,11 @@ print('hello')
 
 ## Project Overview:
 My goal was clear — to create a virtual companion capable of providing valuable information and fostering uplifting conversations. The chatbot, a fusion of natural language processing and intent classification, emerged as a beacon for mental well-being.
+{style="text-align: justify;"}
 
 ## Intent Classification Model:
 Key to the project's success was the intent classification model. Leveraging a gradient-boosting classifier, I trained the chatbot to understand user intentions accurately. This not only enabled the chatbot to provide relevant information but also facilitated empathetic and uplifting conversations.
+{style="text-align: justify;"}
 
 ### Data Preparation:
 The first step in creating an intent classification model is to prepare the data. This involves collecting a labeled dataset where each instance is associated with a specific intent. To kick off the project, I started by collecting a diverse dataset, meticulously labeled with various user intents related to mental health.
