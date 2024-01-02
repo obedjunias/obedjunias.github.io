@@ -115,7 +115,7 @@ sections:
           date_start: '2020-08-16'
           date_end: '2021-04-16'
           description: |2-
-              Responsibilities include:
+              Responsibilities undertaken:
 
               * Led a team to tackle offline overspending and bad expense management by creating an innovative AI app for my capstone project.
               * Conducted research, developing an advanced product categorization module integrating NLP and ML sub-modules.
@@ -130,7 +130,7 @@ sections:
           date_start: '2022-02-05'
           date_end: '2022-07-18'
           description: |2-
-              Responsibilities include:
+              Responsibilities undertaken:
 
               * Improved the Wi-Fi mesh network by implementing a Reinforcement Learning (RL) model integrated into Raspberry Pi devices.
               * Designed and implemented a reinforcement learning model based on the Q-learning algorithm to enhance network adaptability.
@@ -145,7 +145,7 @@ sections:
           date_start: '2019-07-05'
           date_end: '2019-09-05'
           description: |2-
-              Responsibilities include:
+              Responsibilities undertaken:
 
               * Worked on development of a proprietary plugin that uses automatic speech recognition (ASR) system for transcription.
               * Utilized ASR technology by training over the LibriSpeech Dataset to enable real-time transcription and improve accessibility for users.
