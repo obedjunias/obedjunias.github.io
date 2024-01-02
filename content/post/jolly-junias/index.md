@@ -46,6 +46,7 @@ categories:
 import libr
 print('hello')
 ```
+<p align="justify">
 
 # Inspired by the need for accessible and uplifting support, I embarked on a project to develop an intent-based chatbot dedicated to mental health awareness.
 
@@ -81,4 +82,4 @@ As technology continues to evolve, so does its potential to make a positive impa
 
 # Let's continue to explore innovative ways technology can contribute to the well-being of individuals, making mental health support accessible to all.
 
-{style="text-align: justify;"}
+</p>
