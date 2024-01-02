@@ -257,7 +257,7 @@ sections:
           - publication
         featured_only: true
     design:
-      columns: '2.5'
+      columns: '2'
       view: card
   - block: collection
     id: posts
@@ -285,7 +285,7 @@ sections:
     design:
       # Choose a layout view
       view: compact
-      columns: '2.5'
+      columns: '2'
   # - block: markdown
   #   content:
   #     title: Gallery
@@ -309,7 +309,7 @@ sections:
     content:
       title: Popular Topics
     design:
-      columns: '2.5'
+      columns: '2'
   - block: contact
     id: contact
     content:
@@ -356,5 +356,5 @@ sections:
           # Enable CAPTCHA challenge to reduce spam?
           captcha: false
     design:
-      columns: '2.5'
+      columns: '2'
 ---
