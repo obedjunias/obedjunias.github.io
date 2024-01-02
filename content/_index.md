@@ -248,12 +248,13 @@ sections:
     design:
       columns: '2'
   - block: collection
-    id: fprojects
+    id: featured
     content:
-      title: Featured Projects
+      title: Featured
       filters:
         folders:
           - project
+          - publication
         featured_only: true
     design:
       columns: '2.5'

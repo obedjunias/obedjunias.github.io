@@ -26,7 +26,8 @@ abstract: In the contemporary era of rapid technological advancements, the gener
 summary: This study presents ProEns, an innovative ensemble model utilizing Support Vector Machine and Logistic Regression for precise product categorization in E-commerce. Leveraging web-scraped data, ProEns outperforms state-of-the-art models, showcasing 1% improvement in recall and precision, affirming its novelty and competitiveness.
 
 tags:
-- Source Themes
+- NLP
+- Publications
 featured: false
 
 links:

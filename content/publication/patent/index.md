@@ -26,8 +26,9 @@ abstract: In the realm of information systems handling critical contracts and do
 summary: This paper addresses the lack of protective mechanisms for data subjects in information systems dealing with contracts and documents. By employing named entity recognition with NLTK, Stanford CoreNLP, and spaCy, the study demonstrates high efficacy in accurately classifying both generic and contract data, proposing a robust Privacy Enhancing Technology.
 
 tags:
-- Source Themes
-featured: false
+- NLP
+- Publications
+featured: true
 
 # links:
 # - name: ""

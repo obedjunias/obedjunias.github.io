@@ -8,10 +8,10 @@ date: '2023-11-10T00:00:00Z'
 # Optional external URL for project (replaces project detail page).
 external_link: 'https://jj-chatbotapp-aeqqi6ckiinivb9ektnpbv.streamlit.app/'
 
-featured: false
+featured: true
 
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Photo from giphy
   focal_point: Smart
 
 links:
