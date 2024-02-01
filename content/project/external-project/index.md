@@ -1,6 +1,6 @@
 ---
 title: Emotion Analysis using Trees and Bi-LSTM with LIME Interpretability
-summary: Embark on a journey into the realm of emotion analysis as we deploy decision trees and Bi-LSTM models to predict the sentiment of textual expressions. Witness the power of interpretability with LIME, shedding light on the intricate decisions made by our models. A fusion of traditional and advanced approaches achieves an 84% accuracy milestone, bringing us closer to understanding the emotional nuances encoded in language. 
+summary: Skillfully crafted and executed a decision tree classifier for predicting emotions in text sentences, achieving an impressive 84% accuracy rate. Implemented LIME to provide insightful interpretations of the model's predictions, enhancing transparency and understanding.  
 tags:
   - NLP
 date: '2023-12-20T00:00:00Z'
