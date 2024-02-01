@@ -1,6 +1,7 @@
 ---
 title: Intent-based Chatbot for Mental Health Information and Uplifting
-summary: "Developed and deployed a purpose-driven mental health chatbot using Streamlit servers. The project aims to create a positive impact by fostering a supportive virtual environment." {style="text-align: justify;"}
+summary: Developed and deployed a purpose-driven mental health chatbot using Streamlit servers. The project aims to create a positive impact by fostering a supportive virtual environment 
+{style="text-align: justify;"}
 tags: 
   - NLP
 date: '2023-11-10T00:00:00Z'
