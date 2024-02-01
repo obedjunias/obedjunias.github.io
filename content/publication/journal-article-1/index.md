@@ -25,9 +25,8 @@ abstract: This research proposes an architecture called HealthDash for developin
 summary: This research proposes an architecture called HealthDash for developing Internet of Things (IoT) solutions in healthcare. The main aim of this research is to overcome the complexity problems in creating and keeping up with computational health solutions with increased flexibility, where scenarios are often complex and dynamic
 
 tags:
-- IoT
 - Publications
-featured: true
+featured: false
 
 links:
 - name: Paper Link
