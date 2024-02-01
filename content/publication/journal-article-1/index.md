@@ -19,31 +19,10 @@ publication_types: ["article-journal"]
 publication: "International Journal of Scientific Research in Science, Engineering and Technology"
 publication_short: "IJSRSET"
 
-abstract: This research proposes a architecture called HealthDash for developing
-Internet of Things (IoT) solutions in healthcare. The main aim of this
-research is to over come the complexity problems in creating and keeping
-up with computational health solutions with increased flexibility, where
-scenarios are often complex and dynamic. HealthDash aims to unify
-technologies at both the fog and cloud layers, providing dynamism in
-creating IoT applications and reducing data transmission between these
-layers. To specify which layer (fog or cloud) data flows will be executed,
-the suggested approach makes use of the data flow-oriented programming
-paradigm, empowers IoT healthcare solutions with greater flexibility,
-efficiency, and privacy.The architecture aims to simplify the creation and
-maintenance of computational solutions in the complex and dynamic
-healthcare domain. HealthDash is designed to address challenges such as
-low latency, data transmission efficiency, and privacy concerns in remote
-patient monitoring scenarios. Enabling dynamic creation of IoT
-applications in both fog and cloud layers. Reducing data transmission
-between fog and cloud layers. Utilizing a unified data flow-oriented
-programming paradigm.
+abstract: This research proposes an architecture called HealthDash for developing Internet of Things (IoT) solutions in healthcare. The main aim of this research is to overcome the complexity problems in creating and keeping up with computational health solutions with increased flexibility, where scenarios are often complex and dynamic. HealthDash aims to unify technologies at both the fog and cloud layers, providing dynamism in creating IoT applications and reducing data transmission between these layers. To specify which layer (fog or cloud) data flows will be executed, the suggested approach makes use of the data flow-oriented programming paradigm and empowers IoT healthcare solutions with greater flexibility, efficiency, and privacy. The architecture aims to simplify the creation and maintenance of computational solutions in the complex and dynamic healthcare domain. HealthDash is designed to address challenges such as low latency, data transmission efficiency, and privacy concerns in remote patient monitoring scenarios. Enabling dynamic creation of IoT applications in both fog and cloud layers. Reducing data transmission between fog and cloud layers. Utilizing a unified data flow-oriented programming paradigm.
 
 # Summary. An optional shortened abstract.
-summary: This research proposes a architecture called HealthDash for developing
-Internet of Things (IoT) solutions in healthcare. The main aim of this
-research is to over come the complexity problems in creating and keeping
-up with computational health solutions with increased flexibility, where
-scenarios are often complex and dynamic.
+summary: This research proposes an architecture called HealthDash for developing Internet of Things (IoT) solutions in healthcare. The main aim of this research is to overcome the complexity problems in creating and keeping up with computational health solutions with increased flexibility, where scenarios are often complex and dynamic
 
 tags:
 - IoT
@@ -51,8 +30,8 @@ tags:
 featured: true
 
 links:
-# - name: Custom Link
-  url:  https://ijsrset.com/IJSRSET2411114
+- name: Paper Link
+  url:  'https://ijsrset.com/IJSRSET2411114'
 # url_pdf: http://arxiv.org/pdf/1512.04133v1
 # url_code: 'https://github.com/obedjunias19/ProEns'
 # url_dataset: '#'
@@ -65,7 +44,7 @@ links:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://is4-ssl.mzstatic.com/image/thumb/Purple71/v4/3f/f8/e9/3ff8e9fb-646c-3f8e-77b6-e9928c6925f5/source/512x512bb.jpg)'
+  caption: 'Image credit: [**Unsplash**](https://is4-ssl.mzstatic.com/image/thumb/Purple71/v4/3f/f8/e9/3ff8e9fb-646c-3f8e-77b6-e9928c6925f5/source/512x512bb)'
   focal_point: ""
   preview_only: false
 
