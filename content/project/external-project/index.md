@@ -6,7 +6,7 @@ tags:
 date: '2023-12-20T00:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: https://jj-chatbotapp-aeqqi6ckiinivb9ektnpbv.streamlit.app/
+# external_link: https://jj-chatbotapp-aeqqi6ckiinivb9ektnpbv.streamlit.app/
 
 featured: true
 
