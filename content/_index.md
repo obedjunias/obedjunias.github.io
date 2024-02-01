@@ -96,6 +96,7 @@ sections:
     design:
       columns: '2.5'
   - block: experience
+    id: rexperience
     content:
       title: Research Experience
       # Date format for experience
