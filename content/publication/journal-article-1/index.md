@@ -1,5 +1,5 @@
 ---
-title: "ProEns: Ensemble Technique for Product Category Classification"
+title: "Empowering IoT Healthcare Solutions with Enhanced Flexibility and Efficiency"
 authors:
 - Levina T
 - admin
@@ -16,8 +16,8 @@ publishDate: "2024-01-31T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Economic Computation & Economic Cybernetics Studies & Research"
-publication_short: "ECECSR"
+publication: "International Journal of Scientific Research in Science, Engineering and Technology"
+publication_short: "IJSRSET"
 
 abstract: This research proposes a architecture called HealthDash for developing
 Internet of Things (IoT) solutions in healthcare. The main aim of this
@@ -48,7 +48,7 @@ scenarios are often complex and dynamic.
 tags:
 - IoT
 - Publications
-featured: false
+featured: true
 
 links:
 # - name: Custom Link
