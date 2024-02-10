@@ -29,8 +29,8 @@ tags:
 featured: false
 
 links:
-- name: Paper Link
-  url:  'https://ijsrset.com/IJSRSET2411114'
+# - name: Paper Link
+#   url:  'https://ijsrset.com/IJSRSET2411114'
 # url_pdf: http://arxiv.org/pdf/1512.04133v1
 # url_code: 'https://github.com/obedjunias19/ProEns'
 # url_dataset: '#'
