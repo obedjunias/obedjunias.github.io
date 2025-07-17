@@ -32,6 +32,7 @@ gem 'feedjira'
 gem 'httparty'
 gem 'observer'
 gem 'ostruct'
+gem 'faraday-retry'
 # gem 'terser'  # Uncommented - needed for jekyll-terser functionality
 
 # Platform-specific gems
