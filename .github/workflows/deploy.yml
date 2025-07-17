@@ -83,8 +83,10 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.4.2"  # More stable version
+          ruby-version: "3.4"  # More stable version
           bundler-cache: true
+      - name: Install dependencies 📦
+        run: bundle update --bundler && bundle install --jobs 4 --retry 3 --without development test
           
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
