@@ -36,9 +36,9 @@ repo_trophies:
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 
-# filepath: /workspaces/obedjunias.github.io/_config.yml
-enable_darkmode: true
-default_theme: light
+# # filepath: /workspaces/obedjunias.github.io/_config.yml
+# enable_darkmode: true
+# default_theme: light
 # -----------------------------------------------------------------------------
 # RSS Feed
 # -----------------------------------------------------------------------------
