@@ -4,9 +4,9 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
 
-# About Me
+<!-- # About Me -->
 
-I'm a second-year Master's student at the [University of Colorado Boulder](https://www.colorado.edu/cs/) advised by Professor [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). I'm broadly interested in Natural Language Processing, with a focus on interpretable AI and structured reasoning systems. My current research involves developing explainable AI systems using entailment trees for multi-step reasoning in question-answering tasks.
+<!-- I'm a second-year Master's student at the [University of Colorado Boulder](https://www.colorado.edu/cs/) advised by Professor [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). I'm broadly interested in Natural Language Processing, with a focus on interpretable AI and structured reasoning systems. My current research involves developing explainable AI systems using entailment trees for multi-step reasoning in question-answering tasks.
 
 ## Personal Research Interests
 
@@ -18,4 +18,4 @@ My research interests span Natural Language Processing, with particular focus on
 
 **I'm actively seeking opportunities in Natural Language Processing and related areas.**
 
-Feel free to contact me for research collaborations or other engagements.
+Feel free to contact me for research collaborations or other engagements. -->
