@@ -31,7 +31,7 @@ latest_posts:
 .about-content {
   display: flex;
   align-items: flex-start;
-  gap: 50px;
+  gap: 20 px;
 }
 
 .about-text {
@@ -41,7 +41,7 @@ latest_posts:
 
 /* Target the theme's profile image */
 .profile {
-  flex: 0 0 200px;
+  flex: 0 0 200 px;
   order: 2; /* Move image to the right */
 }
 </style>
