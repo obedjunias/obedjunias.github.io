@@ -28,17 +28,28 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 <style>
-.justified-text {
-  text-align: justify;
-  clear: both;
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
-<style>
-.justified-text {
+
+.text-column {
+  flex: 1;
   text-align: justify;
-  margin-right: 250px; /* Adjust based on your image width + desired spacing */
+}
+
+.image-column {
+  flex: 0 0 200px; /* Adjust width as needed */
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
 }
 </style>
-<div class="justified-text" markdown="1">
+<div class="content-wrapper">
+<div class="text-column" markdown="1">
 I'm a second-year Master's student at the [University of Colorado Boulder](https://www.colorado.edu/cs/) advised by Professor [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). I'm broadly interested in Natural Language Processing, with a focus on interpretable AI and structured reasoning systems. My current research involves developing explainable AI systems using entailment trees for multi-step reasoning in question-answering tasks.
 
 ## Personal Research Interests
@@ -52,4 +63,8 @@ My research interests span Natural Language Processing, with particular focus on
 **I'm actively seeking opportunities in Natural Language Processing and related areas.**
 
 Feel free to contact me for research collaborations or other engagements.
+</div>
+  <div class="image-column">
+    <img src="assets/img/prof_pic.jpg" alt="Profile Picture" class="profile-img">
+  </div>
 </div>
