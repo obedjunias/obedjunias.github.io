@@ -31,7 +31,7 @@ latest_posts:
 .about-content {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 50px;
 }
 
 .about-text {
