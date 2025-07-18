@@ -32,6 +32,11 @@ latest_posts:
   text-align: justify;
   clear: both;
 }
+<style>
+.justified-text {
+  text-align: justify;
+  margin-right: 250px; /* Adjust based on your image width + desired spacing */
+}
 </style>
 <div class="justified-text" markdown="1">
 I'm a second-year Master's student at the [University of Colorado Boulder](https://www.colorado.edu/cs/) advised by Professor [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). I'm broadly interested in Natural Language Processing, with a focus on interpretable AI and structured reasoning systems. My current research involves developing explainable AI systems using entailment trees for multi-step reasoning in question-answering tasks.
