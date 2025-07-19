@@ -5,13 +5,20 @@ permalink: /
 # subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>555 your office number</p>
-  #   <p>123 your address street</p>
-  #   <p>Your City, State 12345</p>
+align: right
+image: prof_pic.jpg # fallback image
+images: # array of images for rotation
+- obed_junias1.jpg
+- obed_junias2.jpg
+- obed_junias3.jpg
+image_circular: false # crops the image to make it circular
+more_info: >
+<p style="text-align: center; margin-top: 10px;">
+<a href="mailto:your.email@colorado.edu" style="margin: 0 5px;"><i class="fas fa-envelope"></i></a>
+<a href="https://linkedin.com/in/yourprofile" style="margin: 0 5px;"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/yourusername" style="margin: 0 5px;"><i class="fab fa-github"></i></a>
+<a href="https://twitter.com/yourusername" style="margin: 0 5px;"><i class="fab fa-twitter"></i></a>
+</p>
     
 
 selected_papers: true # includes a list of papers marked as "selected={true}"

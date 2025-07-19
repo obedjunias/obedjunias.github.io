@@ -18,17 +18,94 @@ layout: default
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          <!-- Rotating image gallery -->
+          <div class="rotating-gallery" style="position: relative;">
+            {% if page.profile.images %}
+              {% for image in page.profile.images %}
+                {% assign image_path = image | prepend: 'assets/img/' %}
+                {% if page.profile.image_circular %}
+                  {% assign image_class = 'img-fluid z-depth-1 rounded-circle gallery-image' %}
+                {% else %}
+                  {% assign image_class = 'img-fluid z-depth-1 rounded gallery-image' %}
+                {% endif %}
+                {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+                <div class="gallery-item" {% if forloop.first %}style="opacity: 1;"{% else %}style="opacity: 0; position: absolute; top: 0; left: 0;"{% endif %}>
+                  {%
+                    include figure.liquid loading="eager" path=image_path class=image_class sizes=sizes alt=image
+                    cache_bust=true
+                  %}
+                </div>
+              {% endfor %}
+            {% else %}
+              <!-- Fallback to single image if images array not provided -->
+              {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+              {% if page.profile.image_circular %}
+                {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+              {% else %}
+                {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+              {% endif %}
+              {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+              {%
+                include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+                cache_bust=true
+              %}
+            {% endif %}
+          </div>
+          
+          <script>
+            // Rotating gallery functionality
+            document.addEventListener('DOMContentLoaded', function() {
+              const galleryItems = document.querySelectorAll('.gallery-item');
+              if (galleryItems.length > 1) {
+                let currentIndex = 0;
+                
+                function showNextImage() {
+                  // Hide current image
+                  galleryItems[currentIndex].style.opacity = '0';
+                  
+                  // Get random next index (different from current)
+                  let nextIndex;
+                  do {
+                    nextIndex = Math.floor(Math.random() * galleryItems.length);
+                  } while (nextIndex === currentIndex && galleryItems.length > 1);
+                  
+                  // Show next image after fade out
+                  setTimeout(() => {
+                    galleryItems[nextIndex].style.opacity = '1';
+                    currentIndex = nextIndex;
+                  }, 300);
+                }
+                
+                // Change image every 3-5 seconds (random interval)
+                function scheduleNext() {
+                  const interval = Math.random() * 2000 + 3000; // 3-5 seconds
+                  setTimeout(() => {
+                    showNextImage();
+                    scheduleNext();
+                  }, interval);
+                }
+                
+                scheduleNext();
+              }
+            });
+          </script>
+          
+          <style>
+            .rotating-gallery {
+              position: relative;
+            }
+            
+            .gallery-item {
+              transition: opacity 0.3s ease-in-out;
+            }
+            
+            .gallery-item:not(:first-child) {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+            }
+          </style>
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
