@@ -41,10 +41,16 @@ latest_posts:
   flex: 0 0 200px;
   order: 1;
   margin-bottom: 20px;
-  margin-left: 20px; /* ADD THIS for spacing between text and image */
 }
 
-/* Stack content vertically on small screens */
+/* Desktop view: add spacing between image and text */
+@media (min-width: 769px) {
+  .profile {
+    margin-left: 20px;
+  }
+}
+
+/* Mobile view: stack vertically and remove margins */
 @media (max-width: 768px) {
   .about-content {
     flex-direction: column;
@@ -54,13 +60,14 @@ latest_posts:
     order: 0;
     align-self: center;
     float: none !important;
-    margin-left: 0; /* Remove left margin on small screens */
+    margin-left: 0;
   }
 
   .about-text {
     order: 1;
   }
 }
+
 </style>
 
 <div class="about-content">
