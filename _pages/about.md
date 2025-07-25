@@ -41,6 +41,7 @@ latest_posts:
   flex: 0 0 200px;
   order: 1;
   margin-bottom: 20px;
+  margin-left: 20px; /* ADD THIS for spacing between text and image */
 }
 
 /* Stack content vertically on small screens */
@@ -53,6 +54,7 @@ latest_posts:
     order: 0;
     align-self: center;
     float: none !important;
+    margin-left: 0; /* Remove left margin on small screens */
   }
 
   .about-text {
