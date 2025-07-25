@@ -61,43 +61,64 @@ on:
       - "!README.md"
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
-        
+
+      - name: Cache Ruby gems 💎
+        uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.4"  # More stable version
-          bundler-cache: true
-      - name: Install dependencies 📦
-        run: bundle update --bundler && bundle install --jobs 4 --retry 3 --without development test
-          
+          ruby-version: "3.4"
+          bundler-cache: false  # We handle caching manually here
+
+      - name: Install Ruby dependencies 📦
+        run: bundle install --jobs 4 --retry 3 --path vendor/bundle --without development test
+
+      - name: Cache Python packages 🐍
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-          cache: "pip"
-          
+
+      - name: Cache npm packages 📦
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json', 'package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-        
+
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -105,25 +126,33 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
-          
-      - name: Install and Build 🔧
+
+      - name: Cache Jekyll cache 🧹
+        uses: actions/cache@v3
+        with:
+          path: .jekyll-cache
+          key: ${{ runner.os }}-jekyll-cache-${{ hashFiles('**/*.md', '**/*.html', '**/*.scss') }}
+          restore-keys: |
+            ${{ runner.os }}-jekyll-cache-
+
+      - name: Install system dependencies & Build site 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          
+
+      - name: Install PurgeCSS globally (cached npm)
+        run: npm install -g purgecss
+
       - name: Purge unused CSS 🧹
-        run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
-          
+        run: purgecss -c purgecss.config.js
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages

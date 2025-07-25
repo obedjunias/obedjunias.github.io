@@ -39,45 +39,46 @@ latest_posts:
 
 .profile-container {
   display: flex;
+  flex-wrap: wrap;   /* very important */
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 2em;
-  flex-wrap: wrap;
 }
 
-.profile-image img {
-  max-width: 200px;
-  height: auto;
-}
 
-.left-align .profile-image {
+.profile-container.left-align .profile-image {
   order: 0;
 }
-.left-align .profile-text {
+
+.profile-container.right-align .profile-image {
   order: 1;
 }
 
-.right-align .profile-image {
-  order: 1;
+.profile-image {
+  flex: 0 0 auto;
+  max-width: 200px;   /* limits image width */
+  margin-right: 20px;
 }
-.right-align .profile-text {
-  order: 0;
+
+.profile-text {
+  flex: 1 1 0;        /* allow text to take remaining space */
+  min-width: 0;       /* helps with text wrapping */
 }
+
 
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
-
-  .profile-image,
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 1em;
+    max-width: 100%; /* allow image to scale */
+    width: 200px;    /* or any fixed width */
+  }
   .profile-text {
-    order: unset;
     width: 100%;
-  }
-
-  .profile-text {
     text-align: left;
   }
 }
