@@ -37,28 +37,51 @@ latest_posts:
   order: 2;
 }
 
-.profile {
-  flex: 0 0 200px;
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 2em;
+  flex-wrap: wrap;
+}
+
+.profile-image img {
+  max-width: 200px;
+  height: auto;
+}
+
+.left-align .profile-image {
+  order: 0;
+}
+.left-align .profile-text {
   order: 1;
-  margin-bottom: 20px;
 }
 
-/* Stack content vertically on small screens */
+.right-align .profile-image {
+  order: 1;
+}
+.right-align .profile-text {
+  order: 0;
+}
+
 @media (max-width: 768px) {
-  .about-content {
+  .profile-container {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .profile {
-    order: 0;
-    align-self: center;
-    float: none !important;
+  .profile-image,
+  .profile-text {
+    order: unset;
+    width: 100%;
   }
 
-  .about-text {
-    order: 1;
+  .profile-text {
+    text-align: left;
   }
 }
+
 </style>
 
 <div class="about-content">
