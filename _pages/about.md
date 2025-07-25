@@ -37,45 +37,32 @@ latest_posts:
   order: 2;
 }
 
-.profile-container {
-  display: flex;
-  flex-wrap: wrap;   /* very important */
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 2em;
-}
-
-
-.profile-container.left-align .profile-image {
-  order: 0;
-}
-
-.profile-container.right-align .profile-image {
-  order: 1;
-}
-
-.profile-image {
-  flex: 0 0 auto;
-  max-width: 200px;   /* limits image width */
-  margin-right: 20px;
-}
-
 .profile-text {
-  flex: 1 1 0;        /* allow text to take remaining space */
-  min-width: 0;       /* helps with text wrapping */
+  flex: 1 1 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
 }
-
 
 @media (max-width: 768px) {
   .profile-container {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   .profile-image {
     margin-right: 0;
     margin-bottom: 1em;
-    max-width: 100%; /* allow image to scale */
-    width: 200px;    /* or any fixed width */
+    max-width: 100%;
+    width: 200px;
+  }
+  .profile-image img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
   }
   .profile-text {
     width: 100%;
