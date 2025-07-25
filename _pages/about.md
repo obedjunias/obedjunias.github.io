@@ -7,51 +7,67 @@ permalink: /
 profile:
   align: right
   image: obed_junias1.jpg
-  image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>555 your office number</p>
-  #   <p>123 your address street</p>
-  #   <p>Your City, State 12345</p>
-    
+  image_circular: false
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: true
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: true
+  limit: 5
 
 latest_posts:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
+
 <style>
 .about-content {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
-  gap: 20 px;
+  gap: 20px;
 }
 
 .about-text {
-  flex: 1;
+  flex: 1 1 100%;
   text-align: justify;
+  order: 2;
 }
 
-/* Target the theme's profile image */
 .profile {
-  flex: 0 0 200 px;
-  order: 2; /* Move image to the right */
+  flex: 0 0 200px;
+  order: 1;
+  margin-bottom: 20px;
+}
+
+/* Stack content vertically on small screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .profile {
+    order: 0;
+    align-self: center;
+    float: none !important;
+  }
+
+  .about-text {
+    order: 1;
+  }
 }
 </style>
+
 <div class="about-content">
   <div class="about-text" markdown="1">
 I'm a second-year Master's student at the [University of Colorado Boulder](https://www.colorado.edu/cs/) advised by Professor [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). I'm broadly interested in Natural Language Processing, with a focus on interpretable AI and structured reasoning systems. My current research involves developing explainable AI systems using entailment trees for multi-step reasoning in question-answering tasks.
 
 ## Personal Research Interests
 
-In parallel, I'm working under Professor [Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari) on detecting and mitigating bias and fairness issues in Large Language Models within the mental health domain—a project that stems from my personal interest in ensuring AI systems are equitable and beneficial across diverse populations. This work combines my core interests in NLR with my commitment to responsible AI development.
+In parallel, I'm working under Professor [Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari) on detecting and mitigating bias and fairness issues in Large Language Models within the mental health domain—a project that stems from my personal interest in ensuring AI systems are equitable and beneficial across diverse populations. This work combines my core interests in NLP with my commitment to responsible AI development.
 
 ## Research Interests
 
@@ -60,5 +76,5 @@ My research interests span Natural Language Processing, with particular focus on
 **I'm actively seeking opportunities in Natural Language Processing and related areas.**
 
 Feel free to contact me for research collaborations or other engagements.
-</div>
+  </div>
 </div>
