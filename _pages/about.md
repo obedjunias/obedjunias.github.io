@@ -45,7 +45,7 @@ latest_posts:
 /* Desktop view: add spacing between image and text */
 @media (min-width: 769px) {
   .profile {
-    margin-left: 20px;
+    margin-left: 5 px;
   }
 }
 
@@ -66,6 +66,22 @@ latest_posts:
     order: 1;
   }
 }
+
+/* Resize social icons */
+.author__urls-wrapper {
+  font-size: 16px; /* Adjust this value to your preference */
+}
+
+.author__urls-wrapper li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.author__urls-wrapper svg {
+  width: 20px;
+  height: 20px;
+}
+
 
 </style>
 
