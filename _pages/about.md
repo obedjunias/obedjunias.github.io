@@ -67,21 +67,23 @@ latest_posts:
   }
 }
 
-/* Resize social icons */
+/* Resize and evenly space social icons */
 .author__urls-wrapper {
-  font-size: 16px; /* Adjust this value to your preference */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .author__urls-wrapper li {
-  display: inline-block;
-  margin-right: 10px;
+  list-style: none;
 }
 
 .author__urls-wrapper svg {
   width: 20px;
   height: 20px;
 }
-
 
 </style>
 
