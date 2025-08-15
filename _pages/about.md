@@ -9,7 +9,7 @@ profile:
   image: obed_junias1.jpg
   image_circular: false
 
-selected_papers: true
+# selected_papers: true
 social: true
 
 announcements:
@@ -17,10 +17,10 @@ announcements:
   scrollable: true
   limit: 5
 
-latest_posts:
-  enabled: true
-  scrollable: true
-  limit: 3
+# latest_posts:
+#   enabled: true
+#   scrollable: true
+#   limit: 3
 ---
 
 <style>
@@ -70,7 +70,7 @@ latest_posts:
 /* Resize and evenly space social icons */
 .author__urls-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 10px;
@@ -81,8 +81,8 @@ latest_posts:
 }
 
 .author__urls-wrapper svg {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 </style>

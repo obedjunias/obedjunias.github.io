@@ -6,8 +6,13 @@ nav: false
 collection: papers
 ---
 
-> What an astonishing thing a book is. It's a flat object made from a tree with flexible parts on which are imprinted lots of funny dark squiggles. But one glance at it and you're inside the mind of another person, maybe somebody dead for thousands of years. Across the millennia, an author is speaking clearly and silently inside your head, directly to you. Writing is perhaps the greatest of human inventions, binding together people who never knew each other, citizens of distant epochs. Books break the shackles of time. A book is proof that humans are capable of working magic.
->
-> -- Carl Sagan, Cosmos, Part 11: The Persistence of Memory (1980)
+> Research papers are more than printed pages – they are portals into someone else’s thinking, perhaps years, even centuries, ago. As Zora Neale Hurston once said, “Research is formalized curiosity. It is poking and prying with a purpose.” And as Albert Szent-Györgyi reminds us, “Research is to see what everybody else has seen, and to think what nobody else has thought.” Together, they capture the magic of inquiry: a conversation across time that challenges us to see the world anew.
 
 ## Papers that I am reading, have read, or will read
+
+### Reasoning Papers
+<ul>
+  <li><a href="https://aclanthology.org/2021.emnlp-main.585.pdf"><strong>Explaining Answers with Entailment Trees</strong></a> — Dalvi et al., <em>EMNLP 2023</em></li>
+  <li><a href="https://aclanthology.org/2022.emnlp-main.134.pdf"><strong>Entailer: Answering Questions with Faithful and Truthful Chains of Reasoning</strong></a> — Tafjord et al., <em>EMNLP 2022</em></li>
+  <li><a href="https://aclanthology.org/2024.emnlp-main.531.pdf"><strong>Enhancing Systematic Decompositional Natural Language Inference Using Informal Logic</strong></a> — Weir et al., <em>EMNLP 2024</em></li>
+</ul>
