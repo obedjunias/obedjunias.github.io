@@ -399,7 +399,7 @@ ul.task-list input[type="checkbox"] {
 
 .social {
   display: flex;                  // Flex container for all icons
-  justify-content: space-evenly;  // Even spacing between icons
+  justify-content: space-between;  // Even spacing between icons
   align-items: center;
   flex-wrap: wrap;                // Wrap icons on smaller screens
   text-align: center;
@@ -408,7 +408,7 @@ ul.task-list input[type="checkbox"] {
 
   .contact-icons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;                  // Spread across the container
