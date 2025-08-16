@@ -95,17 +95,15 @@ In parallel, I'm working under Professor [Theodora Chaspari](https://www.colorad
 
 ## Research Interests
 
-## Research Interests
-
-### 1. **Natural Language Understanding and Reasoning**
+#### 1. Natural Language Understanding and Reasoning
 - Natural Language Understanding (NLU) and Reasoning (NLR)
 - Agentic and Neuro-Symbolic reasoning systems
 
-### 2. **Interpretability and Responsible AI**
+#### 2. Interpretability and Responsible AI
 - Interpretable and explainable NLP models
 - Responsible and ethical development of AI systems
 
-### 3. **Interdisciplinary Applications of NLP**
+#### 3. Interdisciplinary Applications of NLP
 - NLP for mental health and well-being
 - AI for Social Good
 

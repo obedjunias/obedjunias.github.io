@@ -398,19 +398,28 @@ ul.task-list input[type="checkbox"] {
 // Social (bottom)
 
 .social {
+  display: flex;                  // Flex container for all icons
+  justify-content: space-evenly;  // Even spacing between icons
+  align-items: center;
+  flex-wrap: wrap;                // Wrap icons on smaller screens
   text-align: center;
+  font-size: 2rem;                // Base font size for icons, adjust if needed
+  padding: 0.5rem 0;
 
   .contact-icons {
-    font-size: 2 rem;  // smaller, adjust as neededfont-size: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;                  // Spread across the container
 
     a {
-      img {
-        width: 2.1rem;
-        height: 2.1rem;
-        margin-bottom: 0.5rem;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0.5rem;           // Horizontal spacing between icons
 
-      svg {
+      img, svg {
         width: 2.1rem;
         height: 2.1rem;
         margin-bottom: 0.5rem;
@@ -423,7 +432,7 @@ ul.task-list input[type="checkbox"] {
 
       i::before {
         color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
 
       &:hover {
@@ -438,8 +447,15 @@ ul.task-list input[type="checkbox"] {
 
   .contact-note {
     font-size: 0.8rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    justify-content: center;       // Center icons on small screens
   }
 }
+
 
 .wechat-modal {
   display: none;
