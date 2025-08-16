@@ -89,18 +89,29 @@ announcements:
 
 <div class="about-content">
   <div class="about-text" markdown="1">
-I'm a second-year Master's student at the [University of Colorado Boulder](https://www.colorado.edu/cs/) advised by Professor [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). I'm broadly interested in Natural Language Processing, with a focus on interpretable AI and structured reasoning systems. My current research involves developing explainable AI systems using entailment trees for multi-step reasoning in question-answering tasks.
+I'm a second-year Master's student at the [University of Colorado Boulder](https://www.colorado.edu/cs/) advised by Professor [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). I'm broadly interested in Natural Language Processing, with a focus on interpretable AI and structured reasoning systems. My current research involves developing interpretable and explainable AI systems using entailment trees to make machine reasoning more transparent and understandable.
 
-## Personal Research Interests
-
-In parallel, I'm working under Professor [Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari) on detecting and mitigating bias and fairness issues in Large Language Models within the mental health domain—a project that stems from my personal interest in ensuring AI systems are equitable and beneficial across diverse populations. This work combines my core interests in NLP with my commitment to responsible AI development.
+In parallel, I'm working under Professor [Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari) on detecting and mitigating bias and fairness issues in Large Language Models within the mental health domain. This work reflects my broader interest in responsible AI and my commitment to building systems that are equitable and beneficial across diverse populations.
 
 ## Research Interests
 
-My research interests span Natural Language Processing, with particular focus on Natural Language Understanding, Natural Language Reasoning, neurosymbolic systems, interpretable and explainable AI systems, fairness and bias mitigation in NLP, AI for Good, and applications of NLP in interdisciplinary domains.
+## Research Interests
 
-**I'm actively seeking opportunities in Natural Language Processing and related areas.**
+### 1. **Natural Language Understanding and Reasoning**
+- Natural Language Understanding (NLU) and Reasoning (NLR)
+- Agentic and Neuro-Symbolic reasoning systems
 
-Feel free to contact me for research collaborations or other engagements.
+### 2. **Interpretability and Responsible AI**
+- Interpretable and explainable NLP models
+- Responsible and ethical development of AI systems
+
+### 3. **Interdisciplinary Applications of NLP**
+- NLP for mental health and well-being
+- AI for Social Good
+
+
+**I’m actively seeking opportunities in NLP and related areas.**  
+Feel free to reach out for research collaborations or other opportunities.
+
   </div>
 </div>
