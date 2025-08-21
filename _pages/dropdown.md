@@ -5,8 +5,8 @@ nav: true
 nav_order: 8
 dropdown: true
 children:
-  - title: bookshelf
-    permalink: /papers/
+  # - title: papershelf
+  #   permalink: /papers/
   - title: divider
   - title: blog
     permalink: /blog/

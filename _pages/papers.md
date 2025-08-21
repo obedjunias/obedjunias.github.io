@@ -1,5 +1,5 @@
 ---
-layout: paper-shelf
+layout: book-shelf
 title: papers
 permalink: /papers/
 nav: false
