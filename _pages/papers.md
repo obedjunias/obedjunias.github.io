@@ -2,7 +2,8 @@
 layout: book-shelf
 title: papers
 permalink: /papers/
-nav: false
+nav: true
+nav_order: 6
 collection: papers
 ---
 

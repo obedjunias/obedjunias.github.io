@@ -4,7 +4,7 @@ permalink: /courses/
 title: courses
 description: Courses I have taken at both CU Boulder and BMSCE.
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 ### Courses taken at CU Boulder:
