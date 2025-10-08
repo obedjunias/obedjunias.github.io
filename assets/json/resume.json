@@ -6,7 +6,7 @@
     "email": "obed.junias@colorado.edu",
     "phone": "720-266-0046",
     "url": "https://linkedin.com/in/obed-junias",
-    "summary": "MS Computer Science student at University of Colorado Boulder specializing in Natural Language Processing, Machine Learning, and Responsible AI. Experienced in building scalable AI solutions and conducting research on LLM bias and fairness.",
+    "summary": "I am a graduate researcher exploring Commonsense Reasoning, Neuro-symbolic NLP, and Responsible ML. My research focuses on developing reasoning frameworks that integrate structured logic with neural representations, with the goal of improving the interpretability, factual consistency, and fairness of LLMs. I aspire to contribute to foundational AI research at the intersection of cognition, reasoning, and ethical deployment.",
     "location": {
       "address": "",
       "postalCode": "80302",
@@ -22,6 +22,39 @@
       }
     ]
   },
+ "research": [
+  {
+    "organization": "Institute of Cognitive Science, CU Boulder",
+    "location": "Boulder, Colorado",
+    "position": "Responsible AI Researcher",
+    "url": "https://www.colorado.edu/ics",
+    "startDate": "2025-01-01",
+    "endDate": "Present",
+    "summary": "Conducting fairness and bias evaluations of large language models (LLaMA, GPT-4, etc.) in mental health classification tasks, analyzing demographic and modality-based disparities in model behavior.",
+    "highlights": [
+      "Implemented fairness-aware loss functions and diagnostic probes for LLM evaluation",
+      "Identified demographic and linguistic biases in model outputs across text and audio modalities",
+      "Co-author of an accepted IEEE-EMBS 2025 paper (arXiv:2509.25795) on algorithmic bias in mental health detection",
+      "Developing frameworks for ethical and responsible AI deployment"
+    ]
+  },
+  {
+    "organization": "University of Colorado Boulder",
+    "location": "Boulder, Colorado",
+    "position": "Graduate Researcher – Medical Ethics and NLP",
+    "url": "https://www.colorado.edu/",
+    "startDate": "2024-09-01",
+    "endDate": "2025-06-01",
+    "summary": "Examining the ethical and commonsense reasoning capabilities of LLMs in clinical and biomedical contexts using controlled evaluation pipelines.",
+    "highlights": [
+      "Developed the Medical Ethics Assessment of LLMs project using a Retrieval-Augmented Generation (RAG) pipeline",
+      "Analyzed model confidence and rationale structures to assess reliability in moral reasoning tasks",
+      "Identified key gaps in ethical reasoning consistency even under knowledge-augmented setups",
+      "Contributing to responsible NLP research focused on model interpretability and societal alignment"
+    ]
+  }
+]
+,
   "work": [
     {
       "name": "Oracle Corporation",
@@ -40,18 +73,6 @@
       "endDate": "2021-07-01",
       "summary": "Built intelligent automation solution with Groovy and Workfusion OCR, optimizing data workflows and integrating text extraction into software robots, increasing speed by 40% and reducing errors by 80%.",
       "highlights": ["Increased automation speed by 40%", "Reduced errors by 80%", "Delivered PoC on Intelligent Business Process Management"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Institute of Cognitive Science, CU Boulder",
-      "location": "Boulder, Colorado",
-      "position": "Responsible AI Researcher",
-      "url": "https://colorado.edu",
-      "startDate": "2025-01-01",
-      "endDate": "Present",
-      "summary": "Conducting bias and fairness evaluation in LLaMA, GPT-4, and other LLMs for mental health NLP tasks, analyzing demographic and linguistic biases across multi-modal datasets.",
-      "highlights": ["Implemented fairness metrics for LLM evaluation", "Identified biases in pronoun usage and emotional tone", "Contributing to ethical AI research"]
     }
   ],
   "education": [
