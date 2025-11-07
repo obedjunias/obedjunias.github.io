@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: obed_junias2.jpg
+  image: obed_junias3.jpg
   image_circular: false
 
 # selected_papers: true
@@ -89,16 +89,18 @@ announcements:
 
 <div class="about-content">
   <div class="about-text" markdown="1">
-I'm a second-year Master's student at the [University of Colorado Boulder](https://www.colorado.edu/cs/) advised by Professor [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). I'm broadly interested in Natural Language Processing, with a focus on interpretable AI and structured reasoning systems. My current research involves developing interpretable and explainable AI systems using entailment trees to make machine reasoning more transparent and understandable.
+I'm a second-year Master's student in Computer Science at the [University of Colorado Boulder](https://www.colorado.edu/cs/), advised by [Dr. Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). My ongoing research focuses on developing **interpretable reasoning systems and benchmarks** for **commonsense and logical inference** in natural language processing. In particular, I am exploring **entailment tree–based frameworks** as a way to make machine reasoning more transparent, structured, and logically grounded.
 
-In parallel, I'm working under Professor [Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari) on detecting and mitigating bias and fairness issues in Large Language Models within the mental health domain. This work reflects my broader interest in responsible AI and my commitment to building systems that are equitable and beneficial across diverse populations.
+In parallel, I work with [Dr. Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari) on **bias detection and fairness evaluation** in LLMs, particularly within the **mental health domain**. This work reflects my broader commitment to **responsible and equitable AI**, aiming to build models that remain trustworthy across diverse populations.
+
+Looking ahead, I am interested in exploring how **structured reasoning** and **social or moral alignment** can be incorporated into **foundation model pretraining**, and in studying how models internalize, perceive, and compare these signals during **inference and generation**. In parallel, I aim to investigate **reflective post-training frameworks**, including **reinforcement learning (RL)–based approaches**, that encourage models to **reflect, revise, and align with human values**. From a **systems perspective**, I am also interested in how these mechanisms can be implemented and evaluated at scale in **open, transparent, and sustainable model ecosystems**.
 
 ## Research Interests
 
-- **Natural Language Understanding and Reasoning:** Natural Language Understanding (NLU) and Reasoning (NLR), Agentic and Neuro-Symbolic reasoning systems  
-- **Interpretability and Responsible AI:** Interpretable and explainable NLP models, Responsible and ethical development of AI systems  
-- **Interdisciplinary Applications of NLP:** NLP for mental health and AI for social good
-
+- **Natural Language Processing, Understanding, and Reasoning:** Commonsense reasoning, neuro-symbolic methods for interpretable NLP  
+- **Responsible and Interpretable AI for Social Good:** Fairness and bias mitigation, social and moral alignment in LLMs, ethical and equitable development of AI 
+- **Agentic and Reflective Systems:** Self-reflective and introspective agents, multi-agent collaboration
+- **MLSys and Reinforcement Learning:** Open, transparent, and sustainable model ecosystems, reasoning-aware pretraining, reflective post-training, and reinforcement learning for alignment
 
 **I’m actively seeking opportunities in NLP and related areas.**  
 Feel free to reach out for research collaborations or other opportunities.
