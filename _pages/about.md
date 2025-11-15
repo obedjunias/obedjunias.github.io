@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: obed_junias3.jpg
+  image: obed_junias_pfp.jpg
   image_circular: false
 
 # selected_papers: true
