@@ -4,6 +4,7 @@ layout: post
 date: 2025-06-10 16:11:00-0400
 inline: true
 related_posts: false
+published: false
 ---
 
 Joined BLAST Lab at CU Boulder and started working on reasoning systems using entailment trees.

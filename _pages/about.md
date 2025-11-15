@@ -45,7 +45,7 @@ announcements:
 /* Desktop view: add spacing between image and text */
 @media (min-width: 769px) {
   .profile {
-    margin-left: 5 px;
+    margin-left: 5px;
   }
 }
 
@@ -89,11 +89,13 @@ announcements:
 
 <div class="about-content">
   <div class="about-text" markdown="1">
-I'm a second-year Master's student in Computer Science at the [University of Colorado Boulder](https://www.colorado.edu/cs/), advised by [Dr. Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). My ongoing research focuses on developing **interpretable reasoning systems and benchmarks** for **commonsense and logical inference** in natural language processing. In particular, I am exploring **entailment tree–based frameworks** as a way to make machine reasoning more transparent, structured, and logically grounded.
+I'm a second-year Master's student in Computer Science at the [University of Colorado Boulder](https://www.colorado.edu/cs/), advised by [Dr. Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). My work sits at the intersection of interpretable reasoning and responsible AI.
 
-In parallel, I work with [Dr. Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari) on **bias detection and fairness evaluation** in LLMs, particularly within the **mental health domain**. This work reflects my broader commitment to **responsible and equitable AI**, aiming to build models that remain trustworthy across diverse populations.
+My current research focuses on developing **interpretable reasoning systems and benchmarks** for **commonsense and logical inference** in natural language processing. I am exploring **entailment tree-based frameworks** as a way to make machine reasoning more transparent, structured, and logically grounded. In parallel, I work with [Dr. Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari) on **bias detection and fairness evaluation** in LLMs, particularly within the **mental health domain**—work that reflects my broader commitment to building AI systems that remain trustworthy and equitable across diverse populations.
 
-Looking ahead, I am interested in exploring how **structured reasoning** and **social or moral alignment** can be incorporated into **foundation model pretraining**, and in studying how models internalize, perceive, and compare these signals during **inference and generation**. In parallel, I aim to investigate **reflective post-training frameworks**, including **reinforcement learning (RL)–based approaches**, that encourage models to **reflect, revise, and align with human values**. From a **systems perspective**, I am also interested in how these mechanisms can be implemented and evaluated at scale in **open, transparent, and sustainable model ecosystems**.
+**Looking ahead**, I am interested in exploring how **structured reasoning** and **social or moral alignment** can be incorporated into **foundation model pretraining**, and how models internalize, perceive, and compare these signals during **inference and generation**. I also aim to investigate **reflective post-training frameworks**, including **reinforcement learning (RL)-based approaches**, that encourage models to reflect, revise, and align with human values.
+
+From a **systems perspective**, I am interested in how these mechanisms can be implemented and evaluated at scale in **open, transparent, and sustainable model ecosystems**.
 
 ## Research Interests
 
