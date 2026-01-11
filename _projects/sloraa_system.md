@@ -2,10 +2,14 @@
 layout: page
 title: S-LoRAA - Scalable Multi-Agent LLM System
 description: Dynamic LoRA adapter orchestration for efficient multi-agent inference pipelines
-img: 
+img:
 importance: 1
 category: work
 related_publications: false
+---
+
+**Quick Navigation:** [Overview](#overview) • [System Architecture](#system-architecture) • [Experimental Results](#experimental-results) • [Technical Contributions](#technical-contributions) • [Impact & Insights](#impact-and-insights) • [Conclusion](#conclusion)
+
 ---
 
 ## Overview

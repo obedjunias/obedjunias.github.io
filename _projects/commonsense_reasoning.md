@@ -2,10 +2,14 @@
 layout: page
 title: Commonsense Reasoning with Logical Entailment Trees
 description: Developing benchmarks and evaluation methods for logical commonsense reasoning
-img: 
+img:
 importance: 1
 category: work
 related_publications: false
+---
+
+**Quick Navigation:** [Overview](#overview) • [Research Progress](#research-progress) • [Research Goals](#research-goals)
+
 ---
 
 ## Overview

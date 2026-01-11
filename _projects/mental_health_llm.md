@@ -2,10 +2,14 @@
 layout: page
 title: Resource-Efficient LLM Fine-tuning for Mental Health Support
 description: Parameter-efficient adaptation of LLMs for mental health conversation support
-img: 
+img:
 importance: 2
 category: work
 related_publications: false
+---
+
+**Quick Navigation:** [Overview](#overview) • [Objective](#objective) • [Approach](#approach) • [Key Benefits](#key-benefits) • [Impact](#impact) • [Technical Insights](#technical-insights) • [Future Directions](#future-directions)
+
 ---
 
 ## Overview

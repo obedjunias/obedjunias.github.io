@@ -2,10 +2,14 @@
 layout: page
 title: E2E Text-to-Comic Generation Pipeline
 description: Scalable cloud-native system for transforming textual narratives into comic strips
-img: 
+img:
 importance: 2
 category: work
 related_publications: false
+---
+
+**Quick Navigation:** [Overview](#overview) • [System Architecture](#system-architecture) • [Processing Pipeline](#processing-pipeline) • [Technical Implementation](#technical-implementation) • [Testing & Validation](#testing-and-validation) • [Performance Metrics](#performance-metrics) • [Challenges & Solutions](#challenges-and-solutions) • [Future Enhancements](#future-enhancements)
+
 ---
 
 ## Overview

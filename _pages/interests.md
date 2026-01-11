@@ -4,7 +4,7 @@ title: interests
 permalink: /interests/
 description: Beyond research - books, hobbies, photography, and more
 nav: true
-nav_order: 7
+nav_order: 11
 display_categories: [reading, hobbies, photography, travel]
 horizontal: false
 ---

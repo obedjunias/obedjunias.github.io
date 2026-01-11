@@ -3,7 +3,7 @@ layout: book-shelf
 title: papers
 permalink: /papers/
 nav: true
-nav_order: 6
+nav_order: 7
 collection: papers
 ---
 ## Papers that I am reading, have read, or will read
