@@ -1,0 +1,278 @@
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+% \usepackage[scale=0.9]{geometry}
+\usepackage[margin=0.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+% \usepackage[colorlinks=true]{hyperref} % loaded later with consistent options
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+
+% hanging publications: 1st line starts at beginning of line, 
+% further lines are placed a bit to the right
+\usepackage{hanging}
+\newcommand\publication[1]{%
+	\smallskip\par\hangpara{1.5em}{1}\bibentry{#1}\smallskip
+}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{parskip} 
+\usepackage{relsize}
+\usepackage{scrextend}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6.5pt}{6.5pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+\usepackage{lmodern}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+  \Huge {\textbf{Obed Junias} }\\[1pt]
+  \href{mailto:obed.junias@colorado.edu}{\raisebox{-0.05\height}\faEnvelope \ obed.junias@colorado.edu} \ $|$ \
+  \href{https://obedjunias.github.io}{\raisebox{-0.05\height}\faGlobe\ obedjunias.com} \ $|$ \
+  \href{https://github.com/obedjunias19}{\raisebox{-0.05\height}\faGithub \ obedjunias19} \ $|$ \
+  \href{https://linkedin.com/in/obed-junias}{\raisebox{-0.05\height}\faLinkedin\ obed-junias} \ $|$ \
+  \href{tel:+1720-266-0046}{\raisebox{-0.05\height}\faMobile \ 720-266-0046} \\
+\end{tabularx}
+
+\color{BlueViolet}
+\section*{Research Statement}
+\color{black}
+I study how large language models reason over information and why fluent generation can mask brittle or spurious inference. My work focuses on designing structured evaluation frameworks that expose hidden reasoning failures in multi-step commonsense tasks beyond surface-level accuracy.
+
+A central direction of my research is understanding how training-data distributions shape observed reasoning behavior. In particular, I study how increasing reliance on model-generated data shifts the effective distribution over time, and how structured benchmarks can detect and characterize these shifts.
+
+More broadly, I am interested in how AI systems retrieve, represent, and reason over knowledge, and in building evaluation methods that make these processes observable and reliable for real-world information-seeking systems.
+
+\color{BlueViolet}
+\section*{Research \& Technical Interests}
+\color{black}
+
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+\textbf{Research Interests} & \textbf{Technical Interests} \\
+Commonsense reasoning in LLMs & LLM serving and inference systems \\
+Robust evaluation of multi-step reasoning & Distributed training and GPU optimization \\
+Information retrieval and grounded reasoning & Multi-agent LLM systems \\
+Benchmark design and synthetic reasoning datasets & Retrieval-augmented generation (RAG) systems \\
+Human–AI interaction in info-seeking systems & LLM evaluation and benchmarking \\
+\end{tabularx}
+
+\color{BlueViolet}
+\section*{Education}
+\color{black}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{M.S. in Computer Science}, \textbf{University of Colorado Boulder} & Aug 2024 – May 2026 \\
+\textit{Courses:} NLP, Deep Natural Language Understanding, Datacenter-Scale Computing, Neurosymbolic NLP & (GPA: 4.0/4.0)
+\end{tabularx}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{B.E. in Computer Science}, BMS College of Engineering & Aug 2017 – Aug 2021 \\
+\textit{Relevant Courses:} Algorithms, Databases, Operating Systems, Machine Learning
+\end{tabularx}
+
+\color{BlueViolet}
+\section{Publications}
+\color{black}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=1.5pt]
+\item \textbf{Junias, Obed*}, et al. \textit{Assessing Algorithmic Bias in Language-Based Depression Detection: A Comparison of DNN and LLM Approaches.} IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI), 2025. (Peer-reviewed, Presented). \href{https://ieeexplore.ieee.org/abstract/document/11269509}{https://ieeexplore.ieee.org/abstract/document/11269509}
+
+\item \textbf{Junias, Obed}, and Maria Leonor Pacheco. \textit{LOGICAL-COMMONSENSEQA: A Benchmark for Logical Commonsense Reasoning.} arXiv preprint arXiv:2601.16504, 2026. \href{https://arxiv.org/abs/2601.16504}{https://arxiv.org/abs/2601.16504}
+\end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+\color{BlueViolet}
+\section{Research Experience}
+\color{black}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Structured Commonsense Reasoning and Benchmarking} & June 2025 – Present \\
+\multicolumn{2}{@{}X@{}}{\textit{Advisor: Maria Leonor Pacheco, BLAST Lab, CU Boulder}} \\
+\end{tabularx}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
+    \item Designed \textbf{LOGICAL-COMMONSENSEQA}, a benchmark with structurally composed questions and answer options to isolate multi-fact and compositional inference in LLMs.
+    \item Developed evaluation protocols to analyze failure modes of chain-of-thought and few-shot prompting, identifying cases where fluent reasoning masks incorrect logical inference.
+    \item Designing entailment-like reasoning representations to study alignment between predicted answers and underlying reasoning structure.
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Responsible LLM Evaluation for Mental Health} & Jan 2025 – Nov 2025 \\
+\multicolumn{2}{@{}X@{}}{\textit{Advisor: Theodora Chaspari, HUBBS Lab, CU Boulder}} \\
+\end{tabularx}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
+    \item Built \textbf{large-scale LLM evaluation pipelines} to assess demographic bias and subgroup performance of LLMs (e.g., LLaMA, GPT-4) for mental health classification tasks.
+    \item Studied how prompting strategies and fairness-aware losses affect reasoning consistency and robustness in low-resource and imbalanced data settings.
+    \item Developed diagnostic metrics to characterize bias and reasoning instability beyond aggregate accuracy.
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Efficient Multi-Agent LLM Inference with Parameter-Efficient Adaptation} & Aug 2025 – Dec 2025 \\
+\multicolumn{2}{@{}X@{}}{\textit{ML Systems Engineering, CU Boulder}} \\
+\end{tabularx}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
+    \item Designed a modular inference framework studying how parameter-efficient adapters enable scalable multi-agent LLM systems.
+    \item Implemented dynamic \textbf{LoRA adapter loading and scheduling} under strict GPU memory constraints, demonstrating a \textbf{20–90$\times$ lower cumulative switching overhead} versus full-model loads.
+\end{itemize}
+
+\color{BlueViolet}
+\section{Industry Experience}
+\color{black}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Senior Member of Technical Staff} at  Oracle Corporation & \hfill Aug 2021 - Aug 2024 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+        \item Designed and implemented scalable automation frameworks (\textbf{Python, TestNG, BATS}) for \href{https://www.oracle.com/database/technologies/appdev/rest.html}{Oracle REST Data Services} and \href{https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/}{SQLcl}, \textbf{reducing manual effort by 95\%}.
+        \item Built a Python-based migration framework to automate \href{https://apex.oracle.com/en/}{Oracle APEX} application transfers, supporting \textbf{200+ internal users}.
+        \item Led technical validation for a new Oracle Cloud DB Tools feature, coordinating a 15-engineer effort and achieving production readiness in 2 months.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Machine Learning Engineer Intern} at  Hewlett Packard Enterprise & \hfill Feb 2021 - Jul 2021 \\ 
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+        \item Built OCR-based automation pipelines using Groovy and WorkFusion to process unstructured documents, improving processing speed by 40\% and reducing errors by 80\%.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Samsung Research Intern} at Samsung Research Institute Bangalore & \hfill May 2020 - Jul 2020 \\
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+%         \item Designed an RL prototype (Q-learning) on RaspberryPi nodes to optimize Wi-Fi mesh networks.
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+
+\color{BlueViolet}
+\section{Relevant Research \& Development Projects}
+\color{black}
+
+\begin{itemize}
+  \item \textbf{Adapter-Based Multi-Agent LLM Serving System}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Built a \textbf{multi-agent LLM serving system} executing 14 specialized agents as dynamic \textbf{LoRA adapters} over a shared Llama-3B backbone.
+      \item Implemented \textbf{dynamic adapter loading/eviction} under strict \textbf{5--15\,GB GPU memory budgets}.
+      \item Observed \textbf{LoRA loads in < 1s} versus \textbf{9-22s full-model loads}, yielding \textbf{20-90x lower switching overhead}.
+      \item \textbf{Tech:} vLLM, PyTorch, Transformers, PEFT/LoRA, CUDA, Python.
+    \end{itemize}
+
+  \item \textbf{ScoutR: Agentic Football Transfer Intelligence Platform}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Designed an \textbf{agentic platform} monitoring player performance globally, surfacing candidates via tactical/financial fits.
+      \item Built a \textbf{multi-agent pipeline (LangGraph)} parsing queries into \textbf{Pydantic schemas} with \textbf{RAG (ChromaDB)} grounding.
+      \item Engineered a \textbf{streaming UX (SSE)} exposing real-time agent reasoning steps.
+      \item \textbf{Tech:} Gemini, LangGraph, Pydantic, ChromaDB, RAG, SSE.
+    \end{itemize}
+
+  \item \textbf{GradCompass: Multi-Agent LLM Application Assistant}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Developed a \textbf{production-grade multi-agent system} for application guidance and interview simulation.
+      \item Designed an \textbf{8-agent architecture} with role-specialization, tool use, and shared memory.
+      \item \textbf{Tech:} Python, LangChain, RAG, Vector Databases, Multi-Agent Orchestration.
+    \end{itemize}
+
+  \item \textbf{Text-to-Comic Generation Platform}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Built a \textbf{cloud-native AI system} converting narratives into comic strips using LLMs and diffusion models.
+      \item Managed a \textbf{modular asynchronous pipeline} on \textbf{GKE} using Pub/Sub, Cloud Storage, and Redis.
+      \item \textbf{Tech:} React, Node.js, Python, GKE, Pub/Sub, Redis, Stable Diffusion.
+    \end{itemize}
+
+  \item \textbf{Lost in Plot: Contrastive Learning for Semantic Retrieval}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Built a \textbf{dual-encoder retrieval system} for vague natural-language movie queries.
+      \item Fine-tuned a \textbf{BERT-based encoder} using \textbf{multi-task contrastive loss} to align user descriptions with metadata.
+      \item \textbf{Tech:} PyTorch, BERT, Contrastive Learning, Information Retrieval.
+    \end{itemize}
+
+  \item \textbf{Medical Ethics Assessment of Large Language Models}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Designed protocols to assess ethical reasoning of LLMs in medical decision-making scenarios.
+      \item Built a multiple-choice benchmarking pipeline to analyze how external knowledge affects reasoning consistency.
+    \end{itemize}
+\end{itemize}
+
+\color{BlueViolet}
+\section{Skills}
+\color{black}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  \textbf{Languages} & Python, SQL, Java, C++, Groovy \\
+  \textbf{LLM Systems} & LLM Serving, RAG Pipelines, Multi-Agent Systems, Prompt Engineering, Evaluation \\
+  \textbf{ML & DL} & SFT, PEFT (LoRA/QLoRA), Transformers, Contrastive Learning, BERT, RL \\
+  \textbf{Infrastructure} & CUDA, GPU Memory Optimization, Docker, Kubernetes (GKE), Redis, Pub/Sub \\
+  \textbf{Frameworks} & PyTorch, Transformers, vLLM, LangChain, LangGraph, Triton, Scikit-Learn \\
+  \textbf{Cloud/Data} & Vector Databases (ChromaDB, FAISS), AWS, GCP, OCI, Oracle DB
+\end{tabularx}
+
+\color{BlueViolet}
+\section{Awards \& Teaching}
+\color{black}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+  \item \textbf{NSF--EMBS--Google Young Professional NextGen Scholar}, \textit{IEEE EMBS BHI Conference}, 2025
+  \item \textbf{Student Grading Assistant}, CU Boulder (Machine Learning CSCI 4622) - Jan 2025 – Present
+\end{itemize}
+
+\vfill
+\end{document}

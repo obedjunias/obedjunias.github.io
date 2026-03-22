@@ -1,0 +1,533 @@
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,11pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+% \usepackage[scale=0.9]{geometry}
+\usepackage[margin=0.4in]{geometry}
+
+
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage{bibentry}
+\makeatletter\let\saved@bibitem\@bibitem\makeatother
+\usepackage[unicode,draft=false,colorlinks=true,breaklinks]{hyperref}
+\makeatletter\let\@bibitem\saved@bibitem\makeatother
+
+
+% hanging publications: 1st line starts at beginning of line, 
+% further lines are placed a bit to the right
+\usepackage{hanging}
+\newcommand\publication[1]{%
+	\smallskip\par\hangpara{1.5em}{1}\bibentry{#1}\smallskip
+}
+
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{relsize}
+\usepackage{scrextend}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6.5pt}{6.5pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+\usepackage{lmodern}
+
+
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+  \Huge {\textbf{Obed Junias} }\\[1pt]
+  \href{mailto:obed.junias@colorado.edu}{\raisebox{-0.05\height}\faEnvelope \ obed.junias@colorado.edu} \ $|$ \
+  \href{https://obedjunias.github.io}{\raisebox{-0.05\height}\faGlobe\ obedjunias.com} \ $|$ \
+  % \href{https://github.com/obedjunias19?tab=repositories}{\raisebox{-0.05\height}\faGithub \ obedjunias19} \ $|$ \
+  \href{https://github.com/obedjunias19}{\raisebox{-0.05\height}\faGithub \ obedjunias19} \ $|$ \
+  \href{https://linkedin.com/in/obed-junias}{\raisebox{-0.05\height}\faLinkedin\ obed-junias} \ $|$ \
+  \href{tel:+1720-266-0046}{\raisebox{-0.05\height}\faMobile \ 720-266-0046} \\
+\end{tabularx}
+
+
+\color{BlueViolet}
+\section*{Professional Summary}
+\color{black}
+LLM Systems \& Evaluation Engineer with experience building scalable ML and NLP systems, distributed pipelines, and cloud-native infrastructure. Strong background in Python, SQL, production ML, and Kubernetes, with industry experience at Oracle and HPE. Interested in data/ML roles involving large-scale data processing, cloud, LLM evaluation, and LLM adaptation (SFT).
+
+\color{BlueViolet}
+\section{Industry Experience}
+\color{black}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Senior Member of Technical Staff} at  Oracle Corporation & \hfill Aug 2021 - Aug 2024 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+        \item Designed and implemented scalable automation frameworks in Python, TestNG, and BATS, \textbf{reducing manual validation effort by 95\%} across \href{https://www.oracle.com/database/technologies/appdev/rest.html} {Oracle REST Data Services} and \href{https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/}{SQLcl}.
+        \item Built a Python-based migration framework to automate \href{https://apex.oracle.com/en/} {Oracle APEX} application transfers,  improving deployment reliability and supporting \textbf{200+ internal users}.
+        \item \textbf{Led validation and release readiness} for a new \href{https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-tools.html#GUID-8B5AAB5D-21B7-4EFC-8018-2AE18642FAFB}{Oracle Cloud DB Tools} feature, coordinating a \textbf{15-engineer} effort and delivering production readiness in 2 months.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Machine Learning Engineer Intern} at  Hewlett Packard Enterprise & \hfill Feb 2021 - Jul 2021 \\ 
+%\textit{Tech Stack: Python, Groovy, Workfusion} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+        \item Built intelligent automation pipelines using Groovy and \href{https://www.workfusion.com/intelligent-document-processing/} {WorkFusion} OCR to process unstructured documents, \textbf{improving processing speed by 40\% and reducing errors by 80\%.}
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\color{BlueViolet}
+\section{Relevant Projects}
+\color{black}
+
+% \begin{itemize}
+% \item \textbf{Adapter-Based Multi-Agent LLM Serving System (vLLM)}
+% \hfill \emph{ML Systems Engineering Project}
+% \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+%     \item Designed and implemented a \textbf{multi-agent LLM serving system} using \textbf{vLLM}, where 14 task-specialized agents are executed as dynamic \textbf{LoRA adapters} over a shared \textbf{Llama-3.2-3B-Instruct} backbone.
+%     \item Implemented \textbf{dynamic adapter lifecycle management} (load, execution, eviction) with adapters streamed from CPU memory into GPU memory at runtime, enabling execution under strict \textbf{5\,GB, 7.5\,GB, and 15\,GB GPU memory budgets}.
+%     \item Built controlled \textbf{execution environments} (global random shuffle, per-topic blocks, and round-robin ordering) to systematically vary adapter-switching frequency and model locality.
+%     \item Evaluated multiple \textbf{scheduling policies} (LRU, Lookahead, Round-Robin) to study how scheduling decisions interact with memory pressure and switching behavior in agentic workloads.
+%     \item Benchmarked both \textbf{task-level accuracy} and \textbf{system-level performance}, including adapter/model load counts, per-load latency, cumulative load time, inference latency, throughput, and GPU utilization.
+%     \item Demonstrated that \textbf{LoRA adapters load in under 1 second} while full-model loads require \textbf{9--22 seconds}, resulting in \textbf{20--90$\times$ lower cumulative switching overhead} under high-entropy workloads with up to \textbf{140 adapter transitions per run}.
+%     \item Identified hard feasibility boundaries: full-model specialization is \textbf{infeasible at 5\,GB} and incurs extreme switching latency at 7.5\,GB, while LoRA-based agents remain stable and usable across all memory tiers.
+%     \item Ran end-to-end experiments on a \textbf{single NVIDIA A100 40GB GPU} (CUDA 12.3, PyTorch 2.1), disabling I/O caching and batching to isolate true disk-to-GPU transfer and switching costs.
+%     \item \textbf{Tech:} vLLM, PyTorch, HuggingFace Transformers, PEFT/LoRA, CUDA, Python
+% \end{itemize}
+
+\begin{itemize}
+\item \textbf{Adapter-Based Multi-Agent LLM Serving System}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+    \item Built a \textbf{custom multi-agent LLM serving system} executing 14 task-specialized agents as dynamic \textbf{LoRA adapters} over a shared Llama-3B backbone, and \textbf{benchmarked against vLLM-style serving}.
+    \item Implemented \textbf{dynamic adapter loading, eviction, and scheduling} under strict \textbf{5--15\,GB GPU memory budgets}, streaming adapters from CPU to GPU at runtime.
+    \item Evaluated high-entropy agentic workloads (up to \textbf{140 adapter switches per run}) across multiple schedulers, benchmarking \textbf{latency, throughput, GPU utilization, and switching overhead}.
+    \item Demonstrated that \textbf{LoRA adapters load in less than 1s} versus \textbf{9-22s full-model loads}, yielding \textbf{20-90x lower cumulative switching overhead} and enabling execution where full models are infeasible.
+    \item \textbf{Tech:} vLLM, PyTorch, HuggingFace Transformers, PEFT/LoRA, CUDA, Python
+\end{itemize}
+
+\item \textbf{ScoutR: Agentic Football Transfer Intelligence Platform}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+    \item Built \textbf{ScoutR}, an agentic LLM system that analyzes global football player data and recommends transfer targets based on \textbf{tactical fit, statistical performance, and financial constraints}.
+    \item Designed a \textbf{LangGraph-based multi-agent pipeline} where Gemini parses scouting queries into structured \textbf{Pydantic schemas}, enabling tool calling, typed intermediate states, and downstream reasoning.
+    \item Implemented a \textbf{RAG pipeline} over StatsBomb event data using \textbf{ChromaDB}, grounding agent outputs in statistical evidence and reducing hallucinated comparisons during player evaluation.
+    \item Architected a \textbf{fault-tolerant multi-model inference layer} (Gemini $\rightarrow$ Claude $\rightarrow$ fallback) to handle API rate limits and outages while maintaining uninterrupted agent workflows.
+    \item Built \textbf{real-time streaming agent execution} using \textbf{Server-Sent Events (SSE)}, exposing intermediate reasoning steps and supporting \textbf{long-horizon tasks} in a single interactive interface.
+    \item \textbf{Tech:} LangGraph, Pydantic, ChromaDB, RAG, Prompt Engineering
+\end{itemize}
+
+\item \textbf{GradCompass: Multi-Agent LLM Application Assistant}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+    \item Built a \textbf{production-grade multi-agent LLM system} for personalized graduate-application guidance, document review, and mock interview simulation.
+    \item Designed an \textbf{8-agent architecture} with role-specialized agents and a centralized orchestration layer.
+    \item Implemented \textbf{agentic execution and communication patterns} and integrated a \textbf{Retrieval-Augmented Generation (RAG)} pipeline to ground recommendations in curated program and admissions data.
+    \item Implemented agent coordination and response synthesis for coherent outputs across multi-step workflows.
+    \item \textbf{Tech:} Python, LangChain, LLM APIs, RAG, Vector Databases, Multi-Agent Orchestration
+\end{itemize}
+
+\item \textbf{End-to-End Text-to-Comic Generation Platform}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+    \item Built a \textbf{production-grade, cloud-native AI system} that converts natural-language narratives into comic strips using \textbf{LLMs and diffusion models}, with a \textbf{React frontend} and \textbf{Node.js backend}.
+    \item Designed a \textbf{modular, asynchronous pipeline} deployed on \textbf{GKE}, using \textbf{Pub/Sub} for orchestration, \textbf{Cloud Storage} for persistence, and \textbf{Redis} for hot-path caching.
+    \item Implemented \textbf{OAuth 2.1-based authentication} and per-request isolation, supporting \textbf{100+ users} and sustaining \textbf{20--30 concurrent generation jobs}.
+    \item Reduced median end-to-end latency by \textbf{35--45\%} through caching, pipeline parallelism, and reuse of intermediate artifacts under concurrent load.
+    \item \textbf{Tech:} React, Node.js, Python, GKE, Pub/Sub, Redis, Cloud Storage, GPT, Stable Diffusion
+\end{itemize}
+
+
+\item \textbf{Lost in Plot: Contrastive Learning-Based Movie Retrieval}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+    \item Built a semantic retrieval system for \textbf{“tip-of-the-tongue” movie search}, handling vague natural-language queries, and constructed a \textbf{100K+ example synthetic dataset} for training and evaluation.
+    \item Fine-tuned a \textbf{BERT-based dual encoder} using a \textbf{multi-task contrastive loss} to align user descriptions with structured movie metadata.
+    \item Outperformed a \textbf{GPT-4 few-shot baseline} on \textbf{Recall@K and MRR}, with strong retrieval quality.
+    \item \textbf{Tech:} PyTorch, BERT, Contrastive Learning, Information Retrieval
+\end{itemize}
+
+\end{itemize}
+
+\color{BlueViolet}
+\section{Skills}
+\color{black}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  \textbf{Languages} & Python, SQL, Java, C++ \\
+  % \textbf{ML Techniques} & Regression, Naive Bayes, Random Forests, SVMs, Neural Networks \\
+  \textbf{LLM Systems} & LLM Serving, LLM Evaluation, RAG Pipelines, Multi-Agent Systems and Tools \\
+  \textbf{LLM Training} & Pre-Training, Supervised Fine-Tuning, Transformers, PyTorch DDP \\
+  \textbf{ML Infrastructure} & CUDA, FlashAttention, Quantization, GPU Memory Optimization \\
+  \textbf{Frameworks} & PyTorch, Triton, Transformers, vLLM, LangChain, LangGraph \\
+  \textbf{Systems \& Cloud} & Docker, Kubernetes, Redis, Vector Databases, AWS, GCP, OCI
+
+\end{tabularx}
+
+%Industry Experience
+\color{BlueViolet}
+\section{Research Experience}
+\color{black}
+
+\begin{tabularx}{\linewidth}{ @{}X r@{} }
+  \textbf{Responsible LLM Evaluation for Mental Health Applications} & Peer-reviewed (IEEE-EMBS 2025)\\
+\end{tabularx}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
+  \item Built large-scale \textbf{LLM evaluation pipelines} measuring demographic bias, subgroup performance, and robustness for mental-health classification across GPT-4 and LLaMA models.
+  \item Implemented \textbf{in-context prompting} and \textbf{fairness-aware losses} to mitigate bias in low-resource settings.
+  \item Developed diagnostic metrics to quantify subgroup performance, consistency, and bias across model variants.
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{ @{}X r@{} }
+  \textbf{Commonsense Reasoning with Logical Entailment Trees} & \\
+\end{tabularx}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
+  \item Designed structured benchmarks and evaluation pipelines to assess multi-step commonsense reasoning in LLMs.
+  \item Analyzed failure modes of chain-of-thought and n-shot prompting under compositional reasoning tasks.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\color{BlueViolet}
+\section*{Education}
+\color{black}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{M.S. in Computer Science}, \textbf{University of Colorado Boulder} & Aug 2024 – May 2026 \\
+\textit{Courses:} NLP, Deep Natural Language Understanding, Datacenter-Scale Computing & (GPA: 4.0/4.0)
+\end{tabularx}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{B.E. in Computer Science}, BMS College of Engineering & Aug 2017 – Aug 2021 \\
+\textit{Relevant Courses:} Algorithms, Databases, Operating Systems, Machine Learning
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+\color{BlueViolet}
+\section*{TECHNICAL INTERESTS}
+\color{black}
+Distributed Systems • ML Systems • Scalable LLM Applications • Multi-Agent Architectures • FlashAttention • Supervised Fine-Tuning (SFT) • LLM Evaluation • Quantization • Distributed Training (PyTorch DDP)
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\color{BlueViolet}
+\section{Publications}
+\color{black}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=1.5pt]
+\item \textbf{Junias, Obed*}, et al. \textit{Assessing Algorithmic Bias in Language-Based Depression Detection: A Comparison of DNN and LLM Approaches.} IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI), 2025. (Peer-reviewed, Presented). \href{https://ieeexplore.ieee.org/abstract/document/11269509}{https://ieeexplore.ieee.org/abstract/document/11269509}
+
+\item \textbf{Junias, Obed}, and Maria Leonor Pacheco. \textit{LOGICAL-COMMONSENSEQA: A Benchmark for Logical Commonsense Reasoning.} arXiv preprint arXiv:2601.16504, 2026. \href{https://arxiv.org/abs/2601.16504}{https://arxiv.org/abs/2601.16504}
+\end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+
+
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Undergraduate Researcher} at {B.M.S College of Engineering} & \hfill Aug 2020 - Mar 2021  \\
+% \textit{Skills: scikit-learn, NLTK, Flask, Computer Vision } \href{https://github.com/obedjunias19/ProEns} {\raisebox{-0.05\height}\faGithub } \\[3.75pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+%     \item \textbf{Led a 4-member team} to build an AI app addressing overspending by categorizing purchases, analyzing patterns, and issuing alerts when spending neared predefined limits.
+%     \item Curated a \textbf{100,000 row} dataset, developed the \textbf{NLP pre-processing module}, and implemented an \textbf{ensemble model (SVM, Naive Bayes, Random Forest, Logistic Regression)}, achieving a \textbf{95\% F1-score}.
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Student Grading Assistant-II} at CU Boulder & \hfill Jan 2025 - May 2025 \\ 
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+%         \item Grading course assignments, exams and projects for a senior-level Machine Learning (CSCI 4622) course, ensuring fair and consistent grading.
+%         \item Providing feedback to students on algorithm implementations, model evaluation, and theoretical concepts.
+%         \item Assisting in maintaining academic integrity and improving course assessment methodologies.
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+
+%\begin{tabularx}{\linewidth}{ @{}l r@{} }
+%\textbf{Samsung Research Intern} at {Samsung Research Institute}, Bangalore, India & \hfill May 2020 - Jul 2020  \\
+%\multicolumn{2}{@{}X@{}}{
+%\begin{minipage}[t]{\linewidth}
+ %   \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+%        \item Designed an RL prototype employing Q-learning on RaspberryPi nodes to optimize Wi-Fi mesh networks.
+  %      \item Researched AI algorithms, 802.11ac protocols, and QoS mechanisms.
+%    \end{itemize}
+ %   \end{minipage}
+%}
+%\end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{ML Research Intern} at  AXISCADES, Bangalore, India & \hfill Jul 2019 - Sept 2019 \\
+% \textit{Skills:  nltk, PyTorch} \\[3.75pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%     \item Contributed to the development of Automatic Speech Recognition for transcription \& subtitle display.
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+
+% \color{BlueViolet}
+% \section{Publications}
+% \color{black}
+% \begin{itemize}
+%     \item \textbf{Junias, Obed}, et al. "Do LLMs 'Get' Medical Ethics? Probing Knowledge and Reasoning Through Multiple-Choice Evaluation." \textit{Submitted to IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI)}. (Rebuttal phase)
+% \end{itemize}
+% \color{BlueViolet}
+% \section*{Awards and Recognition}
+% \color{black}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+% \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=1.5pt]
+%     \item \textbf{NSF--EMBS--Google Young Professional NextGen Scholar}, \textit{IEEE EMBS BHI Conference}, 2025
+% \end{itemize}
+% \end{minipage}
+% }
+% \end{tabularx}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Skills
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{ML Research Intern} at  AXISCADES, Bangalore, India & \hfill Jul 2019 - Sept 2019 \\
+% \textit{Skills:  nltk, PyTorch} \\[3.75pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%     \item Contributed to the development of Automatic Speech Recognition for transcription \& subtitle display.
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+
+% %Projects
+% \color{BlueViolet}
+% \section{Relevant Projects}
+% \color{Black}
+
+% \begin{itemize}
+%     \item \textbf{Medical Ethics Assessment of LLMs}
+%     \begin{itemize}
+%         \item \textbf{Objective:} To systematically assess the ethical reasoning capabilities of large language models (LLMs) in a clinical context, a critical and underexplored area for responsible AI deployment.
+%         \item \textbf{Approach:} Implemented a controlled evaluation using a curated multiple-choice question set. Utilized a Retrieval-Augmented Generation (RAG) pipeline to isolate the impact of external knowledge on model performance and decision-making.
+%         \item \textbf{Findings:} Conducted a rigorous analysis via logit-based confidence metrics and rationale evaluation. Demonstrated that while LLMs possess partial knowledge of ethical principles, they lack the reliability and depth for ethically sensitive applications, even when augmented with domain-specific information.
+%     \end{itemize}
+
+%     \item \textbf{Lost in Plot: Contrastive Learning for Movie Retrieval}
+%     \begin{itemize}
+%         \item \textbf{Objective:} To develop an innovative solution for "tip-of-the-tongue" movie retrieval, a difficult task for traditional methods due to the vagueness of natural language queries.
+%         \item \textbf{Approach:} Implemented a dense retrieval system by fine-tuning a pre-trained BERT encoder with contrastive learning. The model was trained with a multi-task loss function to align user descriptions with movie metadata in a shared semantic space.
+%         \item \textbf{Result:} The fine-tuned model significantly outperformed a robust GPT-4 few-shot baseline on both Recall@K and MRR metrics. This work included the creation of a synthetic dataset and benchmarking on a corpus of over 100,000 movies.
+%     \end{itemize}
+
+%     \item \textbf{Resource-Efficient LLM Fine-tuning for Mental Health Support}
+%     \begin{itemize}
+%         \item \textbf{Objective:} To adapt a large language model (LLM) for a specialized domain with limited computational resources and data.
+%         \item \textbf{Approach:} Applied parameter-efficient fine-tuning (PEFT) with Quantized Low-Rank Adaptation (QLoRA) to fine-tune the Falcon 7B model on a curated mental health conversation dataset.
+%     \end{itemize}
+
+%     % \item \textbf{Multi-stage Retrieval-Augmented Generation (RAG) System}
+%     % \begin{itemize}
+%     %     \item \textbf{Objective:} To architect a robust RAG system that enhances the factual grounding and contextual relevance of LLM-generated responses over a corpus of research papers.
+%     %     \item \textbf{Approach:} Designed and implemented a multi-stage retrieval pipeline using FAISS for efficient indexing and Scikit-Learn for context filtering, which served as a data-efficient front-end for the \texttt{zephyr-7b-beta} model.
+%     % \end{itemize}
+
+%     \item \textbf{GradCompass: AI-Powered Graduate Application Assistant}
+% \begin{itemize}
+%     \item \textbf{Objective:} To develop a multi-agent system leveraging LLMs to provide personalized guidance for graduate school applicants, profile evaluation and university recommendation.
+%     \item \textbf{Approach:} Implemented an \textbf{8-agent framework}, where each agent specializes in distinct subtasks including document review, university recommendation, and advising. Integrated a \textbf{RAG} pipeline to enable context-aware and adaptive responses. Developed an \textbf{AI based interview simulator} with speech-to-text processing and detailed feedback scoring.
+% \end{itemize}
+
+
+%     \item \textbf{E2E Text-to-Comic Generation Pipeline}
+%     \begin{itemize}
+%         \item \textbf{Objective:} To build a scalable, end-to-end web application that autonomously transforms textual narratives into visual comic strips.
+%         \item \textbf{Approach:} Engineered a multi-component pipeline that integrates GPT-3.5 and Stable Diffusion for text and image generation. The system was orchestrated on GKE with Redis to manage state and ensure high-throughput processing of concurrent user requests.
+%     \end{itemize}
+
+%     % \item \textbf{Gemini Text-to-SQL Interface}
+%     % \begin{itemize}
+%     %     \item \textbf{Objective:} To create a natural language interface for database interaction, abstracting complex SQL queries from the end-user.
+%     %     \item \textbf{Approach:} Developed a Streamlit application that leverages the Gemini LLM to reliably translate natural language questions into executable and optimized SQL queries, providing a conversational data retrieval experience.
+%     % \end{itemize}
+% \end{itemize}
+
+
+%     \item \textbf{Transparent Emotion Analysis with LIME}
+%     \begin{itemize}
+%         \item \textbf{Objective:} To develop a model for emotion detection in text that is not only accurate but also interpretable, a key requirement for sensitive applications.
+%         \item \textbf{Approach:} Engineered a decision tree classifier achieving 84\% accuracy on text-based emotion detection. Critically, the model's predictions were made transparent and verifiable using LIME for local interpretability.
+%     \end{itemize}
+
+%     \item \textbf{Intent-based Chatbot for Mental Health Information}
+%     \begin{itemize}
+%         \item \textbf{Objective:} To build a highly accurate, domain-specific chatbot to provide reliable mental health information.
+%         \item \textbf{Result:} Developed a chatbot that achieved 92\% accuracy on a self-curated dataset, demonstrating strong reliability and specialized knowledge for its target domain.
+%     \end{itemize}
+% \end{itemize}
+
+% \color{BlueViolet}
+% \section{Teaching \& Mentorship}
+% \color{black}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+% % \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt]
+% Taught core computer science courses (C++, Python, Data Structures) and served as a course grader for both undergraduate and graduate-level Machine Learning courses at CU Boulder, while also mentoring students on programming concepts.
+% % \end{itemize}
+% \end{minipage}
+% }
+% \end{tabularx}
+
+
+
+%----------------------------------------------------------------------------------------
+%	University Service and Volunteering
+%----------------------------------------------------------------------------------------
+% \color{BlueViolet}
+% \section{University Service/Volunteering}
+% \color{black}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%         \item \textbf{Swasthya Seva Initiative}: Developed an application utilizing the MERN stack that helped people locate critical care centers during the COVID pandemic.
+%         \item \textbf{Lecture Capture System}: Developed an E2E MERN application with Raspberry Pi to record live lectures and provide access to 1000+ students. Used \textbf{AWS Lambda} for backend tasks and \textbf{EC2} for deployment.
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	Certifications
+%----------------------------------------------------------------------------------------
+% \color{BlueViolet}
+% \section{Online Courses and Certifications}
+% \color{black}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+% \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+% \item \href{https://coursera.org/share/190d91faab3e6ceada329a8d3d8d8c76} {\textbf{Machine Learning Specialization (3 courses) }} by
+% {\emph{Stanford University and Deeplearning.ai}}
+% \item \href{https://coursera.org/share/94d45e8d9db4e255577d626bd6752317} {\textbf{Natural Language Processing Specialization (4 courses)}} by
+% {\emph{Deeplearning.ai}}
+% \item \href{https://coursera.org/share/031591fc0ae52f71c1f2c9bc7c8214e3} {\textbf{Neural Networks and Deep Learning}} by
+% {\emph{Deeplearning.ai}}
+% \item\href{https://coursera.org/share/982e4d08147afdecd83465013455eb47} {\textbf{Convolutional Neural Networks in TensorFlow}} by
+% {\emph{Deeplearning.ai}}
+% \item \href{https://coursera.org/share/03ff70c0333a6b6613cda62d345dcbbe} {\textbf{Introduction to TensorFlow for Deep Learning}} by
+% {\emph{Deeplearning.ai}}
+% \item \href{https://coursera.org/share/aba6645ce626b033c90c5c13fc0616ec} {\textbf{AWS Fundamentals: Going Cloud-Native}} by
+% {\emph{Amazon Web Services}}
+% \item \href{https://coursera.org/share/62508b37fb6315454c7d9f953517def8} {\textbf{Google Cloud Fundamentals: Core 
+% Infrastructure}} by 
+% {\emph{Google Cloud}}
+% \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+
+\vfill
+
+\end{document}

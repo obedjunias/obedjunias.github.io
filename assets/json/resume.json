@@ -19,6 +19,11 @@
         "network": "LinkedIn",
         "username": "obed-junias",
         "url": "https://linkedin.com/in/obed-junias"
+      },
+      {
+        "network": "Google Scholar",
+        "username": "IfVjTBwAAAAJ",
+        "url": "https://scholar.google.com/citations?user=IfVjTBwAAAAJ"
       }
     ]
   },
@@ -159,6 +164,19 @@
     }
   ],
   "projects": [
+    {
+      "name": "ScoutR: Agentic Football Transfer Intelligence Platform",
+      "summary": "Designed and shipped an agentic AI transfer intelligence platform that monitors player data across leagues and surfaces candidates aligned to club tactical and financial constraints. Built multi-agent pipelines with Gemini/Claude and Pydantic, and implemented RAG with ChromaDB over StatsBomb event data.",
+      "highlights": [
+        "LangGraph-based multi-agent pipeline with Gemini and Pydantic for complex reasoning",
+        "RAG pipeline over StatsBomb event data using ChromaDB for grounded evaluation",
+        "Fault-tolerant 3-tier inference layer (Gemini -> Claude -> fallback) for reliability",
+        "Real-time streaming agent execution (SSE) for monitoring long-horizon tasks"
+      ],
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-01",
+      "url": ""
+    },
     {
       "name": "Medical Ethics Assessment of LLMs",
       "summary": "Systematic assessment of ethical reasoning capabilities of large language models in clinical contexts using RAG pipeline and controlled evaluation with curated multiple-choice questions.",

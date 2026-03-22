@@ -1,0 +1,294 @@
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,11pt]{article}
+
+%----------------------------------------------------------------------------------------
+%  FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%  PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+% \usepackage[scale=0.9]{geometry}
+\usepackage[margin=0.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+\usepackage[unicode,draft=false,colorlinks=true,breaklinks]{hyperref}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{relsize}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6.5pt}{6.5pt}
+
+%Setup hyperref package, and colours for links
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+%for social icons
+\usepackage{fontawesome5}
+
+\usepackage{lmodern}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%  BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%  TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+  \Huge {\textbf{Obed Junias} }\\[1pt]
+  \href{mailto:obed.junias@colorado.edu}{\raisebox{-0.05\height}\faEnvelope \ obed.junias@colorado.edu} \ $|$ \
+  \href{https://obedjunias.github.io}{\raisebox{-0.05\height}\faGlobe\ obedjunias.com} \ $|$ \
+  % \href{https://github.com/obedjunias19?tab=repositories}{\raisebox{-0.05\height}\faGithub \ obedjunias19} \ $|$ \
+  \href{https://github.com/obedjunias19}{\raisebox{-0.05\height}\faGithub \ obedjunias19} \ $|$ \
+  \href{https://linkedin.com/in/obed-junias}{\raisebox{-0.05\height}\faLinkedin\ obed-junias} \ $|$ \
+  \href{tel:+1720-266-0046}{\raisebox{-0.05\height}\faMobile \ 720-266-0046} \\
+\end{tabularx}
+
+\color{BlueViolet}
+\section*{Professional Summary}
+\color{black}
+Generative AI Engineer specializing in \textbf{LLM systems, agentic workflows, and evaluation}. Experience building scalable ML/NLP pipelines and cloud-native services, with a strong foundation in production ML, and GPU-aware optimization. Interested in roles spanning \textbf{LLM serving}, \textbf{Agentic and RAG Systems}, \textbf{SFT/PEFT}, and \textbf{reliable LLM evaluation} for real-world deployment.
+
+\color{BlueViolet}
+\section{Industry Experience}
+\color{black}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+  \textbf{Senior Member of Technical Staff} at  Oracle Corporation & \hfill Aug 2021 - Aug 2024 \\[3.75pt]
+  \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+      \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+        \item Designed and implemented scalable automation frameworks in Python, TestNG, and BATS, \textbf{reducing manual validation effort by 95\%} across \href{https://www.oracle.com/database/technologies/appdev/rest.html} {Oracle REST Data Services} and \href{https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/}{SQLcl}.
+        \item Built a Python-based migration framework to automate \href{https://apex.oracle.com/en/} {Oracle APEX} application transfers,  improving deployment reliability and supporting \textbf{200+ internal users}.
+        \item \textbf{Led validation and release readiness} for a new \href{https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-tools.html\#GUID-8B5AAB5D-21B7-4EFC-8018-2AE18642FAFB}{Oracle Cloud DB Tools} feature, coordinating a \textbf{15-engineer} effort and delivering production readiness in 2 months.
+      \end{itemize}
+    \end{minipage}
+  }
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+  \textbf{Machine Learning Engineer Intern} at  Hewlett Packard Enterprise & \hfill Feb 2021 - Jul 2021 \\
+  %\textit{Tech Stack: Python, Groovy, Workfusion} \\[3.75pt]
+  \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+      \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
+        \item Built intelligent automation pipelines using Groovy and \href{https://www.workfusion.com/intelligent-document-processing/} {WorkFusion} OCR to process unstructured documents, \textbf{improving processing speed by 40\% and reducing errors by 80\%.}
+      \end{itemize}
+    \end{minipage}
+  }
+\end{tabularx}
+
+\color{BlueViolet}
+\section{Relevant Projects}
+\color{black}
+
+\begin{itemize}
+  \item \textbf{Adapter-Based Multi-Agent LLM Serving System}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Built a \textbf{custom multi-agent LLM serving system} executing 14 task-specialized agents as dynamic \textbf{LoRA adapters} over a shared Llama-3B backbone, and \textbf{benchmarked against vLLM-style serving}.
+
+      \item Implemented \textbf{dynamic adapter loading, eviction, and scheduling} under strict \textbf{5--15\,GB GPU memory budgets}, streaming adapters from CPU to GPU at runtime.
+      \item Evaluated high-entropy agentic workloads (up to \textbf{140 adapter switches per run}) across multiple schedulers, benchmarking \textbf{latency, throughput, GPU utilization, and switching overhead}.
+      \item Demonstrated that \textbf{LoRA adapters load in less than 1s} versus \textbf{9-22s full-model loads}, yielding \textbf{20-90x lower cumulative switching overhead} and enabling execution where full models are infeasible.
+      \item \textbf{Tech:} vLLM, PyTorch, HuggingFace Transformers, PEFT/LoRA, CUDA, Python
+    \end{itemize}
+
+  \item \textbf{ScoutR: An Agentic Football Transfer Intelligence Platform}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Designed and shipped \textbf{ScoutR}, an \textbf{agentic AI transfer intelligence platform} that monitors player data across leagues and surfaces candidates aligned to club tactical and financial constraints.
+      \item Built a \textbf{multi-agent pipeline} where Gemini parses scouting requests into typed \textbf{Pydantic criteria}, then produces tactical-fit analysis, valuation summaries, and scouting outputs with schema enforcement.
+      \item Implemented \textbf{RAG with ChromaDB} over StatsBomb event data to ground recommendations in statistical evidence, reducing hallucinated comparisons and improving trust in transfer decisions.
+      \item Designed a \textbf{3-tier LLM fallback architecture} for graceful degradation during outages and rate limits, maintaining continuity for clubs without large analytics teams.
+      \item Engineered a \textbf{real-time streaming UX} using Server-Sent Events (SSE), exposing step-by-step agent reasoning so users can follow autonomous \textbf{long-horizon} decision workflows in one interface.
+      \item \textbf{Tech:} Gemini, Claude, LangGraph, Pydantic, ChromaDB, RAG, Prompt Engineering
+    \end{itemize}
+
+  \item \textbf{GradCompass: Multi-Agent LLM Application Assistant}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Built a \textbf{production-grade multi-agent LLM system} for personalized graduate-application guidance, document review, and mock interview simulation.
+      \item Designed an \textbf{8-agent architecture} with role-specialized agents and a centralized orchestration layer.
+      \item Implemented \textbf{agentic execution and communication patterns} (tool use, routing, shared memory) and integrated a \textbf{Retrieval-Augmented Generation (RAG)} pipeline to ground recommendations.
+      \item Implemented agent coordination and response synthesis for coherent outputs across multi-step workflows.
+      \item \textbf{Tech:} Python, LangChain, LLM APIs, RAG, Vector Databases, Multi-Agent Orchestration
+    \end{itemize}
+
+  \item \textbf{End-to-End Text-to-Comic Generation Platform}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Built a \textbf{production-grade, cloud-native AI system} that converts natural-language narratives into comic strips using \textbf{LLMs and diffusion models}, with a \textbf{React frontend} and \textbf{Node.js backend}.
+      \item Designed a \textbf{modular, asynchronous pipeline} deployed on \textbf{GKE}, using \textbf{Pub/Sub} for orchestration, \textbf{Cloud Storage} for persistence, and \textbf{Redis} for hot-path caching.
+      \item Implemented \textbf{OAuth 2.1-based authentication} and per-request isolation, supporting \textbf{100+ users} and sustaining \textbf{20--30 concurrent generation jobs}.
+      \item Reduced median end-to-end latency by \textbf{35--45\%} through caching, pipeline parallelism, and reuse of intermediate artifacts under concurrent load.
+      \item \textbf{Tech:} React, Node.js, Python, GKE, Pub/Sub, Redis, Cloud Storage, GPT, Stable Diffusion
+    \end{itemize}
+
+  \item \textbf{Lost in Plot: Contrastive Learning-Based Movie Retrieval}
+    \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=2pt]
+      \item Built a semantic retrieval system for \textbf{“tip-of-the-tongue” movie search}, handling vague natural-language queries, and constructed a \textbf{100K+ example synthetic dataset} for training and evaluation.
+      \item Fine-tuned a \textbf{BERT-based dual encoder} using a \textbf{multi-task contrastive loss} to align user descriptions with structured movie metadata.
+      \item Outperformed a \textbf{GPT-4 few-shot baseline} on \textbf{Recall@K and MRR}, with strong retrieval quality.
+      \item \textbf{Tech:} PyTorch, BERT, Contrastive Learning, Information Retrieval
+    \end{itemize}
+
+\end{itemize}
+
+\color{BlueViolet}
+\section{Skills}
+\color{black}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  \textbf{Languages} & Python, SQL, Java, C++ \\
+  % \textbf{ML Techniques} & Regression, Naive Bayes, Random Forests, SVMs, Neural Networks \\
+  \textbf{LLM Systems} & LLM Serving, RAG Pipelines, Multi-Agent Systems and Tools, Prompt Engineering \\
+  \textbf{LLM Training} & Supervised Fine-Tuning, Transformers, PyTorch DDP \\
+  \textbf{ML Infrastructure} & CUDA, FlashAttention, Quantization, GPU Memory Optimization \\
+  \textbf{Frameworks} & PyTorch, CUDA, Triton, Transformers, vLLM, LangChain, LangGraph \\
+  \textbf{Systems \& Cloud} & Docker, Kubernetes, Redis, Vector Databases, AWS, GCP, OCI
+
+\end{tabularx}
+
+\color{BlueViolet}
+\section*{Technical Interests}
+\color{black}
+LLM Infrastructure • Agentic Systems • Retrieval-Augmented Generation • LLM Evaluation • Model Serving • Distributed ML Systems • Reasoning Benchmarks
+
+%----------------------------------------------------------------------------------------
+%  EDUCATION
+%----------------------------------------------------------------------------------------
+\color{BlueViolet}
+\section*{Education}
+\color{black}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+  \textbf{M.S. in Computer Science}, \textbf{University of Colorado Boulder} & Aug 2024 -- May 2026 \\
+  \textit{Courses:} NLP, Deep Natural Language Understanding, Datacenter-Scale Computing & (GPA: 4.0/4.0)
+\end{tabularx}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+  \textbf{B.E. in Computer Science}, BMS College of Engineering & Aug 2017 – Aug 2021 \\
+  \textit{Relevant Courses:} Algorithms, Databases, Operating Systems, Machine Learning
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Industry Experience
+\color{BlueViolet}
+\section{Research Experience}
+\color{black}
+
+\begin{tabularx}{\linewidth}{ @{}X r@{} }
+  \textbf{Responsible LLM Evaluation for Mental Health Applications} & Peer-reviewed (IEEE-EMBS 2025)\\
+\end{tabularx}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
+  \item Built large-scale \textbf{LLM evaluation pipelines} measuring demographic bias, subgroup performance, and robustness for mental-health classification across GPT-4 and LLaMA models.
+  \item Implemented \textbf{in-context prompting} and \textbf{fairness-aware losses} to mitigate bias in low-resource settings.
+  \item Developed diagnostic metrics to quantify subgroup performance, consistency, and bias across model variants.
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{ @{}X r@{} }
+  \textbf{Commonsense Reasoning with Logical Entailment Trees} & \\
+\end{tabularx}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
+  \item Designed structured benchmarks and evaluation pipelines to assess multi-step commonsense reasoning in LLMs.
+  \item Analyzed failure modes of chain-of-thought and n-shot prompting under compositional reasoning tasks.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%  PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\color{BlueViolet}
+\section{Publications}
+\color{black}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+  \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+      \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=1.5pt]
+        \item \textbf{Junias, Obed*}, et al. \textit{Assessing Algorithmic Bias in Language-Based Depression Detection: A Comparison of DNN and LLM Approaches.} IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI), 2025. (Peer-reviewed, Presented). \href{https://ieeexplore.ieee.org/abstract/document/11269509}{https://ieeexplore.ieee.org/abstract/document/11269509}
+
+        \item \textbf{Junias, Obed}, and Maria Leonor Pacheco. \textit{LOGICAL-COMMONSENSEQA: A Benchmark for Logical Commonsense Reasoning.} arXiv preprint arXiv:2601.16504, 2026. \href{https://arxiv.org/abs/2601.16504}{https://arxiv.org/abs/2601.16504}
+      \end{itemize}
+    \end{minipage}
+  }
+\end{tabularx}
+
+% \color{BlueViolet}
+% \section*{Awards and Recognition}
+% \color{black}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+% \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=1.5pt]
+%     \item \textbf{NSF--EMBS--Google Young Professional NextGen Scholar}, \textit{IEEE EMBS BHI Conference}, 2025
+% \end{itemize}
+% \end{minipage}
+% }
+% \end{tabularx}
+
+%     \item \textbf{Resource-Efficient LLM Fine-tuning for Mental Health Support}
+%     \begin{itemize}
+%         \item \textbf{Objective:} To adapt a large language model (LLM) for a specialized domain with limited computational resources and data.
+%         \item \textbf{Approach:} Applied parameter-efficient fine-tuning (PEFT) with Quantized Low-Rank Adaptation (QLoRA) to fine-tune the Falcon 7B model on a curated mental health conversation dataset.
+%     \end{itemize}
+
+%     % \item \textbf{Gemini Text-to-SQL Interface}
+%     % \begin{itemize}
+%     %     \item \textbf{Objective:} To create a natural language interface for database interaction, abstracting complex SQL queries from the end-user.
+%     %     \item \textbf{Approach:} Developed a Streamlit application that leverages the Gemini LLM to reliably translate natural language questions into executable and optimized SQL queries, providing a conversational data retrieval experience.
+%     % \end{itemize}
+% \end{itemize}
+
+% \color{BlueViolet}
+% \section*{TECHNICAL INTERESTS}
+% \color{black}
+% Distributed Systems • ML Systems • Scalable LLM Applications • Multi-Agent Architectures • FlashAttention • Supervised Fine-Tuning (SFT) • LLM Evaluation • Quantization • Distributed Training (PyTorch DDP)
+
+\vfill
+
+\end{document}
