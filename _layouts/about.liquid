@@ -43,31 +43,47 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="clearfix" style="text-align: justify;">{{ content }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <div class="news" style="margin-top: 2rem;">
+        <h2 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; border-bottom: none;">
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        </h2>
+        {% include news.liquid limit=true %}
+      </div>
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+      <div class="latest-posts" style="margin-top: 2rem;">
+        <h2 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; border-bottom: none;">
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        </h2>
+        {% include latest_posts.liquid %}
+      </div>
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <div class="selected-papers" style="margin-top: 2rem;">
+        <h2 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; border-bottom: none;">
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        </h2>
+        {% include selected_papers.liquid %}
+      </div>
     {% endif %}
+
+    <style>
+      .news table td, .news table th, 
+      .publications table td, .publications table th {
+        padding-left: 0 !important;
+      }
+      .news h2, .latest-posts h2, .selected-papers h2 {
+        border-bottom: none !important;
+      }
+    </style>
 
     <!-- Remove the original social section since we moved it under the profile -->
     {% comment %}
