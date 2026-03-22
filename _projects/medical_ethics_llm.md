@@ -4,7 +4,7 @@ title: Medical Ethics Assessment of Large Language Models
 description: Evaluating ethical reasoning capabilities of LLMs in clinical contexts
 img:
 importance: 2
-category: work
+category: responsible ai & healthcare
 related_publications: false
 ---
 

@@ -4,7 +4,7 @@ title: Commonsense Reasoning with Logical Entailment Trees
 description: Developing benchmarks and evaluation methods for logical commonsense reasoning
 img:
 importance: 1
-category: work
+category: nlp & reasoning research
 related_publications: false
 ---
 
@@ -12,7 +12,7 @@ related_publications: false
 
 ---
 
-## Overview
+## overview
 
 Developing benchmarks and reasoning methods for evaluating logical commonsense reasoning in large language models at the BLAST Lab, University of Colorado Boulder.
 
@@ -20,7 +20,7 @@ Developing benchmarks and reasoning methods for evaluating logical commonsense r
 **Advisor:** Dr. Maria L. Pacheco, CU Boulder
 **Target Venue:** ACL 2026
 
-## Research Progress
+## research progress
 
 ### Completed Work
 
@@ -53,7 +53,7 @@ Currently designing and implementing structured evaluation methods:
 - **Step-Level Evaluation**: Assessing inference quality at each reasoning step
 - **Social Consensus Integration**: Incorporating common-sense knowledge patterns
 
-## Research Goals
+## research goals
 
 This work aims to:
 

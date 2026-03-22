@@ -4,7 +4,7 @@ title: Lost in Plot - Contrastive Learning for Movie Retrieval
 description: Dense retrieval system for tip-of-the-tongue movie search from vague descriptions
 img:
 importance: 2
-category: work
+category: nlp & reasoning research
 related_publications: false
 ---
 

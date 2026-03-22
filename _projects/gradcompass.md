@@ -3,8 +3,8 @@ layout: page
 title: GradCompass - AI-Powered Graduate Application Assistant
 description: Multi-agent LLM system for personalized graduate school guidance and application support
 img:
-importance: 2
-category: work
+importance: 1
+category: agentic ai & systems
 related_publications: false
 ---
 
@@ -12,13 +12,13 @@ related_publications: false
 
 ---
 
-## Overview
+## overview
 
 Built a comprehensive multi-agent LLM system delivering personalized graduate school guidance, document evaluation, and recommendations through an 8-agent framework with specialized capabilities.
 
 **Status:** Completed
 
-## Objective
+## objective
 
 Design and implement an intelligent graduate application assistant that provides:
 - Personalized university recommendations
@@ -27,7 +27,7 @@ Design and implement an intelligent graduate application assistant that provides
 - Interview preparation and simulation
 - Comprehensive guidance throughout the application journey
 
-## System Architecture
+## system architecture
 
 ### 8-Agent Framework
 
@@ -80,7 +80,7 @@ Each agent has a specialized role with dedicated LLM configuration:
    - Real-time feedback on answers
    - Behavioral and technical question coverage
 
-## Technical Components
+## technical components
 
 ### RAG (Retrieval-Augmented Generation) Pipeline
 
@@ -117,7 +117,7 @@ Each agent has a specialized role with dedicated LLM configuration:
 - Temperature and parameter tuning per agent
 - Output format standardization
 
-## Key Features
+## key features
 
 ### Personalized Recommendations
 
@@ -161,7 +161,7 @@ Each agent has a specialized role with dedicated LLM configuration:
 - Research discussion scenarios
 - Program-specific inquiries
 
-## User Experience
+## user experience
 
 ### Workflow
 
@@ -180,7 +180,7 @@ Each agent has a specialized role with dedicated LLM configuration:
 - **Guided Workflows:** Step-by-step application process support
 - **On-Demand Advice:** Quick answers to specific questions
 
-## Technical Implementation
+## technical implementation
 
 **Backend:**
 - Multi-agent orchestration framework
@@ -200,7 +200,7 @@ Each agent has a specialized role with dedicated LLM configuration:
 - University database maintenance
 - Feedback history tracking
 
-## Impact and Use Cases
+## impact and use cases
 
 ### Target Users
 
@@ -226,7 +226,7 @@ Each agent has a specialized role with dedicated LLM configuration:
 - Cost-effective compared to consultants
 - Reduces information asymmetry
 
-## Future Enhancements
+## future enhancements
 
 **Feature Additions:**
 - Integration with university application portals
@@ -246,7 +246,7 @@ Each agent has a specialized role with dedicated LLM configuration:
 - Bias mitigation in recommendations
 - Privacy protection for user data
 
-## Conclusion
+## conclusion
 
 GradCompass demonstrates the potential of multi-agent LLM systems to provide comprehensive, personalized support for complex, multi-stage processes like graduate school applications. By combining specialized agents with retrieval-augmented generation and intelligent orchestration, the system delivers value across the entire application journey—from initial planning through interview preparation.
 
