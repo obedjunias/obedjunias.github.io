@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research and development projects in NLP, machine learning, and cloud systems.
+description: A selection of projects in Agentic AI, LLM Systems, and NLP Research, ranging from production-ready platforms to academic benchmarks.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: ["agentic ai & systems", "nlp & reasoning research", "responsible ai & healthcare"]
 horizontal: false
 ---
 

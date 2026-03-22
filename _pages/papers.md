@@ -1,23 +1,24 @@
 ---
 layout: book-shelf
-title: papers
-permalink: /papers/
+title: library
+permalink: /library/
 nav: true
 nav_order: 7
 collection: papers
+description: A curated selection of research papers and resources that have influenced my work in interpretable and responsible AI.
 ---
-## Papers that I am reading, have read, or will read
+## research library
 
-> Research papers are more than printed pages; they are portals into someone else’s thinking. As Zora Neale Hurston once said, “Research is formalized curiosity. It is poking and prying with a purpose.” And as Albert Szent-Györgyi reminds us, “Research is to see what everybody else has seen, and to think what nobody else has thought.” 
+> “Research is formalized curiosity. It is poking and prying with a purpose.” — *Zora Neale Hurston*
 
-#### Reasoning Papers
+#### reasoning papers
 <ul>
   <li><a href="https://aclanthology.org/2021.emnlp-main.585.pdf"><strong>Explaining Answers with Entailment Trees</strong></a> - Dalvi et al., <em>EMNLP 2023</em></li>
   <li><a href="https://aclanthology.org/2022.emnlp-main.134.pdf"><strong>Entailer: Answering Questions with Faithful and Truthful Chains of Reasoning</strong></a> - Tafjord et al., <em>EMNLP 2022</em></li>
   <li><a href="https://aclanthology.org/2024.emnlp-main.531.pdf"><strong>Enhancing Systematic Decompositional Natural Language Inference Using Informal Logic</strong></a> - Weir et al., <em>EMNLP 2024</em></li>
 </ul>
 
-#### Neuro-Symbolic Papers
+#### neuro-symbolic papers
 <ul> <li><a href="https://aclanthology.org/N16-1181.pdf"><strong>Learning to Compose Neural Networks for Question Answering</strong></a> - Andreas et al., <em>NAACL 2016</em></li> 
 <li><a href="https://aclanthology.org/2024.findings-naacl.264.pdf"><strong>ADAPT: As-Needed Decomposition and Planning with Language Models</strong></a> - Prasad et al., <em>NAACL Findings 2024</em></li> 
 <li><a href="https://arxiv.org/pdf/1803.09473"><strong>code2vec: Learning Distributed Representations of Code</strong></a> - Alon et al., <em>POPL 2019</em></li> 
