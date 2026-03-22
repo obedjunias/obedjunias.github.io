@@ -8,8 +8,8 @@ middle_name:
 last_name: Junias
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+description: >
+  Graduate researcher at the BLAST Lab, University of Colorado Boulder. Specializing in interpretable reasoning and responsible machine learning.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -292,8 +292,8 @@ display_categories: ["machine-learning"] # these categories will be displayed on
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Junias]
+  first_name: [Obed]
 
   style: apa
   locale: en
