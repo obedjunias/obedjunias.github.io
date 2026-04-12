@@ -2,7 +2,7 @@
 layout: page
 title: interests
 permalink: /interests/
-description: Beyond research - books, hobbies, photography, and more
+description: beyond research - books, hobbies, photography, and more
 nav: false
 nav_order: 11
 display_categories: [reading, hobbies, photography, travel]

@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A selection of projects in Agentic AI, LLM Systems, and NLP Research, ranging from production-ready platforms to academic benchmarks.
+description: A selection of projects in NLP research (natural language understanding and reasoning), LLM safety, agentic AI, and LLM systems, ranging from production-ready platforms to academic benchmarks.
 nav: true
 nav_order: 2
 display_categories: ["agentic ai & systems", "nlp & reasoning research", "responsible ai & healthcare"]
