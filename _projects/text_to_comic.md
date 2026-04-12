@@ -1,10 +1,10 @@
 ---
 layout: page
-title: e2e text-to-comic generation pipeline
+title: "text-to-comic generation pipeline"
 description: scalable cloud-native system for transforming textual narratives into comic strips
 img:
 importance: 2
-category: systems
+category: agentic ai & systems
 related_publications: false
 ---
 
