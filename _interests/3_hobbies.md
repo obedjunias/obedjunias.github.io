@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Hobbies & Activities
-description: What I do for fun and relaxation
+title: hobbies
+description: exploring my interests outside of research
 img: assets/img/7.jpg
 importance: 3
 category: hobbies

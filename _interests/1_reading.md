@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Currently Reading
-description: Books I'm reading or have recently finished
+title: currently reading
+description: books i'm reading or have recently finished
 img: assets/img/3.jpg
 importance: 1
 category: reading
 ---
 
-## Books I'm Reading
+## books i'm reading
 
-> "A reader lives a thousand lives before he dies. The said man who never reads lives only one." — George R.R. Martin
+> "a reader lives a thousand lives before he dies. the said man who never reads lives only one." — george r.r. martin
 
-### Currently Reading
+### currently reading
 
 **Book Title** by Author Name
 - Why I'm reading it: Brief thoughts about the book
@@ -23,7 +23,7 @@ category: reading
 
 ---
 
-### Recently Finished
+### recently finished
 
 **Completed Book** by Author
 - Rating: ⭐⭐⭐⭐⭐
@@ -31,7 +31,7 @@ category: reading
 
 ---
 
-### Want to Read
+### want to read
 
 - Book 1
 - Book 2

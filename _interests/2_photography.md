@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Photography
-description: Capturing moments and perspectives
+title: photography
+description: capturing the essence of the moment
 img: assets/img/5.jpg
 importance: 2
 category: photography

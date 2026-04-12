@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Travel & Exploration
-description: Places I've been and dream to visit
+title: travel
+description: documenting my travels around the world
 img: assets/img/9.jpg
 importance: 4
 category: travel
