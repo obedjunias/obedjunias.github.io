@@ -101,39 +101,25 @@
 
 
 \color{BlueViolet}
-\section*{Research Statement}
+\section*{Research Summary}
 \color{black}
-I study how large language models reason over information and why fluent generation can mask brittle or spurious inference. My work focuses on designing structured evaluation frameworks that expose hidden reasoning failures in multi-step commonsense tasks beyond surface-level accuracy.
+I study \textbf{model collapse in language models}, focusing on how recursive training on model-generated data degrades distributional diversity, factual reliability, and long-term model quality. My current work combines \textbf{measurement, detection, and controlled experimentation} to identify early signals of collapse under synthetic-data feedback loops.
 
-A central direction of my research is understanding how training-data distributions shape observed reasoning behavior. In particular, I study how increasing reliance on model-generated data shifts the effective distribution over time, and how structured benchmarks can detect and characterize these shifts.
+More broadly, I am interested in reliable reasoning, evaluation under distribution shift, and scalable systems for studying foundation models.
 
-More broadly, I am interested in how AI systems retrieve, represent, and reason over knowledge, and in building evaluation methods that make these processes observable and reliable for real-world information-seeking systems.
+\textit{Long-term goal: developing principled methods to measure, detect, and mitigate model collapse in foundation models across text and code generation.}
 
 \color{BlueViolet}
-\section*{Research \& Technical Interests}
+\section*{Primary Research Focus}
 \color{black}
+Model Collapse in Generative AI, Synthetic Data, Recursive Training, Reliability of Foundation Models
 
-\begin{tabularx}{\linewidth}{@{}X X@{}}
+\color{BlueViolet}
+\section*{Secondary Interests}
+\color{black}
+Commonsense Reasoning, LLM Evaluation and Benchmarking, Responsible AI, Scalable LLM Systems
 
-\textbf{Research Interests} &
-\textbf{Technical Interests} \\
 
-Commonsense reasoning in LLMs &
-LLM serving and inference systems \\
-
-Robust evaluation of multi-step reasoning &
-Distributed training and GPU optimization \\
-
-Information retrieval and grounded reasoning &
-Multi-agent LLM systems \\
-
-Benchmark design and synthetic reasoning datasets &
-Retrieval-augmented generation (RAG) systems \\
-
-Human–AI interaction in information-seeking systems &
-LLM evaluation and benchmarking \\
-
-\end{tabularx}
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
@@ -159,9 +145,9 @@ LLM evaluation and benchmarking \\
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
 \begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=1.5pt]
-\item \textbf{Junias, Obed*}, et al. \textit{Assessing Algorithmic Bias in Language-Based Depression Detection: A Comparison of DNN and LLM Approaches.} IEEE-EMBS International Conference on Biomedical and Health Informatics (BHI), 2025. (Peer-reviewed, Presented). \href{https://ieeexplore.ieee.org/abstract/document/11269509}{https://ieeexplore.ieee.org/abstract/document/11269509}
+\item \textbf{Junias, Obed}, and Maria Leonor Pacheco. \textit{LOGICAL-COMMONSENSEQA: A Benchmark for Logical Commonsense Reasoning.} \textbf{ACL 2026 (Main Conference)} \href{https://arxiv.org/abs/2601.16504}{[paper]}
 
-\item \textbf{Junias, Obed}, and Maria Leonor Pacheco. \textit{LOGICAL-COMMONSENSEQA: A Benchmark for Logical Commonsense Reasoning.} arXiv preprint arXiv:2601.16504, 2026. \href{https://arxiv.org/abs/2601.16504}{https://arxiv.org/abs/2601.16504}
+\item \textbf{Junias, Obed*}, et al. \textit{Assessing Algorithmic Bias in Language-Based Depression Detection: A Comparison of DNN and LLM Approaches.} \textbf{IEEE-EMBS International Conference on Biomedical and Health Informatics (IEEE-BHI), 2025} \href{https://ieeexplore.ieee.org/abstract/document/11269509}{[paper]}
 \end{itemize}
 \end{minipage}
 }
@@ -177,30 +163,42 @@ LLM evaluation and benchmarking \\
 \color{black}
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Measuring Model Collapse under Recursive Summarization Training} & Feb 2026 - Present \\
+\multicolumn{2}{@{}X@{}}{\textit{Advisor: \href{https://blast-cu.github.io/mlpacheco/}{Maria Leonor Pacheco}, \href{https://blast-cu.github.io}{BLAST Lab}}} \\
+\end{tabularx}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
+    \item Designing a controlled recursive training pipeline where human-written corpora are progressively replaced with \textbf{model-generated (synthetic) data} across generations.
+    \item Training language models under synthetic-data feedback loops to study degradation in \textbf{distributional diversity, factual reliability, and knowledge fidelity}.
+    \item Developing measurement methods for collapse using \textbf{entropy-based metrics, lexical diversity, and distributional divergence}.
+    \item Investigating early warning signals such as \textbf{entropy decay, repetition, and detectability of synthetic text} as indicators of collapse before major downstream failures.
+\end{itemize}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
 \textbf{Structured Commonsense Reasoning and Benchmarking} & June 2025 – Present \\
 \multicolumn{2}{@{}X@{}}{\textit{Advisor: \href{https://blast-cu.github.io/mlpacheco/}{Maria Leonor Pacheco}, \href{https://blast-cu.github.io}{BLAST Lab}, Associated publication listed above}} \\
 \end{tabularx}
 \begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
-    \item Designed \textbf{LOGICAL-COMMONSENSEQA}, a benchmark for logical commonsense reasoning, with structurally composed questions and answer options to isolate multi-fact and compositional inference in LLMs.
-    \item Developed evaluation protocols to analyze failure modes of chain-of-thought and few-shot prompting, identifying cases where fluent reasoning masks incorrect logical inference.
-    \item Designing entailment-like reasoning representations to study alignment between predicted answers and underlying reasoning structure.
-    \item Conducting empirical analyses on how reasoning performance varies with task structure and inference depth, forming the basis of an ongoing research manuscript.
+    \item Introduced \textbf{LOGICAL-COMMONSENSEQA}, a benchmark designed to isolate compositional and multi-fact reasoning failures in LLMs.
+    \item Identified systematic mismatches between \textbf{chain-of-thought fluency and logical correctness}, demonstrating cases where coherent reasoning traces yield incorrect conclusions.
+    \item Developed structured evaluation protocols to analyze reasoning depth and failure modes.
+    \item Designed entailment-like reasoning representations to study how performance varies with task structure and inference depth.
 \end{itemize}
+
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
 \textbf{Responsible LLM Evaluation in Mental Health Applications} & Jan 2025 – Nov 2025 \\
 \multicolumn{2}{@{}X@{}}{\textit{Advisor: \href{https://www.colorado.edu/cs/theodora-chaspari}{Theodora Chaspari}, HUBBS Lab, Associated publication listed above}} \\
 \end{tabularx}
 \begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
-    \item Built \textbf{large-scale LLM evaluation pipelines} to assess demographic bias and subgroup performance of LLMs (e.g., LLaMA, GPT-4) for mental health classification tasks.
+    \item Built \textbf{large-scale LLM evaluation pipelines} to assess demographic bias and subgroup performance of LLMs (LLaMA, GPT-4) for mental health classification tasks.
     \item Studied how prompting strategies and fairness-aware losses affect reasoning consistency and robustness in low-resource and imbalanced data settings.
     \item Developed diagnostic metrics to characterize bias and reasoning instability beyond aggregate accuracy.
-    \item Led the research design and analysis for a first-author, peer-reviewed publication presented at BHI 2025.
+    \item Led research design for a \textbf{peer-reviewed publication}, demonstrating limitations of LLM reliability in sensitive domains.
 \end{itemize}
+
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
 \textbf{Efficient Multi-Agent LLM Inference with Parameter-Efficient Adaptation} & Aug 2025 – Dec 2025 \\
-\multicolumn{2}{@{}X@{}}{\textit{University of Colorado Boulder}} \\
 \end{tabularx}
 \begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
     \item Designed a modular inference framework to study how parameter-efficient adapters enable scalable multi-agent LLM systems.
@@ -209,34 +207,19 @@ LLM evaluation and benchmarking \\
     \item Demonstrated that adapter-based agents reduce cumulative switching overhead by \textbf{20–90$\times$}, enabling complex agent workflows on constrained hardware.
 \end{itemize}
 
-
-
-\color{BlueViolet}
-\section*{Awards and Recognition}
-\color{black}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=1.5pt]
-    \item \textbf{NSF--EMBS--Google Young Professional NextGen Scholar}, \textit{IEEE EMBS BHI Conference}, 2025
-\end{itemize}
-\end{minipage}
-}
-\end{tabularx}
-
 \color{BlueViolet}
 \section{Relevant Research Projects}
 \color{black}
-
 \begin{tabularx}{\linewidth}{@{}X r@{}}
 \textbf{Lost in Plot: Contrastive Learning for Logical Semantic Retrieval} & \\
 \end{tabularx}
 \begin{itemize}[nosep, after=\strut, leftmargin=1.5em, itemsep=2pt]
-    \item Formulated a semantic retrieval task for “tip-of-the-tongue” queries, targeting underspecified and ambiguous natural-language descriptions requiring semantic rather than lexical matching.
-    \item Designed a BERT-based dual-encoder trained with a multi-task contrastive learning objective to align free-form user descriptions with structured movie metadata.
+    \item Formulated a semantic retrieval task for vague queries, targeting underspecified and ambiguous natural-language descriptions requiring semantic rather than lexical matching.
+    \item Designed a dual-encoder model (BERT) with multi-task contrastive learning objectives to align free-form user descriptions with structured movie metadata.
     \item Constructed a 100K+ synthetic dataset to enable scalable training and controlled evaluation.
     \item Evaluated retrieval quality using Recall@K and MRR, outperforming a GPT-4 few-shot baseline.
 \end{itemize}
+
 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
 \textbf{Medical Ethics Assessment of Large Language Models} & \\
@@ -256,13 +239,13 @@ LLM evaluation and benchmarking \\
 \multicolumn{2}{@{}X@{}}{
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1.5em, itemsep=2pt]
-        \item Designed and implemented scalable automation and validation frameworks (\textbf{TestNG, BATS}) for end-to-end testing of \href{https://www.oracle.com/database/technologies/appdev/rest.html} {Oracle REST Data Services (ORDS)} and \href{https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/}{SQLcl}, reducing manual validation effort by \textbf{~95\%} and improving correctness guarantees.
-        \item Developed a Python-based migration framework to automate deployment and transfer of \href{https://apex.oracle.com/en/} {Oracle APEX} applications, enabling reliable large-scale migrations and supporting 200+ internal users.
-        \item Led technical validation and delivery of a new Oracle Cloud \href{https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-tools.html#GUID-8B5AAB5D-21B7-4EFC-8018-2AE18642FAFB}{DB Tools} feature, coordinating a 15-engineer effort and achieving production readiness within 2 months.
+        \item Designed and implemented scalable automation and validation frameworks (\textbf{TestNG, BATS}) for end-to-end testing of \href{https://www.oracle.com/database/technologies/appdev/rest.html} {Oracle REST Data Services (ORDS)} and \href{https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/}{SQLcl}, improving validation efficiency by \textbf{~95\%}.       
+        \item Led technical development, validation and delivery of a new Oracle Cloud \href{https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-tools.html#GUID-8B5AAB5D-21B7-4EFC-8018-2AE18642FAFB}{DB Tools} feature, coordinating a 15-engineer effort and achieving production readiness within 2 months.
     \end{itemize}
     \end{minipage}
 }
 \end{tabularx}
+
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Machine Learning Engineer Intern} at  Hewlett Packard Enterprise & \hfill Feb 2021 - Jul 2021 \\ 
@@ -282,15 +265,29 @@ LLM evaluation and benchmarking \\
 \color{black}
 
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-  \textbf{Languages} & Python, SQL, Java, C++ \\
+  \textbf{Languages \& Frameworks} & Python, PyTorch, Triton, LangGraph, SQL, Transformers, C++\\
   % \textbf{ML Techniques} & Regression, Naive Bayes, Random Forests, SVMs, Neural Networks \\
   \textbf{LLM Systems} & LLM Serving, LLM Evaluation, RAG Pipelines, Multi-Agent Systems and Tools \\
   \textbf{LLM Training} & Pre-Training, Supervised Fine-Tuning, Transformers, PyTorch DDP \\
-  \textbf{ML Infrastructure} & CUDA, FlashAttention, Quantization, GPU Memory Optimization \\
-  \textbf{Frameworks} & PyTorch, Triton, Transformers, vLLM, LangChain, LangGraph \\
-  \textbf{Systems \& Cloud} & Docker, Kubernetes, Redis, Vector Databases, AWS, GCP, OCI
+  \textbf{ML Infrastructure} & CUDA, vLLM, FlashAttention, Quantization, GPU Memory Optimization \\
+
 
 \end{tabularx}
+
+\color{BlueViolet}
+\section*{Awards and Recognition}
+\color{black}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=1.2em, itemsep=1.5pt]
+    \item \textbf{NSF--EMBS--Google Young Professional NextGen Scholar}, \textit{IEEE EMBS BHI Conference}, 2025
+\end{itemize}
+\end{minipage}
+}
+\end{tabularx}
+
+
 
 \vfill
 

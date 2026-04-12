@@ -165,6 +165,19 @@
   ],
   "projects": [
     {
+      "name": "Measuring Model Collapse under Recursive Summarization Training",
+      "summary": "Investigating the fundamental limits of foundation model training under autophagous (self-consuming) feedback loops. Developing a robust measurement framework to detect early signals of distributional decay and knowledge fidelity loss.",
+      "highlights": [
+        "Designing high-fidelity recursive training pipelines to isolate causal drivers of model collapse",
+        "Investigating the theoretical foundations of distributional shift in synthetic data dominant regimes",
+        "Developed entropy-based measurement frameworks to detect early signals of systemic output degradation",
+        "Analyzing the catalytic role of summarization tasks in accelerating semantic-level information loss"
+      ],
+      "startDate": "2026-02-01",
+      "endDate": "Present",
+      "url": ""
+    },
+    {
       "name": "ScoutR: Agentic Football Transfer Intelligence Platform",
       "summary": "Designed and shipped an agentic AI transfer intelligence platform that monitors player data across leagues and surfaces candidates aligned to club tactical and financial constraints. Built multi-agent pipelines with Gemini/Claude and Pydantic, and implemented RAG with ChromaDB over StatsBomb event data.",
       "highlights": [
