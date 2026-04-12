@@ -6,7 +6,7 @@
     "email": "obed.junias@colorado.edu",
     "phone": "720-266-0046",
     "url": "https://linkedin.com/in/obed-junias",
-    "summary": "I am a graduate researcher exploring Commonsense Reasoning, Neuro-symbolic NLP, and Responsible ML. My research focuses on developing reasoning frameworks that integrate structured logic with neural representations, with the goal of improving the interpretability, factual consistency, and fairness of LLMs. I aspire to contribute to foundational AI research at the intersection of cognition, reasoning, and ethical deployment.",
+    "summary": "I am a graduate researcher at the BLAST Lab exploring natural language reasoning, LLM safety, and agentic systems. My primary research investigates the fundamental reliability of generative models, focusing on data quality and model collapse during foundation model pretraining. Following my work on interpretable commonsense reasoning (ACL 2026), my overarching vision is to pioneer advancements that ensure next-generation AI systems remain capable, transparent, logically grounded, and aligned with human outcomes.",
     "location": {
       "address": "",
       "postalCode": "80302",
@@ -27,39 +27,52 @@
       }
     ]
   },
- "research": [
-  {
-    "organization": "Institute of Cognitive Science, CU Boulder",
-    "location": "Boulder, Colorado",
-    "position": "Responsible AI Researcher",
-    "url": "https://www.colorado.edu/ics",
-    "startDate": "2025-01-01",
-    "endDate": "Present",
-    "summary": "Conducting fairness and bias evaluations of large language models (LLaMA, GPT-4, etc.) in mental health classification tasks, analyzing demographic and modality-based disparities in model behavior.",
-    "highlights": [
-      "Implemented fairness-aware loss functions and diagnostic probes for LLM evaluation",
-      "Identified demographic and linguistic biases in model outputs across text and audio modalities",
-      "Co-author of an accepted IEEE-EMBS 2025 paper (arXiv:2509.25795) on algorithmic bias in mental health detection",
-      "Developing frameworks for ethical and responsible AI deployment"
-    ]
-  },
-  {
-    "organization": "University of Colorado Boulder",
-    "location": "Boulder, Colorado",
-    "position": "Graduate Researcher – Medical Ethics and NLP",
-    "url": "https://www.colorado.edu/",
-    "startDate": "2025-01-01",
-    "endDate": "2025-06-01",
-    "summary": "Examining the ethical and commonsense reasoning capabilities of LLMs in clinical and biomedical contexts using controlled evaluation pipelines.",
-    "highlights": [
-      "Developed the Medical Ethics Assessment of LLMs project using a Retrieval-Augmented Generation (RAG) pipeline",
-      "Analyzed model confidence and rationale structures to assess reliability in moral reasoning tasks",
-      "Identified key gaps in ethical reasoning consistency even under knowledge-augmented setups",
-      "Contributing to responsible NLP research focused on model interpretability and societal alignment"
-    ]
-  }
-]
-,
+  "research": [
+    {
+      "organization": "Institute of Cognitive Science, CU Boulder",
+      "location": "Boulder, Colorado",
+      "position": "Responsible AI Researcher",
+      "url": "https://www.colorado.edu/ics",
+      "startDate": "2025-02-01",
+      "endDate": "2025-12-01",
+      "summary": "Conducting fairness and bias evaluations of large language models (LLaMA, GPT-4, etc.) in mental health classification tasks, analyzing demographic and modality-based disparities in model behavior.",
+      "highlights": [
+        "Implemented fairness-aware loss functions and diagnostic probes for LLM evaluation",
+        "Identified demographic and linguistic biases in model outputs across text and audio modalities",
+        "Co-author of an accepted IEEE-EMBS 2025 paper (arXiv:2509.25795) on algorithmic bias in mental health detection",
+        "Developing frameworks for ethical and responsible AI deployment"
+      ]
+    },
+    {
+      "organization": "BLAST Lab, CU Boulder",
+      "location": "Boulder, Colorado",
+      "position": "Graduate Research Assistant",
+      "url": "https://blast-cu.github.io",
+      "startDate": "2025-06-01",
+      "endDate": "Present",
+      "summary": "Developing interpretable reasoning frameworks and investigating data quality failures in foundation models.",
+      "highlights": [
+        "Investigating synthetic data proliferation and its role in foundation model collapse during recursive training pipelines.",
+        "Developed an entailment tree-based framework and benchmark for multi-step logical inference (LOGICAL-COMMONSENSEQA).",
+        "Accepted at ACL 2026 (Main Conference) for contributing structured reasoning benchmarks."
+      ]
+    },
+    {
+      "organization": "University of Colorado Boulder",
+      "location": "Boulder, Colorado",
+      "position": "Graduate Researcher – Medical Ethics and NLP",
+      "url": "https://www.colorado.edu/",
+      "startDate": "2025-01-01",
+      "endDate": "2025-05-01",
+      "summary": "Examining the ethical and commonsense reasoning capabilities of LLMs in clinical and biomedical contexts using controlled evaluation pipelines.",
+      "highlights": [
+        "Developed the Medical Ethics Assessment of LLMs project using a Retrieval-Augmented Generation (RAG) pipeline",
+        "Analyzed model confidence and rationale structures to assess reliability in moral reasoning tasks",
+        "Identified key gaps in ethical reasoning consistency even under knowledge-augmented setups",
+        "Contributing to responsible NLP research focused on model interpretability and societal alignment"
+      ]
+    }
+  ],
   "work": [
     {
       "name": "Oracle Corporation",
@@ -68,7 +81,11 @@
       "startDate": "2021-08-01",
       "endDate": "2024-08-01",
       "summary": "Architected and implemented TestNG and BATS automation frameworks for Oracle Rest Data Services and SQLcL, reducing manual effort by 95%. Engineered Python-based migration framework for Oracle APEX applications supporting 200+ employees.",
-      "highlights": ["Reduced manual testing effort by 95%", "Led 15-member team for DB Tools feature validation", "Automated Oracle APEX application migrations"]
+      "highlights": [
+        "Reduced manual testing effort by 95%",
+        "Led 15-member team for DB Tools feature validation",
+        "Automated Oracle APEX application migrations"
+      ]
     },
     {
       "name": "Hewlett Packard Enterprise",
@@ -77,7 +94,11 @@
       "startDate": "2021-02-01",
       "endDate": "2021-07-01",
       "summary": "Built intelligent automation solution with Groovy and Workfusion OCR, optimizing data workflows and integrating text extraction into software robots, increasing speed by 40% and reducing errors by 80%.",
-      "highlights": ["Increased automation speed by 40%", "Reduced errors by 80%", "Delivered PoC on Intelligent Business Process Management"]
+      "highlights": [
+        "Increased automation speed by 40%",
+        "Reduced errors by 80%",
+        "Delivered PoC on Intelligent Business Process Management"
+      ]
     }
   ],
   "education": [
@@ -90,7 +111,11 @@
       "startDate": "2024-08-01",
       "endDate": "2026-05-01",
       "score": "4.0",
-      "courses": ["Machine Learning", "Data Center Scale Computing", "NLP and Deep NLU"]
+      "courses": [
+        "Machine Learning",
+        "Data Center Scale Computing",
+        "NLP and Deep NLU"
+      ]
     },
     {
       "institution": "BMS College of Engineering",
@@ -101,7 +126,12 @@
       "startDate": "2017-08-01",
       "endDate": "2021-08-01",
       "score": "3.95",
-      "courses": ["Algorithms", "Databases", "Operating Systems", "Computer Networks"]
+      "courses": [
+        "Algorithms",
+        "Databases",
+        "Operating Systems",
+        "Computer Networks"
+      ]
     }
   ],
   "skills": [
@@ -154,12 +184,12 @@
       "name": "Machine Learning & AI",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Natural Language Processing",
+        "NLP Research",
+        "Reasoning",
+        "LLM Safety",
         "Responsible AI",
-        "Large Language Models",
-        "Bias and Fairness",
-        "Computer Vision",
-        "Deep Learning"
+        "Agentic AI",
+        "Systems"
       ]
     }
   ],
@@ -178,6 +208,19 @@
       "url": ""
     },
     {
+      "name": "Commonsense Reasoning with Logical Entailment Trees",
+      "summary": "Developed benchmarks and evaluation methods for logical commonsense reasoning to evaluate multi-fact logical capabilities of large language models.",
+      "highlights": [
+        "Created LOGICAL-COMMONSENSEQA, a novel benchmark dataset testing compositional logic",
+        "Benchmarked baseline performance with N-Shot and Chain-of-Thought prompting",
+        "Designed neuro-symbolic methods combining informal logic with neural approaches",
+        "Paper accepted to ACL 2026 (Main Conference)"
+      ],
+      "startDate": "2025-06-01",
+      "endDate": "Present",
+      "url": "https://arxiv.org/abs/2601.16504"
+    },
+    {
       "name": "ScoutR: Agentic Football Transfer Intelligence Platform",
       "summary": "Designed and shipped an agentic AI transfer intelligence platform that monitors player data across leagues and surfaces candidates aligned to club tactical and financial constraints. Built multi-agent pipelines with Gemini/Claude and Pydantic, and implemented RAG with ChromaDB over StatsBomb event data.",
       "highlights": [
@@ -193,7 +236,10 @@
     {
       "name": "Medical Ethics Assessment of LLMs",
       "summary": "Systematic assessment of ethical reasoning capabilities of large language models in clinical contexts using RAG pipeline and controlled evaluation with curated multiple-choice questions.",
-      "highlights": ["RAG Pipeline Implementation", "Ethical Reasoning Evaluation"],
+      "highlights": [
+        "RAG Pipeline Implementation",
+        "Ethical Reasoning Evaluation"
+      ],
       "startDate": "2024-01-01",
       "endDate": "2024-12-01",
       "url": ""
@@ -201,7 +247,11 @@
     {
       "name": "Lost in Plot: Contrastive Learning for Movie Retrieval",
       "summary": "Dense retrieval system using fine-tuned BERT encoder with contrastive learning for tip-of-the-tongue movie retrieval, outperforming GPT-4 baseline on 100K+ movie corpus.",
-      "highlights": ["Contrastive Learning", "BERT Fine-tuning", "Dense Retrieval"],
+      "highlights": [
+        "Contrastive Learning",
+        "BERT Fine-tuning",
+        "Dense Retrieval"
+      ],
       "startDate": "2024-01-01",
       "endDate": "2024-06-01",
       "url": ""
@@ -209,7 +259,10 @@
     {
       "name": "Resource-Efficient LLM Fine-tuning for Mental Health Support",
       "summary": "Applied parameter-efficient fine-tuning with QLoRA to adapt Falcon 7B model for mental health conversations with limited computational resources.",
-      "highlights": ["QLoRA Implementation", "Mental Health NLP"],
+      "highlights": [
+        "QLoRA Implementation",
+        "Mental Health NLP"
+      ],
       "startDate": "2024-06-01",
       "endDate": "2024-12-01",
       "url": ""
@@ -217,7 +270,10 @@
     {
       "name": "Multi-stage RAG System",
       "summary": "Robust RAG system with FAISS indexing and Scikit-Learn context filtering for enhanced factual grounding of LLM responses over research paper corpus.",
-      "highlights": ["FAISS Integration", "Multi-stage Retrieval"],
+      "highlights": [
+        "FAISS Integration",
+        "Multi-stage Retrieval"
+      ],
       "startDate": "2024-03-01",
       "endDate": "2024-08-01",
       "url": ""
