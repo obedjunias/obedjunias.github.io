@@ -29,6 +29,20 @@
   },
   "research": [
     {
+      "organization": "BLAST Lab, CU Boulder",
+      "location": "Boulder, Colorado",
+      "position": "Graduate Research Assistant",
+      "url": "https://blast-cu.github.io",
+      "startDate": "2025-06-01",
+      "endDate": "Present",
+      "summary": "Developing interpretable reasoning frameworks and investigating data quality failures in foundation models.",
+      "highlights": [
+        "Investigating synthetic data proliferation and its role in foundation model collapse during recursive training pipelines.",
+        "Developed an entailment tree-based framework and benchmark for multi-step logical inference (LOGICAL-COMMONSENSEQA).",
+        "Accepted at ACL 2026 (Main Conference) for contributing structured reasoning benchmarks."
+      ]
+    },
+    {
       "organization": "Institute of Cognitive Science, CU Boulder",
       "location": "Boulder, Colorado",
       "position": "Responsible AI Researcher",
@@ -41,20 +55,6 @@
         "Identified demographic and linguistic biases in model outputs across text and audio modalities",
         "Co-author of an accepted IEEE-EMBS 2025 paper (arXiv:2509.25795) on algorithmic bias in mental health detection",
         "Developing frameworks for ethical and responsible AI deployment"
-      ]
-    },
-    {
-      "organization": "BLAST Lab, CU Boulder",
-      "location": "Boulder, Colorado",
-      "position": "Graduate Research Assistant",
-      "url": "https://blast-cu.github.io",
-      "startDate": "2025-06-01",
-      "endDate": "Present",
-      "summary": "Developing interpretable reasoning frameworks and investigating data quality failures in foundation models.",
-      "highlights": [
-        "Investigating synthetic data proliferation and its role in foundation model collapse during recursive training pipelines.",
-        "Developed an entailment tree-based framework and benchmark for multi-step logical inference (LOGICAL-COMMONSENSEQA).",
-        "Accepted at ACL 2026 (Main Conference) for contributing structured reasoning benchmarks."
       ]
     },
     {
