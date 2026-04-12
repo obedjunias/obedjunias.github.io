@@ -1,10 +1,10 @@
 ---
 layout: page
-title: E2E Text-to-Comic Generation Pipeline
-description: Scalable cloud-native system for transforming textual narratives into comic strips
+title: e2e text-to-comic generation pipeline
+description: scalable cloud-native system for transforming textual narratives into comic strips
 img:
 importance: 2
-category: nlp & reasoning research
+category: llm applications
 related_publications: false
 ---
 
@@ -12,14 +12,14 @@ related_publications: false
 
 ---
 
-## Overview
+## overview
 
 Created an end-to-end web system that transforms textual narratives into comic strips, integrating GPT-3.5 and Stable Diffusion via a modular pipeline orchestrated on Google Kubernetes Engine with Redis caching for high-throughput concurrent generation.
 
 **Course:** Cloud Computing / Distributed Systems, University of Colorado Boulder
 **Status:** Completed
 
-## Objective
+## objective
 
 The Text-to-Comic Generator aims to democratize visual storytelling by:
 - Providing an easy-to-use interface for users to submit text stories and retrieve generated comic images
@@ -27,7 +27,7 @@ The Text-to-Comic Generator aims to democratize visual storytelling by:
 - Showcasing cloud-based, scalable architecture to handle multiple users efficiently
 - Managing image generation load across distributed components
 
-## System Architecture
+## system architecture
 
 ### Core Components
 
@@ -69,7 +69,7 @@ The Text-to-Comic Generator aims to democratize visual storytelling by:
 - Generated image URLs
 - Timestamps and analytics
 
-## Processing Pipeline
+## processing pipeline
 
 ### End-to-End Flow
 
@@ -116,7 +116,7 @@ User Request → Check Cache → Serve from Storage → Return Images
 - Falls back to Cloud Storage if not cached
 - Returns comic strip to user
 
-## Technical Implementation
+## technical implementation
 
 ### Kubernetes Orchestration (GKE)
 
@@ -167,7 +167,7 @@ key: hash(input_text) → value: {image_urls, metadata}
 - At-least-once delivery guarantee
 - Idempotency keys for duplicate detection
 
-## Cloud Technologies Integration
+## cloud technologies integration
 
 ### Google Cloud Platform Services
 
@@ -190,7 +190,7 @@ key: hash(input_text) → value: {image_urls, metadata}
 - Google Pub/Sub for asynchronous processing
 - Topic-based routing for different request types
 
-## Testing and Validation
+## testing and validation
 
 ### Component Testing
 - Individual module tests (API, NLP, image generation)
@@ -216,7 +216,7 @@ key: hash(input_text) → value: {image_urls, metadata}
 - Text-to-image transformation accuracy
 - Interface usability assessment
 
-## Performance Metrics
+## performance metrics
 
 **System Capabilities:**
 - **Throughput:** 50+ concurrent requests
@@ -230,7 +230,7 @@ key: hash(input_text) → value: {image_urls, metadata}
 - Graceful degradation under extreme load
 - Automatic recovery from component failures
 
-## Challenges and Solutions
+## challenges and solutions
 
 ### Challenge 1: Stable Diffusion Latency
 **Problem:** Image generation takes 10-20 seconds per image
@@ -253,7 +253,7 @@ key: hash(input_text) → value: {image_urls, metadata}
 - Implemented priority queuing
 - Added monitoring and alerting
 
-## Future Enhancements
+## future enhancements
 
 **Model Improvements:**
 - Fine-tuned Stable Diffusion for consistent character appearance
@@ -278,7 +278,7 @@ key: hash(input_text) → value: {image_urls, metadata}
 - Gallery of public comics
 - Collaborative story editing
 
-## Impact and Learning Outcomes
+## impact and learning outcomes
 
 **Technical Skills:**
 - Cloud-native architecture design
@@ -299,7 +299,7 @@ key: hash(input_text) → value: {image_urls, metadata}
 - Auto-scaling requires careful tuning
 - Monitoring and observability crucial for production systems
 
-## Conclusion
+## conclusion
 
 The E2E Text-to-Comic Generation Pipeline demonstrates the power of integrating modern cloud technologies with state-of-the-art AI models to create a scalable, user-friendly creative tool. By leveraging Kubernetes, message queues, caching, and managed cloud services, the system achieves high throughput, low latency, and cost efficiency while maintaining reliability and ease of use.
 

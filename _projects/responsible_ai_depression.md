@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Algorithmic Bias in LLM-Based Depression Detection
-description: Evaluating and mitigating fairness issues in language-based mental health classification
+title: algorithmic bias in llm-based depression detection
+description: evaluating and mitigating fairness issues in language-based mental health classification
 img:
 importance: 1
 category: responsible ai & healthcare
@@ -12,7 +12,7 @@ related_publications: false
 
 ---
 
-## Overview
+## overview
 
 Investigated algorithmic bias in language-based models for automated depression detection, with a focus on socio-demographic disparities across gender and race/ethnicity.
 
@@ -21,13 +21,13 @@ Investigated algorithmic bias in language-based models for automated depression 
 **Advisor:** Dr. Theodora Chaspari, HUBBS Lab
 **Status:** Published at IEEE-EMBS 2025
 
-## Publication
+## publication
 
 **Junias, Obed**, Prajakta Kini, and Theodora Chaspari. "Assessing Algorithmic Bias in Language-Based Depression Detection: A Comparison of DNN and LLM Approaches." *2025 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)*. IEEE, 2025.
 
 **Links:** [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/11269509) | [arXiv:2509.25795](https://arxiv.org/abs/2509.25795)
 
-## Research Contributions
+## research contributions
 
 ### Large-Scale Fairness Evaluation
 
@@ -60,7 +60,7 @@ Developed quantitative methods for bias assessment:
 - **Fairness Metrics**: Quantified disparities across demographic groups
 - **Model Selection Criteria**: Informed model selection based on fairness considerations
 
-## Key Findings
+## key findings
 
 **Model Performance:**
 - LLMs outperform DNN-based models in depression classification
@@ -78,7 +78,7 @@ Developed quantitative methods for bias assessment:
 - Neither prompting strategies nor increased shots effectively reduce race/ethnicity disparities
 - Highlights need for continued research in fairness-aware mental health AI
 
-## Impact
+## impact
 
 This work advances responsible AI in mental health applications by:
 

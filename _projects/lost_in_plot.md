@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Lost in Plot - Contrastive Learning for Movie Retrieval
-description: Dense retrieval system for tip-of-the-tongue movie search from vague descriptions
+title: lost in plot - contrastive learning for movie retrieval
+description: dense retrieval system for tip-of-the-tongue movie search from vague descriptions
 img:
 importance: 2
-category: nlp & reasoning research
+category: nlp research
 related_publications: false
 ---
 
@@ -12,14 +12,14 @@ related_publications: false
 
 ---
 
-## Overview
+## overview
 
 Developed a dense retrieval system for "tip-of-the-tongue" movie search, enabling users to find films from vague, fragmentary natural language descriptions using contrastive learning.
 
 **Course:** Natural Language Processing, University of Colorado Boulder
 **Status:** Completed
 
-## Problem Statement
+## problem statement
 
 Humans naturally recall movies through fragments—bits of plot, emotion, or striking visuals—rather than exact titles. We remember "that comic-horror about a haunted house at Christmas" or "the one where Brad Pitt plays Death," not precise keywords. This creates a fundamental gap:
 
@@ -32,7 +32,7 @@ Humans naturally recall movies through fragments—bits of plot, emotion, or str
 1. How effective is contrastive learning-based dense retrieval for retrieving movies from vague user descriptions?
 2. How does a fine-tuned model compare to few-shot prompting (GPT-4) and vanilla BERT encoder?
 
-## Approach
+## approach
 
 ### System Architecture
 
@@ -95,7 +95,7 @@ L = w_retr·L_retr + w_genre·L_genre + w_year·L_year + w_theme·L_theme
 - **Epochs:** 8 (early stopping on MRR)
 - **Evaluation:** FAISS index of 100K movies, measured Recall@1/5/10/25 and MRR
 
-## Results
+## results
 
 ### Performance Comparison
 
@@ -134,7 +134,7 @@ L = w_retr·L_retr + w_genre·L_genre + w_year·L_year + w_theme·L_theme
    - Genre, decade, and theme heads potentially overwhelmed core retrieval signal
    - Balancing multi-task losses proved delicate
 
-## Technical Contributions
+## technical contributions
 
 1. **Dense Retrieval Framework:** Contrastive learning system aligning vague descriptions with movie metadata in shared semantic space
 
@@ -146,7 +146,7 @@ L = w_retr·L_retr + w_genre·L_genre + w_year·L_year + w_theme·L_theme
 
 5. **Comparative Analysis:** Systematic evaluation against strong baselines (GPT-4, vanilla BERT)
 
-## Insights and Future Directions
+## insights and future directions
 
 ### Key Takeaways
 
@@ -178,7 +178,7 @@ L = w_retr·L_retr + w_genre·L_genre + w_year·L_year + w_theme·L_theme
 - Photo search from vague descriptions ("waterfall at sunrise")
 - General "tip-of-the-tongue" information retrieval
 
-## Impact
+## impact
 
 This work demonstrates that contrastive learning can bridge the gap between natural human descriptions and structured metadata, enabling more intuitive search systems. While challenges remain, the approach shows clear advantages over generative methods in factual grounding and retrieval reliability.
 

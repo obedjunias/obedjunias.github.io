@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Commonsense Reasoning with Logical Entailment Trees
-description: Developing benchmarks and evaluation methods for logical commonsense reasoning
+title: commonsense reasoning with logical entailment trees
+description: developing benchmarks and evaluation methods for logical commonsense reasoning
 img:
 importance: 1
 category: nlp & reasoning research
@@ -17,8 +17,8 @@ related_publications: false
 Developing benchmarks and reasoning methods for evaluating logical commonsense reasoning in large language models at the BLAST Lab, University of Colorado Boulder.
 
 **Timeline:** June 2025 – Present
-**Advisor:** Dr. Maria L. Pacheco, CU Boulder
-**Target Venue:** ACL 2026
+**Advisor:** Dr. Maria L. Pacheco, CU Boulder  
+**status:** accepted at **ACL 2026 (main conference)** [[paper]](https://arxiv.org/abs/2601.16504)
 
 ## research progress
 

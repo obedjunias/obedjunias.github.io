@@ -1,7 +1,7 @@
 ---
 layout: page
-title: S-LoRAA - Scalable Multi-Agent LLM System
-description: Dynamic LoRA adapter orchestration for efficient multi-agent inference pipelines
+title: s-loraa - scalable multi-agent llm system
+description: dynamic lora adapter orchestration for efficient multi-agent inference pipelines
 img:
 importance: 1
 category: agentic ai & systems
@@ -20,7 +20,7 @@ Designed and implemented S-LoRAA, a scalable system for dynamically orchestratin
 **Course:** Systems for Machine Learning, University of Colorado Boulder
 **Status:** Completed
 
-## System Architecture
+## system architecture
 
 S-LoRAA treats each agent as a lightweight LoRA module that can be loaded, executed, and evicted on demand, providing a systems-oriented solution to multi-agent LLM deployment.
 
@@ -58,7 +58,7 @@ Three controlled settings to isolate ordering effects:
 2. **Per-Topic Block**: Questions grouped by subject, minimal switching
 3. **Round-Robin Interleaving**: Deterministic high-frequency switching
 
-## Experimental Results
+## experimental results
 
 ### Performance Across Memory Tiers
 
@@ -93,7 +93,7 @@ Evaluated system behavior at 5 GB, 7.5 GB, and 15 GB memory budgets:
 - Shuffle and round-robin environments amplify switching costs
 - LoRA maintains efficiency across all ordering patterns
 
-## Technical Contributions
+## technical contributions
 
 1. **Dynamic Multi-Agent Framework**: Complete lifecycle management for LoRA adapters including loading, execution, eviction, and scheduling under GPU memory constraints
 
@@ -103,7 +103,7 @@ Evaluated system behavior at 5 GB, 7.5 GB, and 15 GB memory budgets:
 
 4. **Fine-Grained Metrics**: System-level logging of load/unload counts, GPU memory transitions, and inference latency
 
-## Impact and Insights
+## impact and insights
 
 **Systems Design Perspective:**
 - Parameter-efficient adaptation is a systems design decision, not just a modeling choice
@@ -121,7 +121,7 @@ Evaluated system behavior at 5 GB, 7.5 GB, and 15 GB memory budgets:
 - Multi-GPU and distributed execution
 - Application to complex agentic workflows
 
-## Conclusion
+## conclusion
 
 S-LoRAA demonstrates that multi-agent LLM systems can be made practical through parameter-efficient adaptation. The system provides a foundation for understanding how model specialization and systems behavior interact, showing that lightweight LoRA adapters enable scalable multi-agent operation where traditional full-model pipelines fail or become prohibitively expensive.
 

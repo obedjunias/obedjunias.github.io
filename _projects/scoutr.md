@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "ScoutR: Agentic Football Transfer Intelligence Platform"
-description: Agentic AI transfer intelligence platform for club tactical and financial constraints
+title: scoutr: agentic football transfer intelligence platform
+description: agentic ai transfer intelligence platform for club tactical and financial constraints
 img:
 importance: 1
 category: agentic ai & systems

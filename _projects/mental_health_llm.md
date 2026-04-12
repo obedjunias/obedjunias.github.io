@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Resource-Efficient LLM Fine-tuning for Mental Health Support
-description: Parameter-efficient adaptation of LLMs for mental health conversation support
+title: resource-efficient llm fine-tuning for mental health support
+description: parameter-efficient adaptation of llms for mental health conversation support
 img:
 importance: 2
 category: responsible ai & healthcare
@@ -12,17 +12,17 @@ related_publications: false
 
 ---
 
-## Overview
+## overview
 
 Adapted a large language model for mental health conversation support under limited computational and data resources using parameter-efficient fine-tuning techniques.
 
 **Status:** Completed
 
-## Objective
+## objective
 
 Develop a specialized LLM for mental health support conversations while working within strict resource constraints—limited compute power, memory, and training data. The challenge was to achieve task specialization without the expense of full model fine-tuning.
 
-## Approach
+## approach
 
 ### Parameter-Efficient Fine-Tuning (PEFT)
 
@@ -50,7 +50,7 @@ Develop a specialized LLM for mental health support conversations while working 
 - Optimized for empathetic, supportive responses
 - Resource-constrained hardware compatibility
 
-## Key Benefits
+## key benefits
 
 ### Computational Efficiency
 
@@ -80,7 +80,7 @@ Develop a specialized LLM for mental health support conversations while working 
 - Easier to deploy in production environments
 - Cost-effective scaling for mental health applications
 
-## Impact
+## impact
 
 This work demonstrates that effective task specialization for sensitive domains like mental health support doesn't require massive computational resources. QLoRA enables:
 
@@ -89,7 +89,7 @@ This work demonstrates that effective task specialization for sensitive domains 
 3. **Sustainable AI**: Reduced carbon footprint compared to full fine-tuning
 4. **Domain Specialization**: Effective adaptation for high-stakes applications like mental health
 
-## Technical Insights
+## technical insights
 
 **PEFT Advantages:**
 - Preserves general knowledge from pre-training
@@ -103,7 +103,7 @@ This work demonstrates that effective task specialization for sensitive domains 
 - Compatible with standard training frameworks
 - Easy integration into existing LLM pipelines
 
-## Applications
+## applications
 
 The resulting model can support:
 - Mental health chatbot conversations
@@ -112,7 +112,7 @@ The resulting model can support:
 - Educational resources for mental health awareness
 - Research on human-AI interaction in sensitive contexts
 
-## Future Directions
+## future directions
 
 **Model Improvements:**
 - Multi-adapter strategies for different mental health contexts
@@ -131,7 +131,7 @@ The resulting model can support:
 - Comparison with human support interactions
 - Long-term engagement and effectiveness studies
 
-## Conclusion
+## conclusion
 
 This project demonstrates that parameter-efficient fine-tuning techniques like QLoRA enable practical adaptation of large language models for specialized, sensitive domains like mental health support, even under significant resource constraints. The approach balances computational efficiency with task performance, making advanced AI capabilities accessible for important social applications.
 

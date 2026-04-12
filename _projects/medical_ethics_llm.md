@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Medical Ethics Assessment of Large Language Models
-description: Evaluating ethical reasoning capabilities of LLMs in clinical contexts
+title: medical ethics assessment of large language models
+description: evaluating ethical reasoning capabilities of llms in clinical contexts
 img:
 importance: 2
 category: responsible ai & healthcare
@@ -12,18 +12,18 @@ related_publications: false
 
 ---
 
-## Overview
+## overview
 
 Assessed the ethical reasoning capabilities of large language models in clinical contexts, an underexplored dimension of Responsible AI, revealing critical limitations in their reliability and depth for ethically sensitive healthcare tasks.
 
 **Course:** Deep Natural Language Understanding, University of Colorado Boulder
 **Status:** Completed
 
-## Research Objective
+## research objective
 
 As LLMs are increasingly applied in clinical contexts for documentation and decision support, their ability to understand and reason about medical ethics remains an open question. This study systematically evaluates whether current models can navigate ethical trade-offs that arise in day-to-day medical practice.
 
-## Methodology
+## methodology
 
 ### Model Evaluation
 
@@ -77,7 +77,7 @@ Implemented RAG using the AMA Code of Medical Ethics as external knowledge sourc
   1. **Answer Match**: Consistency between stated choice and generated answer
   2. **Reasoning Match**: Alignment with gold-standard ethical principles and clinical logic
 
-## Key Findings
+## key findings
 
 ### Performance Results
 
@@ -113,7 +113,7 @@ Implemented RAG using the AMA Code of Medical Ethics as external knowledge sourc
 - Difficulty with nuanced, real-world clinical scenarios
 - External knowledge integration insufficient without reasoning capability
 
-## Research Questions Addressed
+## research questions addressed
 
 1. **How well do current LLMs identify the most ethical course of action in clinical settings?**
    - Partial competence with significant failures, especially on complex cases
@@ -124,7 +124,7 @@ Implemented RAG using the AMA Code of Medical Ethics as external knowledge sourc
 3. **Do model confidence scores and natural language rationales provide reliable signals of ethical soundness?**
    - No—models can be confidently wrong; rationales often miss critical reasoning
 
-## Impact and Implications
+## impact and implications
 
 ### Societal Impact
 
@@ -141,14 +141,14 @@ Implemented RAG using the AMA Code of Medical Ethics as external knowledge sourc
 2. **Deployment Risk**: Ethically flawed suggestions could jeopardize patient safety and erode public trust
 3. **Research Needs**: Better training methods, stronger grounding in ethical principles, and more thoughtful evaluation required
 
-## Technical Contributions
+## technical contributions
 
 1. **Curated Evaluation Benchmark**: 100-question dataset covering diverse high-stakes ethical scenarios
 2. **Dual Probing Framework**: Combined confidence analysis and reasoning evaluation for comprehensive assessment
 3. **RAG Pipeline for Ethics**: Retrieval system using professional medical ethics guidance
 4. **Systematic Comparison**: Domain adaptation, few-shot learning, and external knowledge effects
 
-## Conclusion
+## conclusion
 
 This study demonstrates that current language models show partial understanding of medical ethics principles but are not yet reliable for clinical applications. Simply adding more context through retrieval or examples is insufficient—models need fundamental improvements in how they reason about and apply ethical principles in complex situations.
 
