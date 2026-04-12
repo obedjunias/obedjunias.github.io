@@ -3,17 +3,17 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Obed
+first_name: obed
 middle_name: 
-last_name: Junias
+last_name: junias
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
 description: >
-  Graduate researcher at the BLAST Lab, University of Colorado Boulder. Specializing in interpretable reasoning and responsible machine learning.
+  graduate researcher at the blast lab, university of colorado boulder. specializing in interpretable reasoning and responsible machine learning.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  # Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  powered by <a href="https://jekyllrb.com/" target="_blank">jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  hosted by <a href="https://pages.github.com/" target="_blank">github pages</a>.
+  # photos from <a href="https://unsplash.com" target="_blank">unsplash</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -90,8 +90,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: junias-blogs # blog_name will be displayed in your blog page
-blog_description: My personal blog where I share my thoughts, research and experiences. I aim to learn and grow through sharing. # blog_description will be displayed in your blog page
-blog_author: Obed Junias # blog_author will be displayed in your blog page
+blog_description: my personal blog where i share my thoughts, research and experiences. i aim to learn and grow through sharing. # blog_description will be displayed in your blog page
+blog_author: obed junias # blog_author will be displayed in your blog page
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
