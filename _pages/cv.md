@@ -13,6 +13,6 @@ toc:
 ### download cv
 
 - [**master cv (general)**]({{ '/assets/pdf/obed_junias_cv.pdf' | relative_url }})
-- [research focus]({{ '/assets/pdf/oj_research_cv.pdf' | relative_url }})
+- [research focus]({{ '/assets/pdf/obed_junias_cv.pdf' | relative_url }})
 - [genai/agent focus]({{ '/assets/pdf/GenAI_Resume.pdf' | relative_url }})
 - [llm systems focus]({{ '/assets/pdf/llmsys_cv.pdf' | relative_url }})
