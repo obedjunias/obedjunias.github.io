@@ -315,7 +315,8 @@ Everything.
 
 ---
 
-## Where We Tend to Overthink
+<details markdown="1">
+<summary><h2>Where We Tend to Overthink</h2></summary>
 
 Sometimes the confusion comes from thinking too deeply about something that's actually straightforward. Here are places where I've overthought things (and you might too):
 
@@ -343,7 +344,10 @@ The simple truth: They answer different questions. V asks "how good is this stat
 
 The simple truth: The max is just how we define "optimal." We're still computing the expected return — but under the assumption that future actions will be the best ones. Expectation is still there; we're just being optimistic about future behavior.
 
-## Common Misconceptions
+</details>
+
+<details markdown="1">
+<summary><h2>Common Misconceptions</h2></summary>
 
 Let's address some frequent sources of confusion:
 
@@ -370,6 +374,8 @@ Partially true, but it also has real meaning. It encodes how much we care about 
 **Misconception 6: "Policy gradients are fundamentally different from value-based methods"**
 
 Not as different as they seem. Both are ultimately about maximizing expected return. Value-based methods do it by estimating values and acting greedily. Policy gradients do it by directly adjusting action probabilities. Same goal, different paths.
+
+</details>
 
 ## The Cleanest Mental Model
 

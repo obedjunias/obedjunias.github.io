@@ -195,7 +195,8 @@ This is the <span class="tooltip-term">negative log-likelihood (NLL)<span class=
 
 ---
 
-## Where We Tend to Overthink
+<details markdown="1">
+<summary><h2>Where We Tend to Overthink</h2></summary>
 
 Sometimes the confusion comes from thinking too deeply about something that's actually straightforward. Here are places where I've overthought things (and you might too):
 
@@ -219,8 +220,10 @@ The simple truth: Not inherently. MLE just finds parameters that agree with the 
 
 The simple truth: High likelihood = low surprise = good. The model assigns high probability to what actually happened, meaning it's not surprised. We maximize likelihood because we want the model to be unsurprised by reality.
 
+</details>
 
-## Common Misconceptions
+<details markdown="1">
+<summary><h2>Common Misconceptions</h2></summary>
 
 Let's address some frequent sources of confusion:
 
@@ -247,6 +250,8 @@ No. Cross-entropy loss is exactly negative log-likelihood. They're the same thin
 **Misconception 6: "We use likelihood because the data is random"**
 
 No. The data isn't random—it already happened. We use likelihood because our **model** treats outcomes as random. The randomness is in the model's perspective, not in reality.
+
+</details>
 
 ## The Cleanest Mental Model
 
