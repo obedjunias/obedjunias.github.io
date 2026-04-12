@@ -4,7 +4,7 @@ title: e2e text-to-comic generation pipeline
 description: scalable cloud-native system for transforming textual narratives into comic strips
 img:
 importance: 2
-category: llm applications & ai systems
+category: systems
 related_publications: false
 ---
 

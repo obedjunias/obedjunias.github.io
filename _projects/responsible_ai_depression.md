@@ -4,7 +4,7 @@ title: algorithmic bias in llm-based depression detection
 description: evaluating and mitigating fairness issues in language-based mental health classification
 img:
 importance: 1
-category: responsible ai & healthcare
+category: responsible ai
 related_publications: false
 ---
 
