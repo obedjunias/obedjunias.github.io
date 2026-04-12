@@ -7,9 +7,7 @@ nav_order: 7
 collection: papers
 description: A curated selection of research papers and resources that have influenced my work in interpretable and responsible AI.
 ---
-## research library
-
-> “Research is formalized curiosity. It is poking and prying with a purpose.” — *Zora Neale Hurston*
+## my research library
 
 #### reasoning papers
 <ul>

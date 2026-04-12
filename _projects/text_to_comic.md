@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "text-to-comic generation pipeline"
-description: scalable cloud-native system for transforming textual narratives into comic strips
+title: "text-to-comic: scalable system for transforming textual narratives into comic strips"
+description: scalable system for transforming textual narratives into comic strips
 img:
 importance: 2
 category: agentic ai & systems
