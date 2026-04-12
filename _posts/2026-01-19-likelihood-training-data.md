@@ -63,6 +63,23 @@ toc:
     margin-left: -125px;
   }
 }
+details summary {
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary h2::after {
+  content: ' ▼';
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.7em;
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(-90deg);
+}
+details[open] summary h2::after {
+  transform: rotate(0deg);
+}
 </style>
 
 Likelihood and log-likelihood are everywhere in machine learning, yet they're also among the most misunderstood concepts. Many explanations repeat the phrase "the probability of observing the data given the parameters" and move on, leaving us confused about what is being observed, what is random, and why probability is involved at all when the data already exists.
@@ -196,7 +213,7 @@ This is the <span class="tooltip-term">negative log-likelihood (NLL)<span class=
 ---
 
 <details markdown="1">
-<summary><h2>Where We Tend to Overthink</h2></summary>
+<summary><h2 style="display: inline-block; vertical-align: middle;">Where We Tend to Overthink</h2></summary>
 
 Sometimes the confusion comes from thinking too deeply about something that's actually straightforward. Here are places where I've overthought things (and you might too):
 
@@ -223,7 +240,7 @@ The simple truth: High likelihood = low surprise = good. The model assigns high 
 </details>
 
 <details markdown="1">
-<summary><h2>Common Misconceptions</h2></summary>
+<summary><h2 style="display: inline-block; vertical-align: middle;">Common Misconceptions</h2></summary>
 
 Let's address some frequent sources of confusion:
 

@@ -63,6 +63,23 @@ toc:
     margin-left: -125px;
   }
 }
+details summary {
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary h2::after {
+  content: ' ▼';
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.7em;
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(-90deg);
+}
+details[open] summary h2::after {
+  transform: rotate(0deg);
+}
 </style>
 
 When I started learning reinforcement learning, one phrase kept appearing everywhere:
@@ -316,7 +333,7 @@ Everything.
 ---
 
 <details markdown="1">
-<summary><h2>Where We Tend to Overthink</h2></summary>
+<summary><h2 style="display: inline-block; vertical-align: middle;">Where We Tend to Overthink</h2></summary>
 
 Sometimes the confusion comes from thinking too deeply about something that's actually straightforward. Here are places where I've overthought things (and you might too):
 
@@ -347,7 +364,7 @@ The simple truth: The max is just how we define "optimal." We're still computing
 </details>
 
 <details markdown="1">
-<summary><h2>Common Misconceptions</h2></summary>
+<summary><h2 style="display: inline-block; vertical-align: middle;">Common Misconceptions</h2></summary>
 
 Let's address some frequent sources of confusion:
 
