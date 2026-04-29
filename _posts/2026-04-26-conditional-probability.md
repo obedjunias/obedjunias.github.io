@@ -82,477 +82,159 @@ details[open] summary h2::after {
 }
 </style>
 
-When I started learning conditional probability, the formula itself did not look that bad:
+The formula for conditional probability is mathematically straightforward:
 
 $$
 P(E \mid F)=\frac{P(E\cap F)}{P(F)}
 $$
 
-But the intuition behind it bothered me.
+While the formula is simple, the intuition behind the denominator is often counterintuitive. If event $$F$$ has already occurred, treating $$F$$ as the entirely new sample space can feel mathematically abrupt. The outcomes outside $$F$$ still exist in the original sample space $$S$$; they have not disappeared. The shift here is not about altering the physical reality of the sample space, but about restricting the scope of possibility based on new information.
 
-The part that felt strange was this:
-
-> If event $$F$$ has already happened, why do we suddenly enter $$F$$ and treat it like the new sample space?
-
-Because there are still outcomes outside $$F$$, right?
-
-They are still inside the original sample space $$S$$. They did not magically disappear. So why are we allowed to ignore them?
-
-This was the first place where conditional probability stopped feeling like a formula and started feeling like a change in perspective.
-
-The key idea is this:
-
-> Conditioning does not change reality. It changes what is still possible given what we now know.
-
-That sentence is the backbone of this whole topic.
-
-The original sample space still exists. But once we are told that $$F$$ happened, outcomes outside $$F$$ are no longer compatible with our information. So for the question we are asking now, $$F$$ becomes the relevant world.
-
-Not because the rest of $$S$$ vanished.
-
-But because our uncertainty has been restricted.
+Conditional probability represents a fundamental change in perspective. Conditioning does not change reality; it changes what is possible given the current information. The original sample space still exists, but once $$F$$ occurs, outcomes outside $$F$$ are no longer compatible with the available information. $$F$$ becomes the relevant world. Our uncertainty has been restricted.
 
 ---
 
-## The Dice Example That Makes the Whole Thing Concrete
+## A Concrete Dice Example
 
-Suppose we roll a fair six-sided die.
-
-The sample space is:
+Suppose we roll a fair six-sided die. The original sample space is:
 
 $$
-S={1,2,3,4,5,6}
+S=\{1,2,3,4,5,6\}
 $$
 
-Now define two events:
+Now define two events. Let's say $$E$$ is the event that the number is greater than 3, and $$F$$ is the event that the number is even:
 
 $$
-E = \text{the number is greater than 3}
+E=\{4,5,6\}
 $$
 
-So:
-
 $$
-E={4,5,6}
+F=\{2,4,6\}
 $$
 
-And:
-
-$$
-F = \text{the number is even}
-$$
-
-So:
-
-$$
-F={2,4,6}
-$$
-
-Before we know anything else, the probability that the number is greater than 3 is:
+Before we know anything else, the probability that the number is greater than 3 is exactly half, because three out of the six possible outcomes satisfy the condition:
 
 $$
 P(E)=\frac{3}{6}=\frac{1}{2}
 $$
 
-That is because, out of all six possible die outcomes, three are greater than 3.
-
-So far, nothing is conditional.
-
-We are living in the full sample space:
+So far, nothing is conditional. We are living in the full sample space. But now, suppose someone tells us that the number is even. That means event $$F$$ has happened. Now the possible outcomes are no longer all six outcomes; they are restricted to just the even numbers:
 
 $$
-S={1,2,3,4,5,6}
+F=\{2,4,6\}
 $$
 
-Now suppose someone tells us:
+This is a common point of confusion. Outcomes 1, 3, and 5 still exist in the original sample space, but they are incompatible with the information we just received. If we know the number is even, then rolling a 1, 3, or 5 is impossible given the new information. So when we ask for the conditional probability $$P(E \mid F)$$, we are not asking how many of all six die outcomes are greater than 3. Instead, we are asking: out of the outcomes that are even, how many are greater than 3? 
 
-> The number is even.
-
-That means $$F$$ happened.
-
-Now the possible outcomes are no longer all six outcomes. They are only:
-
-$$
-F={2,4,6}
-$$
-
-This is where I initially got stuck.
-
-Because outcomes 1, 3, and 5 still exist in the original sample space. But they are incompatible with the information we just received.
-
-If I know the number is even, then 1 is impossible. 3 is impossible. 5 is impossible.
-
-Not impossible in the original game.
-
-Impossible given the information I now have.
-
-So when I ask:
-
-$$
-P(E \mid F)
-$$
-
-I am not asking:
-
-> Out of all six die outcomes, how many are greater than 3?
-
-I am asking:
-
-> Out of the outcomes that are even, how many are greater than 3?
-
-Inside $$F$$, the possible outcomes are:
-
-$$
-{2,4,6}
-$$
-
-Among those, the outcomes greater than 3 are:
-
-$$
-{4,6}
-$$
-
-So:
+Inside $$F$$, our possible outcomes are restricted to $$\{2,4,6\}$$. Among those, the outcomes greater than 3 are $$\{4,6\}$$. Therefore, our updated probability is:
 
 $$
 P(E\mid F)=\frac{2}{3}
 $$
 
-That is the whole idea.
-
-The denominator changed because the relevant world changed.
-
-Before evidence, the relevant world was $$S$$.
-
-After evidence, the relevant world is $$F$$.
+The denominator changed because the relevant world changed. Before the evidence, the relevant world was $$S$$. After the evidence, the relevant world is $$F$$.
 
 ---
 
-## The First Mental Model That Helped
+## Conditioning as a Filter
 
-Here is the way I started thinking about it:
+A useful mental model is to view conditional probability as probability after information has filtered the world. 
 
-> Conditional probability is probability after information has filtered the world.
+Before the information, our world was $$S=\{1,2,3,4,5,6\}$$. After the information "the number is even", our world is filtered down to $$F=\{2,4,6\}$$. The event $$F$$ acts like a filter, and everything incompatible with $$F$$ gets removed from consideration. Again, this does not mean the removed outcomes never existed; it just means they are no longer possible under the new condition.
 
-Before the information:
-
-$$
-S={1,2,3,4,5,6}
-$$
-
-After the information “the number is even”:
-
-$$
-F={2,4,6}
-$$
-
-The event $$F$$ acts like a filter.
-
-Everything incompatible with $$F$$ gets removed from consideration.
-
-Again, this does not mean the removed outcomes never existed. It means they are no longer possible under the condition.
-
-This distinction matters a lot:
-
-* The original sample space is the full set of possible outcomes before extra information.
-* The conditioned sample space is the set of possible outcomes after the information is known.
-
-So when we condition on $$F$$, we are saying:
-
-> Assume $$F$$ happened. Now reason only inside that assumption.
-
-That is why $$F$$ becomes the new reference set.
+This distinction matters heavily. The original sample space is the full set of possible outcomes before extra information, whereas the conditioned sample space is the set of possible outcomes after the information is known. When we condition on $$F$$, we are simply saying: assume $$F$$ happened, and now reason exclusively inside that assumption. That is exactly why $$F$$ becomes the new reference set.
 
 ---
 
-## Prior: What I Believed Before the Information
+## Prior: Belief Before Evidence
 
-Once conditional probability started making sense, the next words were:
+The next major concepts are the prior, update, posterior, and likelihood. These terms are precise names for different parts of belief revision.
 
-* prior
-* update
-* posterior
-* likelihood
-
-At first, these sounded like extra terminology. But they are actually just names for different parts of belief revision.
-
-A prior is what we believe before seeing the new information.
-
-The word “prior” literally means before.
-
-In the die example, before being told the number is even, the probability that the number is greater than 3 is:
+A **prior** is simply what we believe before seeing the new information. In our die example, before being told the number is even, the probability that the number is greater than 3 is:
 
 $$
 P(E)=\frac{1}{2}
 $$
 
-This is the prior probability of $$E$$.
-
-It is what we believed before the evidence arrived.
-
-So prior does not mean “random guess.”
-
-It means:
-
-> the belief state before this new piece of information is incorporated.
-
-In this example, the prior is simple because the die is fair and all six outcomes are equally likely.
-
-Before knowing anything else, three outcomes are greater than 3:
-
-$$
-{4,5,6}
-$$
-
-and three are not:
-
-$$
-{1,2,3}
-$$
-
-So the prior belief is exactly 50–50.
+This is the prior probability of $$E$$. It is what we believed before the evidence arrived. Prior does not mean a "random guess." Instead, it represents the belief state before this new piece of information is incorporated. In this specific example, the prior is straightforward because the die is fair and all six outcomes are equally likely, leaving us with an exact 50–50 split.
 
 ---
 
 ## Evidence: The Thing That Changes the Question
 
-The evidence is the new information we receive.
+The **evidence** is the new information we receive. In our example, the evidence is the revelation that the number is even ($$F$$). Once we hear this, the question fundamentally changes. We are no longer asking how likely $$E$$ is in the full sample space; we are asking how likely $$E$$ is among the worlds where $$F$$ is true. 
 
-In our example, the evidence is:
+That shift is the core of conditioning. The evidence does not directly tell us whether $$E$$ happened—it doesn't explicitly say "the number is greater than 3." It only says "the number is even." But that information still drastically changes how plausible $$E$$ is. Before hearing "even," $$E$$ had a probability of $$1/2$$. After hearing "even," $$E$$ has a probability of $$2/3$$. 
 
-$$
-F=\text{the number is even}
-$$
-
-Once we hear this, the question changes.
-
-We are no longer asking:
-
-> How likely is $$E$$ in the full sample space?
-
-We are asking:
-
-> How likely is $$E$$ among the worlds where $$F$$ is true?
-
-That shift is the core of conditioning.
-
-The evidence does not directly tell us whether $$E$$ happened.
-
-It does not say “the number is greater than 3.”
-
-It only says “the number is even.”
-
-But that information still changes how plausible $$E$$ is.
-
-Before hearing “even,” $$E$$ had probability:
-
-$$
-\frac{1}{2}
-$$
-
-After hearing “even,” $$E$$ has probability:
-
-$$
-\frac{2}{3}
-$$
-
-So evidence can change the probability of another event even if it does not directly state that event.
-
-That was an important click for me.
+Evidence can completely change the probability of another event even if it does not directly state that event.
 
 ---
 
-## Posterior: What I Believe After the Information
+## Posterior: Belief After Evidence
 
-The posterior is the belief after incorporating the evidence.
-
-The word “posterior” means after.
-
-So in our example:
+The **posterior** is our final belief after incorporating the evidence. So in our example, our posterior probability of $$E$$ after learning $$F$$ is:
 
 $$
 P(E\mid F)=\frac{2}{3}
 $$
 
-is the posterior probability of $$E$$ after learning $$F$$.
-
-Before evidence:
-
-$$
-P(E)=\frac{1}{2}
-$$
-
-After evidence:
-
-$$
-P(E\mid F)=\frac{2}{3}
-$$
-
-That is the prior-to-posterior movement.
-
-The event itself did not change. The die roll did not change. Reality did not change.
-
-What changed was our information.
-
-So posterior means:
-
-> the probability after updating on the evidence.
-
-Not the true answer.
-
-Not the final truth of the universe.
-
-Just the updated belief given what we currently know.
-
----
+We moved from a prior of $$1/2$$ to a posterior of $$2/3$$. That is the prior-to-posterior movement. The event itself did not change, the die roll did not change, and reality did not change. What changed was our information. Therefore, posterior simply means the probability after updating on the evidence. It is just our newly updated belief given what we currently know.
 
 ## Update: The Movement from Prior to Posterior
 
-This was another word I initially wanted to collapse into the others.
+The term "update" should not be confused with the likelihood. The update is not a single probability term; it is the entire revision process of changing from the prior to the posterior.
 
-I wondered:
-
-> Is update the same thing as likelihood?
-
-No.
-
-The update is the whole process of changing from prior to posterior.
-
-In the die example:
-
-Prior:
-
-$$
-P(E)=\frac{1}{2}
-$$
-
-Evidence:
-
-$$
-F=\text{even}
-$$
-
-Posterior:
-
-$$
-P(E\mid F)=\frac{2}{3}
-$$
-
-The update is the movement:
-
-$$
-\frac{1}{2} \rightarrow \frac{2}{3}
-$$
-
-caused by the evidence.
-
-So update is not a single probability term.
-
-It is the revision process.
-
-That matters because likelihood is only one ingredient used in a Bayesian update.
+In our die example, we started with a prior probability of $$P(E)=\frac{1}{2}$$. We then received the evidence that $$F$$ (the number being even) had occurred. Our posterior belief became $$P(E\mid F)=\frac{2}{3}$$. The update is simply the movement from $$\frac{1}{2}$$ to $$\frac{2}{3}$$ caused by the arrival of the new evidence. This distinction matters because the likelihood is only one ingredient used in a Bayesian update, not the update itself.
 
 ---
 
-## Why a New Piece of Evidence Does Not Reset Everything
+## Evidence Accumulates Over Time
 
-Another confusion I had was something like this:
+When dealing with multiple pieces of evidence, it is important to understand how they interact. Suppose a model starts with a 50–50 belief. It sees one negative example, so the belief moves toward the negative hypothesis. Then, it sees one positive example. Why does it not just revert to the original 50–50 belief? 
 
-> Suppose I start 50–50. Then I see one negative example, so I move toward negative. Then I see one positive example. Why do I not just go back to 50–50?
+The answer is that evidence accumulates. A new piece of evidence does not erase the old evidence. If we see one negative example and then one positive example, our belief should reflect both observations together, not only the most recent one. 
 
-The answer is:
-
-> Because evidence accumulates.
-
-A new piece of evidence does not erase the old evidence.
-
-If we see one negative example and then one positive example, our belief should reflect both observations, not only the most recent one.
-
-This is the idea behind sequential updating.
-
-After the first data point $$D_1$$, we have:
+This is the core idea behind sequential updating. After the first data point $$D_1$$, our belief becomes our posterior:
 
 $$
 P(H\mid D_1)
 $$
 
-After the second data point $$D_2$$, we do not go back to the original prior and compute only:
-
-$$
-P(H\mid D_2)
-$$
-
-Instead, we compute:
+After observing the second data point $$D_2$$, we do not go back to the original prior and compute $$P(H\mid D_2)$$ in isolation. Instead, we compute the joint posterior:
 
 $$
 P(H\mid D_1,D_2)
 $$
 
-The old posterior becomes the new prior.
-
-That is the cleanest way to say it.
-
-Learning is not replacement.
-
-Learning is accumulation.
-
-If every new observation reset us back to the beginning, we would never learn anything stable.
+The old posterior becomes the new prior. Learning is an accumulation of knowledge, not a replacement. If every new observation reset the process, stable learning would be impossible.
 
 ---
 
-## Likelihood: The Concept I Had to Slow Down For
+## Understanding Likelihood
 
-Prior made sense:
+While prior (*belief before evidence*) and posterior (*belief after evidence*) are relatively straightforward, likelihood can be harder to grasp.
 
-> What did I believe before the evidence?
+The phrase people often use is that likelihood is $$P(\text{data}\mid \text{hypothesis})$$. While technically correct, it can feel empty until the direction of the equation really clicks. Likelihood asks: *if this hypothesis were true, how expected would this evidence be?* 
 
-Posterior made sense:
-
-> What do I believe after the evidence?
-
-But likelihood was harder.
-
-The phrase people often use is:
-
-> likelihood is (P$$\text{data}\mid \text{hypothesis}$$)
-
-That is technically correct, but it can feel empty until the direction really clicks.
-
-Likelihood asks:
-
-> If this hypothesis were true, how expected would this evidence be?
-
-That is the whole idea.
-
-Not:
-
-> How likely is the hypothesis?
-
-That would be posterior.
-
-Likelihood keeps the hypothesis fixed and asks whether the observed data fits it.
-
-So likelihood is:
+That is the entire idea. It is not asking how likely the hypothesis is—that would be the posterior. Likelihood keeps the hypothesis fixed and asks whether the observed data fits it. So likelihood is represented by:
 
 $$
 P(D\mid H)
 $$
 
-Posterior is:
+Whereas the posterior is represented by:
 
 $$
 P(H\mid D)
 $$
 
-These are not the same thing.
-
-The direction matters.
+These are not the same thing, and the direction absolutely matters.
 
 ---
 
 ## A Coin Example for Likelihood
 
-Suppose we have two hypotheses about a coin:
+Suppose we have two hypotheses about a coin. The first hypothesis ($$H_1$$) is that the coin is fair, and the second hypothesis ($$H_2$$) is that the coin is biased toward heads:
 
 $$
 H_1=\text{the coin is fair}
@@ -562,7 +244,7 @@ $$
 H_2=\text{the coin is biased toward heads}
 $$
 
-Before flipping, suppose both hypotheses are equally plausible:
+Before flipping, suppose we find both hypotheses equally plausible, giving us equal priors:
 
 $$
 P(H_1)=0.5
@@ -572,264 +254,227 @@ $$
 P(H_2)=0.5
 $$
 
-Now we flip once and observe heads.
-
-The likelihood under the fair-coin hypothesis is:
-
-$$
-P(\text{heads}\mid H_1)=0.5
-$$
-
-The likelihood under the biased-coin hypothesis might be:
+Now we flip the coin once and observe heads. The likelihood under the fair-coin hypothesis is simply $$P(\text{heads}\mid H_1)=0.5$$. However, the likelihood under the biased-coin hypothesis might be much higher, perhaps:
 
 $$
 P(\text{heads}\mid H_2)=0.9
 $$
 
-This does not mean:
+This does not mean that $$P(H_2\mid \text{heads})=0.9$$. That would be a completely different statement (the posterior). The likelihood only tells us that if the coin were indeed biased toward heads, then seeing a heads would be very expected. Therefore, the evidence fits $$H_2$$ much better than it fits $$H_1$$. 
 
-$$
-P(H_2\mid \text{heads})=0.9
-$$
-
-That would be a different statement.
-
-The likelihood only says:
-
-> If the coin were biased toward heads, then seeing heads would be very expected.
-
-So the evidence fits $$H_2$$ better than $$H_1$$.
-
-But to get the posterior, we still need to combine this likelihood with the prior.
-
-That is why likelihood is not belief in the hypothesis.
-
-Likelihood is how well the hypothesis explains the evidence.
+To find out which hypothesis is actually more probable (the posterior), we still need to mathematically combine this likelihood with our prior. That is exactly why likelihood is not our final belief in the hypothesis; likelihood is just a measure of how well the hypothesis explains the evidence.
 
 ---
 
 ## Likelihood in the Dice Example
 
-Now return to the die.
-
-Let:
+Let's return to the die to solidify this. We define our hypothesis $$H$$ as the event that the number is greater than 3, and our evidence $$F$$ as the event that the number is even:
 
 $$
-H = \text{the number is greater than 3}
+H=\{4,5,6\}
 $$
 
-So:
-
 $$
-H={4,5,6}
+F=\{2,4,6\}
 $$
 
-Let the evidence be:
+The likelihood is represented by $$P(F\mid H)$$. In plain English, we are asking: *if the number were greater than 3, how likely would it be even?*
 
-$$
-F=\text{the number is even}
-$$
-
-The likelihood is:
-
-$$
-P(F\mid H)
-$$
-
-In words:
-
-> If the number were greater than 3, how likely would it be even?
-
-Inside the hypothesis $$H$$, the possible outcomes are:
-
-$$
-{4,5,6}
-$$
-
-The even ones are:
-
-$$
-{4,6}
-$$
-
-So:
+Inside our hypothesis $$H$$, the possible outcomes are $$\{4,5,6\}$$. Out of those three outcomes, the even ones are $$\{4,6\}$$. Therefore, our likelihood is:
 
 $$
 P(F\mid H)=\frac{2}{3}
 $$
 
-This is likelihood.
+This is the likelihood. On the other hand, the posterior is $$P(H\mid F)$$. In words, the posterior asks: *given that the number is even, how likely is it that the number is greater than 3?*
 
-But the posterior is:
-
-$$
-P(H\mid F)
-$$
-
-In words:
-
-> Given that the number is even, how likely is it that the number is greater than 3?
-
-That also equals $$2/3$$ in this particular example, but conceptually the two questions are different.
-
-Likelihood:
-
-$$
-P(F\mid H)
-$$
-
-Posterior:
-
-$$
-P(H\mid F)
-$$
-
-The fact that they can sometimes have the same numerical value does not mean they are the same idea.
-
-That is one of those places where examples can accidentally hide the distinction.
+This numerical coincidence can sometimes obscure the conceptual difference. The likelihood $$P(F\mid H)$$ and the posterior $$P(H\mid F)$$ measure probability in completely opposite directions. Relying purely on simple examples with symmetric probabilities can accidentally hide these important distinctions.
 
 ---
 
-## The Wording That Finally Helped
+## Defining Likelihood Properly
 
-I asked something like:
+A common misinterpretation of likelihood is phrasing it as: *given this hypothesis, how good is this data for it to be true?* This phrasing is misleading.
 
-> Is likelihood: given this hypothesis, how good is this data for it to be true?
+The correct formulation is: *given this hypothesis, how expected is the observed data?* Alternatively, *if this hypothesis were true, how well would it explain the data?*
 
-That was close, but slightly off.
+This distinction is crucial. The phrasing "how good is this data for the hypothesis to be true?" subtly implies an evaluation of whether the data *makes* the hypothesis true. That is posterior thinking. 
 
-The better wording is:
+Likelihood simply evaluates whether the data is surprising under the assumption that the hypothesis is true. High likelihood means the data is expected under the hypothesis, while low likelihood means the data is highly surprising.
 
-> Given this hypothesis, how expected is the observed data?
+## The Cricket Example That Puts It All Together
 
-or:
+Let’s tie all of these concepts together with a concrete example: a cricket match.
 
-> If this hypothesis were true, how well would it explain what I saw?
+Suppose today’s match is between Royal Challengers Bengaluru (RCB) and Delhi Capitals (DC). In the first innings, Delhi Capitals collapses and gets bowled out for a mere 75 runs. 
 
-The small wording difference matters.
+When asking, "What is the probability that RCB wins?", the natural process of answering aligns with Bayesian updating.
 
-“How good is this data for the hypothesis to be true?” can sound like we are asking whether the data makes the hypothesis true.
+### Before the Innings: The Prior
 
-That leans toward posterior thinking.
+Before the match begins, there is an initial expectation based on historical data. Taking into account factors like overall team strength, pitch conditions, recent player form, and the venue, RCB might be considered the slight favorite. 
 
-Likelihood is more like:
+This initial belief is the prior. Mathematically, it looks like this:
 
-> Pretend the hypothesis is true. Would the data be surprising or unsurprising?
+$$
+P(\text{RCB wins})=0.55
+$$
 
-High likelihood means the data is unsurprising under the hypothesis.
+$$
+P(\text{DC wins})=0.45
+$$
 
-Low likelihood means the data is surprising under the hypothesis.
-
-That is it.
-
-Nothing more mystical is happening.
+This prior establishes that before seeing a single ball bowled, RCB is expected to win 55% of the time.
 
 ---
 
-## Bayes’ Rule as the Whole Story
+### New Evidence Arrives
 
-Now the pieces fit into Bayes’ rule:
+As the game progresses, new information arrives. In this case, the evidence is extreme:
+
+$$
+D = \text{DC scored only 75}
+$$
+
+To update the beliefs, the compatibility of this evidence with each possible hypothesis must be evaluated.
+
+---
+
+**Hypothesis 1: RCB Wins**
+
+Assume the first hypothesis is true:
+
+$$
+H_1 = \text{RCB wins}
+$$
+
+Evaluate the likelihood of seeing the evidence under this assumption:
+
+$$
+P(D \mid H_1)
+$$
+
+This evaluates: *If it was certain that RCB was going to win the match, how expected is it that DC would only score 75 runs?*
+
+It is highly expected. A team being bowled out for 75 usually results in a loss, making this evidence very compatible with an RCB victory. This yields a high likelihood, perhaps:
+
+$$
+P(D \mid H_1)=0.8
+$$
+
+---
+
+**Hypothesis 2: DC Wins**
+
+Now assume the alternative hypothesis is true:
+
+$$
+H_2 = \text{DC wins}
+$$
+
+Evaluate the likelihood of the evidence under this new assumption:
+
+$$
+P(D \mid H_2)
+$$
+
+This evaluates: *If it was certain that DC was going to win the match, how expected is it that they would only score 75 runs?*
+
+It is highly unlikely for a team to win a T20 match after scoring only 75 runs. Because this scenario is so rare, the evidence has a very low likelihood under this hypothesis. Perhaps:
+
+$$
+P(D \mid H_2)=0.1
+$$
+
+---
+
+### The Update and The Posterior
+
+The initial beliefs are now combined with the new evidence. The posterior probability represents the updated belief after factoring in the innings:
+
+$$
+P(\text{RCB wins} \mid \text{DC}=75)
+$$
+
+Because the evidence (DC scoring 75) is overwhelmingly more likely under the hypothesis that RCB wins, confidence in an RCB victory skyrockets. The posterior probability might jump to:
+
+$$
+P(\text{RCB wins} \mid \text{DC}=75) = 0.95
+$$
+
+---
+
+### Summarizing the Shift
+
+The updating process follows four steps:
+
+1. **Prior:** Before the innings, RCB was a slight favorite based on historical factors.
+2. **Evidence:** DC suffered a massive batting collapse, scoring only 75 runs.
+3. **Likelihood:** The probability of that collapse occurring was evaluated under each possible winner, showing it strongly supported the hypothesis of an RCB victory.
+4. **Posterior:** After combining the prior with the likelihood of the evidence, RCB became the overwhelming favorite.
+
+The prior is the belief *before* the innings, the evidence is the *75 all out*, the likelihood measures *how expected* that 75 is under each possible winner, and the posterior is the final updated belief *after* the innings.
+
+---
+
+### Alternative Scenario
+
+Suppose the match went differently. Suppose DC batted first and scored a massive 240 runs. 
+
+The prior remains the exact same (RCB 55%, DC 45%). However, the new evidence is entirely different. The likelihood of a team scoring 240 runs must be evaluated:
+
+$$
+P(240 \mid \text{DC wins})
+$$
+
+This likelihood is extremely high. If DC wins the match, it is very expected that they batted incredibly well. Conversely:
+
+$$
+P(240 \mid \text{RCB wins})
+$$
+
+This likelihood is much lower. If RCB were to win, it is highly unusual that they would allow the opposition to score 240 runs first. Because the evidence strongly favors the DC-winning hypothesis, the posterior probability drastically shifts toward DC.
+
+The exact same framework and updating process is used, but different evidence leads to a different conclusion. This demonstrates Bayesian reasoning: start with initial beliefs, observe data, and reweight beliefs based on how well the hypotheses explain the data.
+
+---
+
+## Bayes’ Rule
+
+These pieces assemble formally into Bayes' rule:
 
 $$
 P(H\mid D)=\frac{P(D\mid H)P(H)}{P(D)}
 $$
 
-Each part has a role:
+Each component of Bayes' rule plays a distinct role. Multiply the **prior** ($$P(H)$$) by the **likelihood** ($$P(D \mid H)$$), which evaluates how well the hypothesis explains the evidence. This results in the updated **posterior** ($$P(H \mid D)$$), after dividing by the **normalizer** ($$P(D)$$) to ensure the probabilities sum to 1.
 
-$$
-P(H)=\text{prior}
-$$
-
-$$
-P(D\mid H)=\text{likelihood}
-$$
-
-$$
-P(H\mid D)=\text{posterior}
-$$
-
-$$
-P(D)=\text{normalizer/evidence probability}
-$$
-
-The informal version is:
+The simplified structure of this equation is:
 
 $$
 \text{posterior} \propto \text{likelihood} \times \text{prior}
 $$
 
-This is the cleanest mental model:
+This provides the cleanest framework: start with prior beliefs, reweight each hypothesis by how well it explains the new evidence, and normalize. The result is the posterior.
 
-> Start with what you believed before. Then reweight each hypothesis by how well it explains the evidence. Normalize. The result is your posterior.
-
-So likelihood does not replace the prior.
-
-It modifies it.
-
-A hypothesis with a strong prior but weak likelihood may lose probability.
-
-A hypothesis with a weak prior but very strong likelihood may gain probability.
-
-The posterior is the balance between both.
-
----
+The likelihood does not replace the prior; it modifies it. A hypothesis with a strong prior but a weak likelihood may lose probability overall. Conversely, a hypothesis with a weak prior but a very strong likelihood may gain probability. The posterior is the logical balance of both forces.
 
 ---
 
 <details markdown="1">
 <summary><h2 style="display: inline-block; vertical-align: middle;">Where We Tend to Overthink</h2></summary>
 
-Sometimes the confusion comes from thinking too deeply about something that is actually straightforward.
+**Overthinking: “Why does $$F$$ become the new sample space?”**  
+Because we are now assuming $$F$$ happened. Outcomes outside $$F$$ are incompatible with the information we currently have. They still exist in the original sample space, but they do not exist in the conditioned world.
 
-**Overthinking: “Why does $$F$$ become the new sample space?”**
+**Overthinking: “Did the probability change because reality changed?”**  
+Reality did not change; our information changed. Conditional probability is purely about updating uncertainty, not about altering the past or changing reality.
 
-The simple truth: because we are now assuming $$F$$ happened. Outcomes outside $$F$$ are incompatible with the information we have. They still exist in the original sample space, but not in the conditioned world.
+**Overthinking: “Is posterior the true answer?”**  
+Not necessarily. The posterior is simply the updated belief given the current evidence and the model. If the evidence is incomplete or if the starting model is flawed, the posterior can still be incorrect.
 
-**Overthinking: “Did the probability change because reality changed?”**
-
-No. Reality did not change. Our information changed. Conditional probability is about updating uncertainty, not changing the past.
-
-**Overthinking: “Is posterior the true answer?”**
-
-Not necessarily. Posterior is the updated belief given the evidence and the model. If the evidence is incomplete or the model is wrong, the posterior can still be wrong.
-
-**Overthinking: “Is likelihood the same as posterior?”**
-
-No. Likelihood is (P$$D\mid H$$). Posterior is (P$$H\mid D$$). Same symbols, opposite direction, completely different meaning.
-
-
-</details>
-
----
-
-<details markdown="1">
-<summary><h2 style="display: inline-block; vertical-align: middle;">Where We Tend to Overthink</h2></summary>
-
-Sometimes the confusion comes from thinking too deeply about something that is actually straightforward.
-
-**Overthinking: “Why does $$F$$ become the new sample space?”**
-
-The simple truth: because we are now assuming $$F$$ happened. Outcomes outside $$F$$ are incompatible with the information we have. They still exist in the original sample space, but not in the conditioned world.
-
-**Overthinking: “Did the probability change because reality changed?”**
-
-No. Reality did not change. Our information changed. Conditional probability is about updating uncertainty, not changing the past.
-
-**Overthinking: “Is posterior the true answer?”**
-
-Not necessarily. Posterior is the updated belief given the evidence and the model. If the evidence is incomplete or the model is wrong, the posterior can still be wrong.
-
-**Overthinking: “Is likelihood the same as posterior?”**
-
-No. Likelihood is (P$$D\mid H$$). Posterior is (P$$H\mid D$$). Same symbols, opposite direction, completely different meaning.
-
-**Overthinking: “If the model sees a positive example after a negative example, shouldn’t it reset?”**
-
-No. Evidence accumulates. The new positive example updates the current belief; it does not erase the previous negative example.
-
-**Overthinking: “If labels are known during training, why do we need likelihood?”**
-
-Because the known labels teach the model what each class looks like. Likelihood is learned from labeled data and then used when labels are unknown.
+**Overthinking: “Is likelihood the same as posterior?”**  
+Likelihood is $$P(D\mid H)$$, while posterior is $$P(H\mid D)$$. They use the same symbols but in the opposite direction, and they have completely different mathematical meanings.
 
 </details>
 
@@ -838,24 +483,17 @@ Because the known labels teach the model what each class looks like. Likelihood 
 <details markdown="1">
 <summary><h2 style="display: inline-block; vertical-align: middle;">Common Misconceptions</h2></summary>
 
-**Misconception 1: “Conditioning deletes the rest of the sample space.”**
+**Misconception 1: “Conditioning deletes the rest of the sample space.”**  
+The rest of the sample space still physically exists. Conditioning only establishes that, given the new information, those alternative outcomes are no longer possible for the specific question being asked.
 
-No. The rest of the sample space still exists. Conditioning only says that, given the information we have, those outcomes are no longer possible for the current question.
+**Misconception 2: “Prior means random guess.”**  
+Prior means the state of belief before the current evidence. Sometimes it is uniform because there is no reason to prefer one hypothesis over another, but priors can also encode very strong previous knowledge.
 
-**Misconception 2: “Prior means random guess.”**
+**Misconception 3: “Likelihood tells us how likely the hypothesis is.”**  
+Likelihood evaluates how likely the evidence is under the assumption of the hypothesis. It is the posterior that evaluates how likely the hypothesis is after seeing the evidence.
 
-No. Prior means belief before the current evidence. Sometimes it is uniform because we have no reason to prefer one hypothesis. But priors can also encode strong previous knowledge.
-
-**Misconception 3: “Likelihood tells us how likely the hypothesis is.”**
-
-No. Likelihood tells us how likely the evidence is under the hypothesis.
-
-The posterior tells us how likely the hypothesis is after seeing the evidence.
-
-**Misconception 4: “Update equals likelihood.”**
-
-No. The update uses likelihood, but it is not the likelihood itself. The update is the full movement from prior to posterior.
-
+**Misconception 4: “Update equals likelihood.”**  
+The update uses the likelihood, but it is not the likelihood itself. The update is the full mathematical movement from the prior to the posterior.
 
 </details>
 
@@ -863,33 +501,19 @@ No. The update uses likelihood, but it is not the likelihood itself. The update 
 
 ## The Cleanest Mental Model
 
-Here is what I would memorize.
+These core definitions form the foundation of the framework:
 
-Conditional probability:
-
-> Reason inside the world where the condition is true.
-
-Prior:
-
-> What I believed before this evidence.
-
-Likelihood:
-
-> If this hypothesis were true, how expected would this evidence be?
-
-Update:
-
-> Reweight beliefs based on how well each hypothesis explains the evidence.
-
-Posterior:
-
-> What I believe after incorporating the evidence.
+* **Conditional probability:** Reasoning exclusively inside the world where the condition is true.
+* **Prior:** The belief state before receiving the new evidence.
+* **Likelihood:** If a given hypothesis were true, how expected would this new evidence be?
+* **Update:** The process of reweighting beliefs based on how well each hypothesis explains the evidence.
+* **Posterior:** The final belief state after incorporating the new evidence.
 
 ---
 
 ## One-Sentence Takeaway
 
-Conditional probability and Bayesian updating are not tricks with formulas; they are the language of changing uncertainty when new information rules out or reweights possible worlds.
+Conditional probability and Bayesian updating form the fundamental language of changing uncertainty when new information rules out or reweights possible worlds.
 
 ---
 

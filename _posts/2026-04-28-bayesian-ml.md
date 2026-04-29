@@ -82,45 +82,19 @@ details[open] summary h2::after {
 }
 </style>
 
-## Moving Into ML Carefully
-Now we can move into machine learning.
+## Applying Probability to Machine Learning
 
-The first intuition I had was something like:
+These probabilistic concepts apply directly to machine learning. A common initial intuition is: *Before training, positive and negative labels have equal probability. Then the model sees a negative example. An update occurs, and the model assigns higher probability to the negative class. It concludes there are more negative examples in the world.*
 
-> Before training, maybe positive and negative have equal probability. Then the model sees a negative example. The update happens, and now the model becomes more negative and less positive. So it thinks there are more negative examples.
+This intuition requires refinement. The model is not learning that there are absolutely more negative examples in reality. More precisely: *given the observed evidence, negative outcomes are now more plausible under the model.*
 
-This intuition is mostly right, but one sentence needs to be corrected.
-
-The model is not necessarily learning:
-
-> There are more negatives in reality.
-
-A better version is:
-
-> Given the evidence it has seen, negative outcomes are now more plausible under the model.
-
-That distinction matters.
-
-The model does not see reality directly.
-
-It sees data.
-
-So after one negative example, a reasonable model should shift toward negative, but not become completely certain.
-
-If one negative example makes it believe everything is negative, that is not learning. That is overfitting.
+The model does not observe reality directly; it only observes the provided data. After observing one negative example, the model shifts its distribution toward the negative label, but it should not become completely certain. If one single negative example causes a model to assign 100% probability to the negative class, that is overfitting.
 
 ---
 
 ## A Small Supervised Learning Example
 
-Let’s use a tiny spam classifier.
-
-We will call:
-
-* negative = spam
-* positive = not spam
-
-Suppose our training data has three examples:
+Let’s use a tiny, intuitive spam classifier to demonstrate this. We will call the negative class "spam" and the positive class "not spam". Suppose our training data consists of just three examples:
 
 | Example | Text            | Label             |
 | ------- | --------------- | ----------------- |
@@ -128,7 +102,7 @@ Suppose our training data has three examples:
 | 2       | “free prize”    | negative/spam     |
 | 3       | “meeting today” | positive/not-spam |
 
-The possible label hypotheses for a new email are:
+The possible label hypotheses for any new, unseen email are:
 
 $$
 H_- = \text{the email is negative/spam}
@@ -138,7 +112,7 @@ $$
 H_+ = \text{the email is positive/not-spam}
 $$
 
-Before seeing any data, suppose the model has no reason to prefer one label over the other:
+Before seeing any of the training data, suppose the model has absolutely no reason to prefer one label over the other. We would represent this as an equal split:
 
 $$
 P(H_-)=0.5
@@ -148,17 +122,13 @@ $$
 P(H_+)=0.5
 $$
 
-This is the initial prior over labels.
+This initial 50–50 split is our model's prior over the labels.
 
 ---
 
 ## Why We Do Not Jump to 100% After One Example
 
-Now the first example is:
-
-> “free money” → negative
-
-If we were extremely naive, after seeing one negative example and zero positive examples, we might say:
+The model encounters the first training example: "free money" → negative. An extremely naive system might look at this single negative example and instantly conclude:
 
 $$
 P(H_-)=1
@@ -168,33 +138,21 @@ $$
 P(H_+)=0
 $$
 
-But that would be too extreme.
-
-One example is not enough to eliminate the other possibility.
-
-So many simple probabilistic models use smoothing.
-
-Smoothing means we start with small imaginary counts.
-
-For example, before seeing real data, imagine we start with:
+Jumping to 100% certainty is extreme. One example is insufficient evidence to permanently eliminate the other possibility. To prevent this, many probabilistic models use a technique called smoothing. Smoothing initializes the model with small pseudo-counts for all classes. For example, before observing data, the model behaves as if it has already seen one instance of each class:
 
 | Label    | Pseudo-count |
 | -------- | -----------: |
 | negative |            1 |
 | positive |            1 |
 
-This is like saying:
-
-> Before data, keep both classes alive.
-
-Now after seeing the first negative example, the counts become:
+This acts as a mathematical safeguard, keeping all classes alive as possibilities before data is observed. Now, after seeing the first actual negative example, our counts become:
 
 | Label    | Count |
 | -------- | ----: |
 | negative |     2 |
 | positive |     1 |
 
-So:
+Which means our probabilities update to:
 
 $$
 P(H_-)=\frac{2}{3}
@@ -204,28 +162,20 @@ $$
 P(H_+)=\frac{1}{3}
 $$
 
-The model now leans negative.
-
-But it is not certain.
-
-That is exactly what we want.
+The model now appropriately leans negative based on the evidence, but it is not completely certain. That is exactly the behavior we want.
 
 ---
 
 ## After the Second Negative Example
 
-The second example is:
-
-> “free prize” → negative
-
-Now the counts become:
+The model then processes the second training example: "free prize" → negative. Our running counts update again:
 
 | Label    | Count |
 | -------- | ----: |
 | negative |     3 |
 | positive |     1 |
 
-So:
+And our probabilities shift:
 
 $$
 P(H_-)=\frac{3}{4}
@@ -235,30 +185,20 @@ $$
 P(H_+)=\frac{1}{4}
 $$
 
-The model leans even more negative.
-
-This makes sense because the evidence so far has been two negative examples and zero positive examples.
-
-The second example did not reset the model.
-
-It updated the already-updated belief.
+The model leans even more strongly negative now. This makes perfect sense because the evidence so far consists of two real negative examples and zero real positive examples. Notice that the second example did not reset the model; instead, it updated the already-updated belief.
 
 ---
 
 ## After the Positive Example
 
-The third example is:
-
-> “meeting today” → positive
-
-Now the counts become:
+Finally, the model sees the third example: "meeting today" → positive. Our final counts become:
 
 | Label    | Count |
 | -------- | ----: |
 | negative |     3 |
 | positive |     2 |
 
-So:
+Yielding our final probabilities for this tiny dataset:
 
 $$
 P(H_-)=\frac{3}{5}=0.6
@@ -268,67 +208,17 @@ $$
 P(H_+)=\frac{2}{5}=0.4
 $$
 
-The model still leans negative overall.
-
-Why did it not go back to 50–50?
-
-Because the positive example did not erase the two negative examples.
-
-The full evidence is:
-
-* negative
-* negative
-* positive
-
-So the posterior reflects all three examples.
-
-That is why sequential updating is cumulative.
+The model still leans negative overall. It does not revert to 50–50 after seeing a positive example because the new positive example does not erase the previous two negative examples. The accumulated evidence is two negatives and one positive; the posterior probability mathematically reflects all three examples. Sequential updating is cumulative.
 
 ---
 
 ## But Real Models Learn More Than Label Counts
 
-If the model only learned that negatives are slightly more common, it would be a weak model.
+If a model only learned that negative labels were slightly more common in the dataset, it would be a very weak model. A real classifier also learns the relationship between the labels and the *features*. In our toy text example, the features are the individual words.
 
-A real classifier also learns features.
+From the two negative examples ("free money" and "free prize"), the model observes the word "free" twice, "money" once, and "prize" once. From the positive example ("meeting today"), the model observes the words "meeting" and "today" once each. 
 
-In this toy text example, the features are words.
-
-From the negative examples:
-
-* “free money”
-* “free prize”
-
-The model sees:
-
-| Word  | Count in negative examples |
-| ----- | -------------------------: |
-| free  |                          2 |
-| money |                          1 |
-| prize |                          1 |
-
-From the positive example:
-
-* “meeting today”
-
-The model sees:
-
-| Word    | Count in positive examples |
-| ------- | -------------------------: |
-| meeting |                          1 |
-| today   |                          1 |
-
-So the model starts learning patterns like:
-
-* “free” is more associated with spam
-* “money” is more associated with spam
-* “prize” is more associated with spam
-* “meeting” is more associated with not-spam
-* “today” is more associated with not-spam
-
-This is where likelihood becomes useful.
-
-The model learns things like:
+By tracking these feature counts, the model learns valuable patterns. It learns that "free", "money", and "prize" are strongly associated with spam, while "meeting" and "today" are associated with non-spam. This is precisely where likelihood becomes mathematically useful. The model calculates feature likelihoods like:
 
 $$
 P(\text{“free”}\mid H_-)
@@ -340,45 +230,17 @@ $$
 P(\text{“free”}\mid H_+)
 $$
 
-In words:
-
-> If the email is spam, how expected is the word “free”?
-
-and:
-
-> If the email is not spam, how expected is the word “free”?
-
-The word “free” has higher likelihood under the spam hypothesis because it appeared in the spam examples.
+The model is essentially asking: *if the email is spam, how expected is the word “free”?* And conversely, *if the email is not spam, how expected is the word “free”?* In this dataset, the word "free" has a much higher likelihood under the spam hypothesis because it appeared exclusively in the spam examples.
 
 ---
 
 ## The Training vs Inference Distinction
 
-This was another subtle point.
+A common point of confusion is the role of labels during likelihood estimation: *the model already knows whether an example is positive or negative from the labels, right?*
 
-I asked:
+During supervised training, the model is provided the true labels. When the model processes the training example `"free money" → spam`, it is not guessing whether the example is spam. The provided label serves as the ground truth. 
 
-> But for likelihood, the model already knows that an example is positive or negative from the labels, right?
-
-Yes.
-
-During supervised training, the model knows the labels.
-
-That is the point of supervised learning.
-
-For the example:
-
-> “free money” → spam
-
-The model is not trying to guess whether this training example is spam.
-
-The label tells it that.
-
-Instead, the model uses this labeled example to learn what spam looks like.
-
-So during training, labels help the model estimate likelihoods.
-
-For example:
+Instead, the model uses this labeled example to learn the fundamental characteristics of what spam looks like. During training, these known labels help the model estimate the likelihoods:
 
 $$
 P(\text{words}\mid \text{spam})
@@ -390,27 +252,19 @@ $$
 P(\text{words}\mid \text{not spam})
 $$
 
-Then, during inference, the label is not known.
-
-Suppose a new email arrives:
-
-> “free meeting”
-
-Now the model must infer the label.
-
-It compares:
+Then, during inference (when the model is deployed), the label is entirely unknown. Suppose a brand new email arrives that says "free meeting". Now the model must infer the hidden label. It compares the likelihood of those words under the negative hypothesis:
 
 $$
 P(\text{“free meeting”}\mid H_-)
 $$
 
-with:
+with the likelihood under the positive hypothesis:
 
 $$
 P(\text{“free meeting”}\mid H_+)
 $$
 
-Then it combines those likelihoods with the class priors:
+It then mathematically combines those calculated likelihoods with the class priors it learned:
 
 $$
 P(H_-\mid x)\propto P(H_-)P(x\mid H_-)
@@ -420,48 +274,19 @@ $$
 P(H_+\mid x)\propto P(H_+)P(x\mid H_+)
 $$
 
-That gives the posterior probability of each label.
-
-So the labels are known during training.
-
-But they are unknown during inference.
-
-Training uses labels to learn the relationship between features and classes.
-
-Inference uses that learned relationship to predict labels for new examples.
+That combination gives the final posterior probability for each label. Labels are known during training, but they are unknown during inference. Training uses the known labels to learn the probabilistic relationship between features and classes. Inference uses that learned relationship to predict labels for new examples.
 
 ---
 
 ## A Concrete New Email Example
 
-Suppose the new email is:
+Suppose the new email is exactly that phrase: "free meeting". This email contains mixed evidence. It has one word that looks incredibly spammy ("free") and one word that looks very not-spammy ("meeting"). 
 
-> “free meeting”
+Because of this mixed evidence, the model does not simply assume the email is negative just because negative examples were more common during training. A probabilistic model actively weighs the overall class prevalence against how well each label explains these particular words.
 
-This email has one word that looks spammy:
+The model actively balances two components: the **class prior** and the **feature likelihood**.
 
-* free
-
-and one word that looks not-spammy:
-
-* meeting
-
-So the model has mixed evidence.
-
-It does not simply say:
-
-> I saw more negative examples during training, so this must be negative.
-
-A better model says:
-
-> Negative is slightly more common in my training data, but I also need to see which label better explains these particular words.
-
-That means it uses both:
-
-1. Class prior
-2. Feature likelihood
-
-The class prior says:
+The class prior is the baseline probability of each class based on the overall dataset counts:
 
 $$
 P(H_-)=0.6
@@ -471,7 +296,7 @@ $$
 P(H_+)=0.4
 $$
 
-The likelihood asks:
+The feature likelihood asks how well each hypothesis explains the specific words in this email:
 
 $$
 P(\text{“free meeting”}\mid H_-)
@@ -483,13 +308,7 @@ $$
 P(\text{“free meeting”}\mid H_+)
 $$
 
-If “free” is very strong evidence for spam, the model may predict spam.
-
-If “meeting” is very strong evidence for not-spam, the model may predict not-spam.
-
-The final answer depends on how these forces balance.
-
-That is the whole Bayesian structure:
+If "free" is incredibly strong evidence for spam, the model may ultimately predict spam. However, if "meeting" is overwhelmingly strong evidence for not-spam, the model may confidently predict not-spam. The final classification depends entirely on how these opposing forces balance out mathematically. That exact balancing act is the structural core of Bayesian reasoning:
 
 $$
 \text{posterior} \propto \text{prior} \times \text{likelihood}
@@ -499,151 +318,87 @@ $$
 
 ## Generative vs Discriminative Models
 
-The spam example above is closest to a generative classifier like Naive Bayes.
-
-A generative classifier models:
-
-$$
-P(x\mid y)
-$$
-
-and:
-
-$$
-P(y)
-$$
-
-Then it uses Bayes’ rule to compute:
+The spam example is closest to a **generative classifier** (like Naive Bayes). A generative classifier models the joint distribution by explicitly learning both the likelihood of the features given the class ($$P(x\mid y)$$) and the prior probability of the class itself ($$P(y)$$). It then uses Bayes' rule to compute the final posterior prediction:
 
 $$
 P(y\mid x)
 $$
 
-A discriminative classifier directly models:
+On the other hand, a **discriminative classifier** (like logistic regression or a neural network classifier) directly models the boundary between classes. It skips modeling the prior and likelihood separately and directly predicts a distribution over labels given the input:
 
 $$
 P(y\mid x)
 $$
 
-For example, logistic regression or a neural network classifier directly predicts a distribution over labels given the input.
-
-But the intuition still carries over.
-
-Even if the model is not explicitly Bayesian, training still changes the model so that it assigns higher probability to the correct labels and lower probability to incorrect labels.
-
-The data is fixed.
-
-The labels are fixed.
-
-The thing we change is the model.
-
-That is why the Bayesian language is useful even when the actual optimization procedure is gradient descent.
+The fundamental intuition still carries over. Even if a model is not explicitly framed in Bayesian terms, the training process still inherently changes the model so that it assigns higher probability to the correct labels and lower probability to incorrect labels. During training, the data is fixed and the labels are fixed. The only thing that changes is the internal state of the model. The language of Bayesian updating is extremely useful for building intuition, even when the actual mathematical optimization procedure is gradient descent.
 
 ---
 
 ## How This Connects to “Likelihood of the Training Data”
 
-In supervised learning, we often write:
+In supervised learning literature, the dataset is often written mathematically as a collection of inputs and known labels:
 
 $$
-D={(x_1,y_1),(x_2,y_2),\ldots,(x_N,y_N)}
+D=\{(x_1,y_1),(x_2,y_2),\ldots,(x_N,y_N)\}
 $$
 
-The inputs are known.
+Since the inputs and labels are known, and the data already exists, the role of probability might seem unclear. The key is that *probability lives inside the model.*
 
-The labels are known.
-
-The data already exists.
-
-So why talk about probability?
-
-The answer is:
-
-> Probability lives inside the model.
-
-The model assigns probabilities to labels.
-
-For one training example ($$x_i,y_i$$), the model gives:
-
-$$
-p(y\mid x_i;\theta)
-$$
-
-The likelihood contribution of that example is the probability assigned to the correct label:
+The model assigns probabilities to labels. For one single training example ($$x_i, y_i$$), the model produces a probability for the correct label:
 
 $$
 p(y_i\mid x_i;\theta)
 $$
 
-If this number is high, the model explains the example well.
+The likelihood contribution of that specific example is simply the probability the model assigned to the correct label. If this number is high, the model currently explains the example very well. If this number is low, the model does not explain the correct label well.
 
-If this number is low, the model is surprised by the correct label.
-
-For the whole dataset, assuming examples are independent, the likelihood is:
+For the entire dataset (assuming the examples are independent), the total likelihood is the product of all those individual probabilities:
 
 $$
 p(D\mid \theta)=\prod_{i=1}^N p(y_i\mid x_i;\theta)
 $$
 
-The model is asking:
+Through this equation, the model evaluates how much total probability it assigns to the observed labels under its current internal parameters ($$\theta$$).
 
-> Under these parameters $$\theta$$, how much probability do I assign to the labels that actually occurred?
-
-Training then adjusts $$\theta$$ to make this likelihood high.
-
-Usually we maximize log-likelihood instead:
+The goal of training is to adjust $$\theta$$ to make this likelihood as high as possible. Usually, for mathematical stability, the log-likelihood is maximized instead:
 
 $$
 \log p(D\mid \theta)=\sum_{i=1}^N \log p(y_i\mid x_i;\theta)
 $$
 
-And in practice, we minimize negative log-likelihood:
+In practical frameworks like PyTorch or TensorFlow, optimizers are designed to minimize values rather than maximize them, so the **negative log-likelihood** is minimized:
 
 $$
 L(\theta)=-\frac{1}{N}\sum_{i=1}^N \log p(y_i\mid x_i;\theta)
 $$
 
-This is the same idea behind cross-entropy loss.
+This exact formulation is the core mathematical idea behind the standard cross-entropy loss function used to train almost all modern neural networks. 
 
-So likelihood in ML is not asking:
-
-> What is the probability that the dataset exists?
-
-It is asking:
-
-> How well does this model, with these parameters, explain the observed labels?
-
----
+Likelihood in machine learning is not an evaluation of the probability that the dataset exists. It is an evaluation of how well the specific model, given its current parameters, explains the observed labels.
 
 ---
 
 <details markdown="1">
 <summary><h2 style="display: inline-block; vertical-align: middle;">Where We Tend to Overthink</h2></summary>
 
-**Overthinking: “If the model sees a positive example after a negative example, shouldn’t it reset?”**
+**Overthinking: “If the model sees a positive example after a negative example, shouldn’t it reset?”**  
+Evidence accumulates mathematically. The new positive example updates the current belief state; it does not simply erase the previous negative example.
 
-No. Evidence accumulates. The new positive example updates the current belief; it does not erase the previous negative example.
-
-**Overthinking: “If labels are known during training, why do we need likelihood?”**
-
-Because the known labels teach the model what each class looks like. Likelihood is learned from labeled data and then used when labels are unknown.
-
+**Overthinking: “If labels are known during training, why do we need likelihood?”**  
+The known labels are exactly what teach the model the feature distributions for each class. The likelihood is learned from the labeled data during training, and then it is utilized during inference when the labels are unknown.
 
 </details>
 
-
+---
 
 <details markdown="1">
 <summary><h2 style="display: inline-block; vertical-align: middle;">Common Misconceptions</h2></summary>
 
-**Misconception 5: “One opposite example cancels the previous example.”**
+**Misconception 5: “One opposite example cancels the previous example.”**  
+Evidence has different strengths, and evidence accumulates over time. Exact cancellation only happens under very special symmetry conditions.
 
-Not automatically. Evidence has strength, and evidence accumulates. Exact cancellation only happens under special symmetry.
-
-**Misconception 6: “In supervised learning, the model is guessing labels during training.”**
-
-Not exactly. During training, labels are given. The model uses them to learn. During inference, labels are unknown, and the model predicts them.
-
+**Misconception 6: “In supervised learning, the model is guessing labels during training.”**  
+During training, the ground-truth labels are given, and the model uses them to learn its internal parameters. It is only during inference that the labels are unknown and the model must actively predict them.
 
 </details>
 
@@ -651,17 +406,15 @@ Not exactly. During training, labels are given. The model uses them to learn. Du
 
 ## The Cleanest Mental Model
 
-Here is what I would memorize for ML:
+This is the core concept for machine learning training:
 
-Machine learning version:
-
-> Training adjusts the model so it assigns higher probability to the labels or outputs that actually occurred.
+> Training adjusts the model's internal parameters so that it assigns the highest possible probability to the labels or outputs that actually occurred in the dataset.
 
 ---
 
 ## One-Sentence Takeaway
 
-Once Bayesian updating clicked, prior, likelihood, posterior, and even ML training started feeling like different versions of the same idea.
+Once Bayesian updating truly clicks, you realize that the prior, the likelihood, the posterior, and even the supervised machine learning training process itself are all just different mathematical expressions of the exact same underlying idea.
 
 ---
 

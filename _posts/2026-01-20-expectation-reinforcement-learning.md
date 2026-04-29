@@ -82,21 +82,19 @@ details[open] summary h2::after {
 }
 </style>
 
-When I started learning reinforcement learning, one phrase kept appearing everywhere:
+In reinforcement learning, a central phrase often appears:
 
 *"The goal of RL is to maximize the expected return."*
 
-At first, I honestly didn't think much of it. I assumed "expected" just meant "average," and I moved on. But the deeper I went, the more that single word started bothering me.
+Often, "expected" is casually interpreted as "average." However, this single word is the structural foundation of the entire framework.
 
-Why expectation? Why not just say "maximize reward"? Why do value functions use expectation? Why does every Bellman equation have this averaging structure? And if the agent eventually learns the best action, why are we still talking about averages at all?
+Why rely on expectation rather than simply maximizing reward? Why do value functions use expectation? Why does every Bellman equation feature this averaging structure? Even when an agent learns an optimal policy, expectation remains central.
 
-That one word, *expectation*, quietly turned out to be the backbone of everything.
+## Defining Expectation in Reinforcement Learning
 
-## What I Thought Expectation Was (and Why That Was Incomplete)
+A simplistic view defines expectation as merely the mean or average of future values.
 
-My initial mental model was simple: "Expectation is just the mean or average of values that haven't happened yet."
-
-That's not completely wrong, but it's dangerously incomplete.
+This definition is incomplete.
 
 The more precise idea is this: <span class="tooltip-term">Expectation<span class="tooltip-text">A weighted average of all possible outcomes, where each outcome is weighted by its probability. It represents what we'd get "on average" over infinitely many trials.</span></span> is a weighted average of all possible outcomes, where each outcome is weighted by how likely it is.
 
@@ -106,43 +104,37 @@ $$
 E[X] = \sum_x P(x) \cdot x
 $$
 
-So yes, it's an average, but it's an average over possibilities, not over already observed samples.
+It is an average over possibilities, not over already observed samples.
 
-That subtle distinction matters a lot in RL.
+That subtle distinction dictates the structure of reinforcement learning algorithms.
 
-## The First Crack in My Intuition: "Is Expectation What I'll Get?"
+## Expectation vs. Guaranteed Return
 
-I remember asking something like: "So if the expected reward is 5.2, does that mean the agent will at least get 5.2?"
+If an expected reward is 5.2, it does not guarantee the agent will receive 5.2 in a given run.
 
-The answer was no. And that was a turning point.
-
-Expectation is not what we get in one run. It's what we get on average over many repetitions.
+Expectation is not a guarantee for a single execution. It is the theoretical mean over infinite repetitions.
 
 In one <span class="tooltip-term">episode<span class="tooltip-text">A complete sequence of interactions from start to end in an RL environment. For example, one game of chess from first move to checkmate.</span></span>, the agent might get 9. In another, it might get 2. Over many episodes, the average converges toward 5.2.
 
-So expectation is not a guarantee. It's a long-run average under uncertainty.
+Expectation evaluates a long-run average under uncertainty.
 
-That immediately explained why expectation even exists in the first place: because the future is uncertain.
+## The Role of Expectation in RL
 
-## Why Expectation Even Shows Up in RL
+In <span class="tooltip-term">reinforcement learning<span class="tooltip-text">A type of machine learning where an agent learns to make decisions by interacting with an environment and receiving rewards. The goal is to learn a policy that maximizes cumulative reward.</span></span>, an agent faces persistent uncertainty:
 
-This is where things clicked.
+- The action the <span class="tooltip-term">policy<span class="tooltip-text">A strategy that tells the agent what action to take in each state. It can be deterministic (always same action) or stochastic (probabilistic choice of actions).</span></span> will sample (if it is stochastic) is uncertain.
+- The next state the environment will produce is uncertain.
+- The long-term reward sequence is uncertain.
 
-In <span class="tooltip-term">reinforcement learning<span class="tooltip-text">A type of machine learning where an agent learns to make decisions by interacting with an environment and receiving rewards. The goal is to learn a policy that maximizes cumulative reward.</span></span>, we're always facing uncertainty:
+So if evaluating: "How good is this state?"
 
-We don't know which action the <span class="tooltip-term">policy<span class="tooltip-text">A strategy that tells the agent what action to take in each state. It can be deterministic (always same action) or stochastic (probabilistic choice of actions).</span></span> will sample (if it's stochastic). We don't know exactly which next state the environment will produce. We don't know what long-term reward sequence will follow.
+There is no single deterministic answer. There are many possible futures.
 
-So if we ask: "How good is this state?"
+Expectation compresses all those possible futures into one meaningful mathematical evaluation.
 
-There is no single answer. There are many possible futures.
+It answers: "Given all the things that could happen, and how likely they are, what reward should be expected on average?"
 
-Expectation is how we compress all those futures into one meaningful number.
-
-It's our way of saying: "Given all the things that could happen, and how likely they are, what reward should we expect on average?"
-
-## Where Expectation First Appears: The Value Function
-
-This was the first formal place expectation stopped being abstract and became concrete.
+## Expectation in the Value Function
 
 The <span class="tooltip-term">state-value function<span class="tooltip-text">A function V(s) that tells us how good it is to be in state s. It represents the expected total future reward starting from that state and following a given policy.</span></span> is defined as:
 
@@ -150,49 +142,43 @@ $$
 V^\pi(s) = E\left[\sum_{t=0}^{\infty} \gamma^t r_t \;\Big|\; s_0 = s, \pi\right]
 $$
 
-In words: the value of a state is the expected total future reward if we start in that state and follow policy $$\pi$$.
+In words: the value of a state is the expected total future reward if starting in that state and following policy $$\pi$$.
 
-At first, I wondered: "Is this expectation just for the next step or for reaching the final goal?"
+This expectation evaluates both the immediate step and reaching the final goal.
 
-The answer was: both.
+It includes the immediate reward, plus all future rewards, compressed into a single expected number.
 
-It includes immediate reward, plus all future rewards, compressed into a single expected number.
+The <span class="tooltip-term">discount factor<span class="tooltip-text">A number γ (gamma) between 0 and 1 that reduces the value of future rewards. γ=0.9 means a reward next step is worth 90% of the same reward now. It makes closer rewards more valuable than distant ones.</span></span> $$\gamma$$ ensures that distant rewards impact the calculation less than immediate ones, making the infinite sum finite and well-behaved.
 
-The <span class="tooltip-term">discount factor<span class="tooltip-text">A number γ (gamma) between 0 and 1 that reduces the value of future rewards. γ=0.9 means a reward next step is worth 90% of the same reward now. It makes closer rewards more valuable than distant ones.</span></span> $$\gamma$$ ensures that distant rewards matter less than immediate ones, making the infinite sum finite and well-behaved.
+## Expectation in the Bellman Equation
 
-## The Line of Code That Forced Me to Understand Expectation
-
-Then I saw this line during <span class="tooltip-term">value iteration<span class="tooltip-text">An algorithm that repeatedly updates value estimates for each state until they converge to the true values. It's a dynamic programming method for solving MDPs.</span></span> or policy evaluation:
+Consider this update line during <span class="tooltip-term">value iteration<span class="tooltip-text">An algorithm that repeatedly updates value estimates for each state until they converge to the true values. It's a dynamic programming method for solving MDPs.</span></span> or policy evaluation:
 
 ```python
 new_v += action_prob * (r + gamma * V[next_s])
 ```
 
-I asked: "Is this expected value immediate?"
+$$r$$ is the immediate reward. $$V(\text{next}_s)$$ already represents all expected future reward after that step. $$\gamma$$ discounts the future. `action_prob` averages the outcome over the possible actions.
 
-The clarification was subtle but crucial.
-
-$$r$$ is the immediate reward. $$V(\text{next}_s)$$ already represents all future reward after that step. $$\gamma$$ discounts the future. `action_prob` means we're averaging over what action might be taken.
-
-So that single line is literally:
+This algorithm implements the standard evaluation:
 
 $$
 V^\pi(s) = \sum_a \pi(a|s) \left[ r(s,a) + \gamma V^\pi(s') \right]
 $$
 
-Which is: "The value of this state is the expected value of immediate reward plus expected future value, averaged over all actions we might take."
+This states: "The value of this state is the expected value of immediate reward plus expected future value, averaged over all actions that might be taken."
 
-That's the <span class="tooltip-term">Bellman equation<span class="tooltip-text">A recursive equation that expresses the value of a state in terms of immediate reward plus the discounted value of the next state. It's the foundation of most RL algorithms.</span></span>: expectation in code form.
+That is the <span class="tooltip-term">Bellman equation<span class="tooltip-text">A recursive equation that expresses the value of a state in terms of immediate reward plus the discounted value of the next state. It's the foundation of most RL algorithms.</span></span>: expectation applied recursively.
 
-## My Next Confusion: "But Where Do the Probabilities Come From?"
+## Where Do the Probabilities Come From?
 
-At this point, something else bothered me: "How do we even get these probabilities if we haven't observed the future?"
+A common question is: "How are these probabilities obtained if the future has not been observed?"
 
-This turned out to split RL into two worlds.
+This divides RL into two primary paradigms.
 
 **Model-based RL**
 
-If we have or learn a model of the environment, then we explicitly estimate:
+If a model of the environment is available or learned, the process explicitly estimates:
 
 $$P(s'|s,a)$$, the <span class="tooltip-term">transition probability<span class="tooltip-text">The probability of ending up in state s' after taking action a in state s. This is part of the environment's dynamics.</span></span>
 
@@ -210,107 +196,89 @@ Each experience is one draw from the unknown distribution. Over many samples, th
 
 So expectation never disappears. It just becomes <span class="tooltip-term">empirical<span class="tooltip-text">Based on observed data rather than theoretical calculation. Instead of computing E[X] analytically, we approximate it by averaging actual samples.</span></span> instead of analytic.
 
-## The Big Mistake I Made About "Best Actions"
+## Optimal Actions and Expectation
 
-At some point I said something like: "But once the agent learns, it just takes the best action, right? So why do we still talk about expectation?"
+A common misconception assumes that once an optimal policy is learned, expectation is no longer relevant because the agent simply takes the "best" action.
 
-This was mixing two different ideas.
+This conflates two different concepts.
 
 Yes, after learning, the policy may become nearly deterministic.
 
-But: the environment can still be <span class="tooltip-term">stochastic<span class="tooltip-text">Random or probabilistic. A stochastic environment means the same action in the same state can lead to different outcomes.</span></span>. Rewards can still vary. Returns can still fluctuate.
+However, the environment can still be <span class="tooltip-term">stochastic<span class="tooltip-text">Random or probabilistic. A stochastic environment means the same action in the same state can lead to different outcomes.</span></span>. Rewards can still vary. Returns can still fluctuate.
 
-So even a deterministic policy still has a distribution over outcomes.
+Even a deterministic policy operates over a distribution of possible outcomes.
 
-That means value is still an expectation.
+Therefore, value remains an expectation. Expectation is not merely a tool for exploration; it is mathematically baked into the definition of value.
 
-So expectation isn't just for exploration. It's baked into how we define "how good something is."
+## Q-Learning and the Assumption of Optimality
 
-## Q-Learning and the Phrase That Confused Me Most
-
-This definition bothered me for a long time:
+Consider the standard definition of the optimal action-value function:
 
 $$Q^*(s,a)$$ = expected return if we start in $$s$$, take action $$a$$, and then act optimally forever after.
 
-I remember thinking: "How can it say 'act optimally thereafter' when we don't know the optimal policy yet?"
+A frequent point of confusion is how the definition assumes optimal future actions before the optimal policy is actually known.
 
-That felt circular.
+This definition establishes the theoretical target for $$Q^*$$, not the computational mechanism.
 
-The clarification that fixed it: that definition describes what $$Q^*$$ *means*, not how we compute it.
-
-During learning, we don't actually act optimally afterward. We pretend we will by using:
+During learning, Q-learning approximates this future optimality using the max operator:
 
 $$
 Q(s,a) \leftarrow r + \gamma \max_{a'} Q(s', a')
 $$
 
-That <span class="tooltip-term">max term<span class="tooltip-text">Taking the maximum Q-value over all possible next actions. This represents the assumption that we'll act optimally in the future.</span></span> is our current best guess of what optimal behavior looks like.
+That <span class="tooltip-term">max term<span class="tooltip-text">Taking the maximum Q-value over all possible next actions. This represents the assumption that we'll act optimally in the future.</span></span> is the current best estimate of optimal future behavior.
 
-So <span class="tooltip-term">Q-learning<span class="tooltip-text">A model-free RL algorithm that learns the optimal action-value function Q* directly. It uses the max over next actions to bootstrap value estimates.</span></span> is still expectation-based, just bootstrapped through max instead of averaging over a policy.
+So <span class="tooltip-term">Q-learning<span class="tooltip-text">A model-free RL algorithm that learns the optimal action-value function Q* directly. It uses the max over next actions to bootstrap value estimates.</span></span> is still expectation-based, but it bootstraps through the max operator instead of averaging over an explicit policy distribution.
 
-## Expectation Shows Up Again in Policy Optimization
+## Expectation in Policy Optimization
 
-Then I moved from value-based methods to <span class="tooltip-term">policy gradients<span class="tooltip-text">A family of RL algorithms that directly optimize the policy by computing gradients of expected return with respect to policy parameters.</span></span>.
-
-And expectation showed up again, in a new disguise.
-
-The objective is:
+In policy optimization methods like <span class="tooltip-term">policy gradients<span class="tooltip-text">A family of RL algorithms that directly optimize the policy by computing gradients of expected return with respect to policy parameters.</span></span>, the objective is defined directly in terms of expectation:
 
 $$
 J(\theta) = E_{\tau \sim \pi_\theta}[R(\tau)]
 $$
 
-Which literally means: "Maximize the expected return over <span class="tooltip-term">trajectories<span class="tooltip-text">A sequence of states, actions, and rewards: (s₀, a₀, r₀, s₁, a₁, r₁, ...). It's one complete path through the environment.</span></span> generated by our policy."
+This translates to: "Maximize the expected return over <span class="tooltip-term">trajectories<span class="tooltip-text">A sequence of states, actions, and rewards: (s₀, a₀, r₀, s₁, a₁, r₁, ...). It's one complete path through the environment.</span></span> generated by the current policy."
 
-We're no longer estimating values. We're directly optimizing expected return.
+The focus shifts from estimating value functions to directly optimizing expected return.
 
-Same idea. Different object.
+## Connecting Expectation and Likelihood
 
-## How Likelihood Quietly Re-Entered the Picture
-
-This part surprised me.
-
-In supervised learning, we maximize <span class="tooltip-term">likelihood<span class="tooltip-text">The probability the model assigns to the observed data. Maximizing likelihood means finding parameters that make the observed outcomes most probable.</span></span>:
+In supervised learning, models are trained to maximize <span class="tooltip-term">likelihood<span class="tooltip-text">The probability the model assigns to the observed data. Maximizing likelihood means finding parameters that make the observed outcomes most probable.</span></span>:
 
 $$
 \max_\theta \sum_i \log P_\theta(y_i | x_i)
 $$
 
-In policy gradients, we maximize expected return — but the gradient looks like:
+In policy gradients, the goal is to maximize expected return, resulting in a gradient that looks like this:
 
 $$
 \nabla_\theta J(\theta) = E\left[\nabla_\theta \log \pi_\theta(a|s) \cdot \text{return}\right]
 $$
 
-So what are we really doing?
+This formulation structurally ties RL to supervised learning: the algorithm increases the likelihood of actions that produced high returns, evaluated in expectation.
 
-We're increasing the likelihood of actions that produced high returns — in expectation.
+## Advantage as an Expectation Baseline
 
-That connected likelihood, log-likelihood, and RL in a way I didn't expect.
-
-## Advantage: Expectation as a Baseline
-
-Another thing that finally made sense only after expectation clicked:
+Expectation also serves as a baseline in Advantage calculations:
 
 $$
 A(s,a) = Q(s,a) - V(s)
 $$
 
-$$V(s)$$ is what we expect to get on average from this state. $$Q(s,a)$$ is what we got (on average) by taking this action.
+$$V(s)$$ is the expected return from the current state. $$Q(s,a)$$ is the expected return after taking a specific action.
 
-So <span class="tooltip-term">advantage<span class="tooltip-text">How much better (or worse) a specific action is compared to the average action in that state. Positive advantage means the action is better than average.</span></span> is: "How much better was this action compared to what we normally expect from here?"
+The <span class="tooltip-term">advantage<span class="tooltip-text">How much better (or worse) a specific action is compared to the average action in that state. Positive advantage means the action is better than average.</span></span> evaluates: "How much better is this specific action compared to the general expectation for this state?"
 
-That's expectation again, now being used as a baseline to reduce variance in our estimates.
+Expectation acts as a critical baseline to reduce variance in gradient estimates.
 
-## Model-Based Planning and Expectation
+## Model-Based Planning
 
-Then I looked at <span class="tooltip-term">MPC (Model Predictive Control)<span class="tooltip-text">A planning method that uses a learned model to simulate future trajectories, then picks the action sequence with the best predicted outcome.</span></span>.
+In <span class="tooltip-term">MPC (Model Predictive Control)<span class="tooltip-text">A planning method that uses a learned model to simulate future trajectories, then picks the action sequence with the best predicted outcome.</span></span>, the algorithm simulates many possible futures, computes total rewards for each trajectory, and selects the action sequence yielding the highest average outcome.
 
-In MPC, we: simulate many possible futures, compute total rewards for each, and pick the action sequence with the best average outcome.
+This is an explicit calculation of expectation over simulated rollouts.
 
-That is literally expectation over imagined rollouts.
-
-And when MPC fails in the real world, it's usually because: the model's expectations are wrong, small errors compound, and the planner exploits model flaws.
+When MPC fails in deployment, it is often because the model's computed expectations are inaccurate, causing compounding errors that the planner exploits.
 
 So again: expectation is powerful, but only as good as the model behind it.
 
@@ -335,78 +303,72 @@ Everything.
 <details markdown="1">
 <summary><h2 style="display: inline-block; vertical-align: middle;">Where We Tend to Overthink</h2></summary>
 
-Sometimes the confusion comes from thinking too deeply about something that's actually straightforward. Here are places where I've overthought things (and you might too):
-
 **Overthinking: "Is expectation some deep mathematical concept I need measure theory to understand?"**
 
-The simple truth: For most of RL, it's just weighted averages. Sum up (probability × value) for each possible outcome. That's it. The fancy notation $$E[\cdot]$$ just means "average over possibilities."
+For most of RL, expectation is simply a weighted average: sum up (probability × value) for each possible outcome. The notation $$E[\cdot]$$ designates this average over probabilities.
 
 **Overthinking: "If the environment is deterministic, does expectation disappear?"**
 
-The simple truth: Not necessarily. Even with a deterministic environment, if our policy is stochastic, we still have uncertainty over which actions we'll take. Expectation handles that. And even with both deterministic, we might still use expectation over initial states or other sources of randomness.
+Not necessarily. In a deterministic environment, a stochastic policy still introduces uncertainty over actions. Expectation handles this variation. Even if both are deterministic, expectation might still be applied over initial states or other sources of randomness.
 
 **Overthinking: "Does the agent actually compute expectations during learning?"**
 
-The simple truth: Usually no. The agent collects samples and updates estimates. The expectation is what those estimates *converge to* over time, not something explicitly calculated. It's the target, not the method.
+Usually, no. In model-free RL, the agent collects samples and updates estimates. The expectation is the theoretical target those estimates *converge to* over time, rather than a value explicitly calculated during each step.
 
 **Overthinking: "Is the Bellman equation saying something profound about time?"**
 
-The simple truth: It's just saying "value now = reward now + discounted value later." It's a recursive definition, not a philosophical statement. The profundity comes from how useful this decomposition is, not from hidden depth.
+The Bellman equation provides a recursive decomposition: value now equals reward now plus discounted expected value later.
 
 **Overthinking: "Why do we need both V(s) and Q(s,a)? Aren't they redundant?"**
 
-The simple truth: They answer different questions. V asks "how good is this state?" Q asks "how good is this state-action pair?" They're related ($$V(s) = \sum_a \pi(a|s) Q(s,a)$$), but each is more convenient in different algorithms.
+They answer different questions. V evaluates the state; Q evaluates the state-action pair. They are related via $$V(s) = \sum_a \pi(a|s) Q(s,a)$$, but each is utilized differently depending on the algorithm.
 
 **Overthinking: "If Q-learning uses max instead of expectation, is it not really about expectation?"**
 
-The simple truth: The max is just how we define "optimal." We're still computing the expected return — but under the assumption that future actions will be the best ones. Expectation is still there; we're just being optimistic about future behavior.
+The max operator defines "optimal" behavior. The algorithm still computes the expected return, but under the assumption that future actions will be optimal.
 
 </details>
 
 <details markdown="1">
 <summary><h2 style="display: inline-block; vertical-align: middle;">Common Misconceptions</h2></summary>
 
-Let's address some frequent sources of confusion:
-
 **Misconception 1: "Expected return means the return I should expect to get"**
 
-Partially true, but misleading. Expected return is the long-run average. In any single episode, we might get much more or much less. It's a statistical property, not a guarantee.
+Expected return is the long-run theoretical average. In any single episode, the actual return fluctuates. It is a statistical property, not a guarantee.
 
 **Misconception 2: "Value functions predict what will happen"**
 
-No. Value functions predict what will happen *on average*. They compress many possible futures into one number. The actual future might be very different from the expected value.
+Value functions predict what will occur *in expectation*. They compress many possible futures into a single metric. A single trajectory may deviate significantly from the expected value.
 
 **Misconception 3: "Model-free RL doesn't use expectations"**
 
-Wrong. Model-free RL absolutely uses expectations — it just estimates them from samples instead of computing them analytically. The target is still the expected return; we're just approximating it empirically.
+Model-free RL fundamentally relies on expectations, estimating them empirically from samples rather than computing them analytically.
 
 **Misconception 4: "Once we have the optimal policy, we don't need expectations anymore"**
 
-No. Even the optimal value function is defined as an expectation. Optimality doesn't remove uncertainty from the environment; it just tells us how to act best given that uncertainty.
+The optimal value function is still defined as an expectation. Optimality dictates the best actions given environmental uncertainty; it does not eliminate that uncertainty.
 
 **Misconception 5: "The discount factor is just a trick to make the math work"**
 
-Partially true, but it also has real meaning. It encodes how much we care about future vs. immediate rewards. $$\gamma = 0.99$$ means we're patient; $$\gamma = 0.9$$ means we're more short-sighted. It's a design choice with real consequences.
+The discount factor encodes the relative importance of future versus immediate rewards. A value closer to 1 prioritizes long-term returns, while a lower value prioritizes immediate rewards.
 
 **Misconception 6: "Policy gradients are fundamentally different from value-based methods"**
 
-Not as different as they seem. Both are ultimately about maximizing expected return. Value-based methods do it by estimating values and acting greedily. Policy gradients do it by directly adjusting action probabilities. Same goal, different paths.
+Both frameworks ultimately maximize expected return. Value-based methods estimate values and act greedily upon them. Policy gradients directly adjust action probabilities to increase expected return.
 
 </details>
 
 ## The Cleanest Mental Model
 
-Here's what to memorize: **expectation in RL is how we summarize uncertain futures into actionable numbers**.
+**Expectation in RL is the mathematical mechanism for summarizing uncertain futures into actionable evaluations.**
 
-Every time we see $$E[\cdot]$$, we're saying: "We don't know exactly what will happen, but here's what we'd get on average across all possibilities."
+The notation $$E[\cdot]$$ designates the average outcome across all probabilistic possibilities.
 
-Value functions, Q-functions, policy objectives, advantages — they're all built on this single idea.
+Value functions, Q-functions, policy objectives, and advantages are all constructed upon this foundation.
 
 ## One-Sentence Takeaway
 
-Expectation in reinforcement learning is not a math trick. It's the language we use to talk about long-term reward under uncertainty.
-
-Once that clicked, the rest of RL stopped feeling like magic and started feeling inevitable.
+Expectation in reinforcement learning provides the mathematical language to evaluate long-term reward under uncertainty.
 
 ---
 
