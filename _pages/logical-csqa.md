@@ -234,6 +234,7 @@ nav: false
   <div class="link-buttons">
     <a class="link-btn btn-paper" href="https://arxiv.org/abs/2601.16504" target="_blank">📄 Paper</a>
     <a class="link-btn btn-arxiv" href="https://arxiv.org/pdf/2601.16504" target="_blank">⬇ PDF</a>
+    <a class="link-btn btn-poster" href="/logical-csqa/slides/" target="_blank">🖥 Slides</a>
   </div>
 </div>
 
@@ -332,6 +333,8 @@ We evaluate a diverse set of model families and prompting strategies:
 <span class="venue-pill">ACL 2026</span> &ensp; **63rd Annual Meeting of the Association for Computational Linguistics**
 
 This work is presented at the main conference. If you are attending ACL 2026 and would like to discuss the paper, feel free to [reach out](https://obedjunias.com/#contact).
+
+**[🖥 View the conference slides →](/logical-csqa/slides/){:target="_blank"}**
 
 <!-- ═══════════════════════════════════════════════════ CITATION -->
 <div class="section-title">Citation</div>
