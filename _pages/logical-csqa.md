@@ -630,6 +630,32 @@ nav: false
     margin: 0.75rem 0 0.5rem;
   }
 
+  /* ── PhD notice ───────────────────────────────────────────────────── */
+  .phd-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #F0F7FF;
+    border: 1.5px solid #C2D9F0;
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-size: 0.84rem;
+    color: #1B2A4A;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .phd-notice-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2A9D8F;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(42,157,143,0.2);
+  }
+  .phd-notice a { color: #378ADD; text-decoration: none; font-weight: 600; }
+  .phd-notice a:hover { text-decoration: underline; }
+  html[data-theme="dark"] .phd-notice { background: rgba(55,138,221,0.08); border-color: rgba(55,138,221,0.25); color: #cbd5e1; }
+
   /* ── Responsive ───────────────────────────────────────────────────── */
   @media (max-width: 580px) {
     .results-notes { grid-template-columns: 1fr; }
@@ -726,6 +752,12 @@ nav: false
 </style>
 
 <div class="lcsqa">
+
+<!-- ══════════════════════════════════════════════════════ PHD NOTICE -->
+<div class="phd-notice">
+  <span class="phd-notice-dot"></span>
+  Open to PhD research conversations in AI/NLP, reasoning, and trustworthy language systems for Spring/Fall 2027 — <a href="https://obedjunias.com/#contact">get in touch</a>.
+</div>
 
 <!-- ═══════════════════════════════════════════════════════════ HERO -->
 <div class="lcsqa-hero">
