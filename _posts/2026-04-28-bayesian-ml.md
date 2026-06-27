@@ -5,6 +5,7 @@ date: 2026-04-28 10:00:00-0400
 description: A deep dive into conditional probability, priors, likelihood, and Bayesian updating in ML.
 tags: machine-learning probability math-for-ml
 categories: machine-learning
+featured: true
 giscus_comments: true
 related_posts: false
 toc:

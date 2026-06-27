@@ -7,14 +7,13 @@ first_name: obed
 middle_name: 
 last_name: junias
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
 description: >
   graduate researcher at the blast lab, university of colorado boulder. specializing in interpretable reasoning and responsible machine learning.
 footer_text: >
   powered by <a href="https://jekyllrb.com/" target="_blank">jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   hosted by <a href="https://pages.github.com/" target="_blank">github pages</a>.
   # photos from <a href="https://unsplash.com" target="_blank">unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: nlp, natural language processing, commonsense reasoning, llm safety, model collapse, responsible ai, academic portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -119,8 +118,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
-# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+disqus_shortname: # disabled — using giscus instead
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
