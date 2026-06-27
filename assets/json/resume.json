@@ -193,6 +193,15 @@
       ]
     }
   ],
+  "awards": [
+    {
+      "title": "NSF–EMBS–Google Young Professional NextGen Scholar",
+      "date": "2025-10-15",
+      "awarder": "IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)",
+      "url": "https://bhi.embs.org/2025/",
+      "summary": "Selected as an early-career researcher for outstanding work on algorithmic bias in language-based depression detection."
+    }
+  ],
   "publications": [
     {
       "name": "LOGICAL-COMMONSENSEQA: A Benchmark for Logical Commonsense Reasoning",
