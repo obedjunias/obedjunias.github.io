@@ -2,7 +2,7 @@
 layout: page
 title: "scoutr: agentic football transfer intelligence platform"
 description: agentic ai transfer intelligence platform for club tactical and financial constraints
-img:
+img: assets/img/proj_scoutr.jpg
 importance: 2
 category: agentic ai & systems
 related_publications: false

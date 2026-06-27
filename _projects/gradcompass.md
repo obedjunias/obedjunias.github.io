@@ -2,7 +2,7 @@
 layout: page
 title: gradcompass - ai-powered graduate application assistant
 description: multi-agent llm system for personalized graduate school guidance and application support
-img:
+img: assets/img/proj_gradcompass.jpg
 importance: 2
 category: agentic ai & systems
 related_publications: false

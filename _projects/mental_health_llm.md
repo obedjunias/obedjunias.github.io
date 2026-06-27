@@ -2,7 +2,7 @@
 layout: page
 title: resource-efficient llm fine-tuning for mental health support
 description: parameter-efficient adaptation of llms for mental health conversation support
-img:
+img: assets/img/proj_mental_health.jpg
 importance: 2
 category: responsible ai
 related_publications: false

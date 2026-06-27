@@ -5,7 +5,7 @@ permalink: /projects/
 description: A selection of projects in NLP research (natural language understanding and reasoning), LLM safety, agentic AI, and LLM systems, ranging from production-ready platforms to academic benchmarks.
 nav: true
 nav_order: 2
-display_categories: ["nlp research ,reasoning & llm safety", "responsible ai", "agentic ai & systems"]
+display_categories: ["nlp research, reasoning & llm safety", "responsible ai", "agentic ai & systems"]
 horizontal: false
 ---
 

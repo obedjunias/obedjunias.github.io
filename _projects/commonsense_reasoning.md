@@ -2,9 +2,9 @@
 layout: page
 title: commonsense reasoning with logical entailment trees
 description: developing benchmarks and evaluation methods for logical commonsense reasoning
-img:
+img: assets/img/proj_commonsense.jpg
 importance: 1
-category: nlp research ,reasoning & llm safety
+category: nlp research, reasoning & llm safety
 related_publications: true
 ---
 

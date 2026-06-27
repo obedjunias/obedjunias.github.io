@@ -2,7 +2,7 @@
 layout: page
 title: medical ethics assessment of large language models
 description: evaluating ethical reasoning capabilities of llms in clinical contexts
-img:
+img: assets/img/proj_medical_ethics.jpg
 importance: 2
 category: responsible ai
 related_publications: false

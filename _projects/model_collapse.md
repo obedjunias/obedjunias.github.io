@@ -2,9 +2,9 @@
 layout: page
 title: "measuring model collapse under recursive summarization training"
 description: investigating the fundamental limits of recursive training and synthetic data proliferation in foundation model ecosystems
-img:
+img: assets/img/proj_model_collapse.jpg
 importance: 1
-category: nlp research ,reasoning & llm safety
+category: nlp research, reasoning & llm safety
 related_publications: false
 ---
 
