@@ -772,7 +772,7 @@ nav: false
       <sup>1</sup>University of Colorado Boulder
     </p>
     <div class="badge-row">
-      <span class="lcsqa-badge badge-acl">ACL 2026 Main Conference</span>
+      <span class="lcsqa-badge badge-acl">ACL 2026 Short Papers</span>
       <span class="lcsqa-badge badge-nlp">Commonsense Reasoning</span>
       <span class="lcsqa-badge badge-cu">BLAST Lab · CU Boulder</span>
     </div>
