@@ -39,7 +39,7 @@
       "highlights": [
         "Investigating synthetic data proliferation and its role in foundation model collapse during recursive training pipelines.",
         "Developed an entailment tree-based framework and benchmark for multi-step logical inference (LOGICAL-COMMONSENSEQA).",
-        "Accepted at ACL 2026 (Main Conference) for contributing structured reasoning benchmarks."
+        "Accepted at ACL 2026 (Short Papers) for contributing structured reasoning benchmarks."
       ]
     },
     {
@@ -193,6 +193,22 @@
       ]
     }
   ],
+  "publications": [
+    {
+      "name": "LOGICAL-COMMONSENSEQA: A Benchmark for Logical Commonsense Reasoning",
+      "publisher": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)",
+      "releaseDate": "2026-07-01",
+      "url": "https://aclanthology.org/2026.acl-short.61/",
+      "summary": "We introduce LOGICAL-COMMONSENSEQA, a benchmark that reframes commonsense reasoning as logical composition over pairs of atomic statements using plausibility-level operators (AND, OR, NEITHER/NOR), exposing fundamental reasoning limitations in current LLMs."
+    },
+    {
+      "name": "Assessing Algorithmic Bias in Language-Based Depression Detection: A Comparison of DNN and LLM Approaches",
+      "publisher": "2025 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)",
+      "releaseDate": "2025-10-01",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11269509",
+      "summary": "We evaluate and compare algorithmic bias in DNN and LLM approaches for depression detection, identifying demographic disparities in model behavior and evaluating mitigation strategies across text and audio modalities."
+    }
+  ],
   "projects": [
     {
       "name": "Measuring Model Collapse under Recursive Summarization Training",
@@ -214,11 +230,11 @@
         "Created LOGICAL-COMMONSENSEQA, a novel benchmark dataset testing compositional logic",
         "Benchmarked baseline performance with N-Shot and Chain-of-Thought prompting",
         "Designed neuro-symbolic methods combining informal logic with neural approaches",
-        "Paper accepted to ACL 2026 (Main Conference)"
+        "Paper accepted to ACL 2026 (Short Papers)"
       ],
       "startDate": "2025-06-01",
       "endDate": "Present",
-      "url": "https://arxiv.org/abs/2601.16504"
+      "url": "https://aclanthology.org/2026.acl-short.61/"
     },
     {
       "name": "ScoutR: Agentic Football Transfer Intelligence Platform",
