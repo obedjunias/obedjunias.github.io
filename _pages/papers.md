@@ -7,13 +7,17 @@ nav_order: 6
 description: Research papers I have read and return to often.
 ---
 
-## Reasoning Papers
+## Structured Reasoning
 
 <ul>
   <li><a href="https://aclanthology.org/2021.emnlp-main.585.pdf"><strong>Explaining Answers with Entailment Trees</strong></a> - Dalvi et al., <em>EMNLP 2023</em></li>
   <li><a href="https://aclanthology.org/2022.emnlp-main.134.pdf"><strong>Entailer: Answering Questions with Faithful and Truthful Chains of Reasoning</strong></a> - Tafjord et al., <em>EMNLP 2022</em></li>
   <li><a href="https://aclanthology.org/2024.emnlp-main.531.pdf"><strong>Enhancing Systematic Decompositional Natural Language Inference Using Informal Logic</strong></a> - Weir et al., <em>EMNLP 2024</em></li>
+  <li><a href="https://arxiv.org/abs/2402.19467"><strong>TV-TREES: Multimodal Entailment Trees for Neuro-Symbolic Video Reasoning</strong></a> - Sanders et al., <em>arXiv 2024</em></li>
 </ul>
+
+{% comment %}
+Neuro-symbolic reading list (hidden from Library page).
 
 ## Neuro-Symbolic Papers
 
@@ -37,4 +41,24 @@ description: Research papers I have read and return to often.
     <li><a href="https://aclanthology.org/2022.findings-emnlp.70/"><strong>Autoregressive Structured Prediction with Language Models</strong></a> - Liu et al., <em>EMNLP Findings 2022</em></li>
   </div>
   </details>
+</ul>
+{% endcomment %}
+
+## AI Safety and Misalignment
+
+<ul>
+  <li><a href="https://arxiv.org/pdf/2502.17424"><strong>Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs</strong></a> - Betley et al., <em>arXiv 2025</em></li>
+  <li><a href="https://arxiv.org/abs/2506.11613"><strong>Model Organisms for Emergent Misalignment</strong></a> - Turner et al., <em>arXiv 2025</em></li>
+  <li><a href="https://arxiv.org/abs/2506.19823"><strong>Persona Features Control Emergent Misalignment</strong></a> - Wang et al., <em>arXiv 2025</em></li>
+  <li><a href="https://arxiv.org/abs/2507.21509"><strong>Persona Vectors: Monitoring and Controlling Character Traits in Language Models</strong></a> - Chen et al., <em>arXiv 2025</em></li>
+</ul>
+
+## Model Collapse
+
+<ul>
+  <li><a href="https://arxiv.org/abs/2305.17493"><strong>The Curse of Recursion: Training on Generated Data Makes Models Forget</strong></a> - Shumailov et al., <em>arXiv 2023</em></li>
+  <li><a href="https://arxiv.org/abs/2410.16713"><strong>Collapse or Thrive: Perils and Promises of Synthetic Data in a Self-Generating World</strong></a> - Kazdan et al., <em>ICML 2025</em></li>
+  <li><a href="https://arxiv.org/abs/2402.07712"><strong>Model Collapse Demystified: The Case of Regression</strong></a> - Dohmatob et al., <em>arXiv 2024</em></li>
+  <li><a href="https://arxiv.org/abs/2410.04840"><strong>Strong Model Collapse</strong></a> - Dohmatob et al., <em>arXiv 2024</em></li>
+  <li><a href="https://arxiv.org/abs/2404.01413"><strong>Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data</strong></a> - Gerstgrasser et al., <em>arXiv 2024</em></li>
 </ul>
