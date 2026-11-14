@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: "Seeking PhD Positions in AI/NLP &nbsp;·&nbsp; 2027"
+subtitle: ""
 
 profile:
   align: right
@@ -42,10 +42,6 @@ I am also fortunate to have collaborated with  on **algorithmic bias in mental h
 Of late, I have been reading into **AI safety and alignment** and **human-AI interaction (HAI/HCI)**, and I am excited about the research questions at their intersection with reliable and trustworthy language systems.
 
 I am actively looking for **PhD positions in AI/NLP** for **2027**, with interests including but not limited to model reliability, reasoning, trustworthy language systems, and broader NLP/LLM research.  -->
-
-# Obed Junias
-
-*Researcher at HUBBS, University of Colorado Boulder, M.S. Computer Science*
 
 I am a researcher at the HUBBS Lab at the University of Colorado Boulder, working with [Dr. Theodora Chaspari](https://www.colorado.edu/cs/theodora-chaspari). I am also advised by [Dr. Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) in the [BLAST Lab](https://blast-cu.github.io/). My research is driven by a fundamental question: **why do language models behave the way they do?** I am interested in how models acquire capabilities through training, how they represent and use information internally, and why these capabilities sometimes deteriorate. I currently investigate these questions through behavioral evaluation and interpretability.
 
