@@ -89,7 +89,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: ""
-blog_description: ""
+blog_description: "My personal blog where I share my thoughts, ideas, research, and experiences about anything and everything."
 blog_author: Obed Junias # blog_author will be displayed in your blog page
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
