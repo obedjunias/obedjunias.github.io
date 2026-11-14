@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: A collection of my published research and preprints in the fields of Responsible NLP, Biomedical Informatics, and Logical Commonsense Reasoning.
 nav: true
 nav_order: 3

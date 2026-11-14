@@ -1,7 +1,7 @@
 ---
 layout: page
-title: resource-efficient llm fine-tuning for mental health support
-description: parameter-efficient adaptation of llms for mental health conversation support
+title: QLoRA fine-tuning for mental-health dialogue
+description: Falcon-7B adapted with QLoRA for supportive mental-health conversations; training and eval setup from a CU project.
 img: assets/img/proj_mental_health.jpg
 importance: 2
 category: responsible ai

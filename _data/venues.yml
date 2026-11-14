@@ -1,9 +1,15 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"ACL 2026":
+  url: https://aclanthology.org/events/acl-2026/
+  color: "#1B4965"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"BHI 2025":
+  url: https://bhi.embs.org/2025/
+  color: "#00629B"
 
-"Vision":
-  color: "#009f36"
+"arXiv 2026":
+  url: https://arxiv.org/
+  color: "#B31B1B"
+
+"NextGen":
+  url: https://bhi.embs.org/2025/
+  color: "#5C4D7D"

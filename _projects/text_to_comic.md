@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "text-to-comic: scalable system for transforming textual narratives into comic strips"
-description: end-to-end pipeline using GPT-3.5 and Stable Diffusion on GKE with Redis for high-throughput comic generation
+title: text-to-comic
+description: Short story → panel scripts (GPT-3.5) → images (Stable Diffusion), queued on GKE with Redis.
 img: assets/img/proj_text_comic.jpg
 importance: 2
 category: agentic ai & systems

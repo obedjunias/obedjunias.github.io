@@ -1,6 +1,6 @@
 ---
 layout: page
-title: more
+title: More
 nav: false
 nav_order: 11
 dropdown: true
@@ -8,8 +8,8 @@ children:
   # - title: papershelf
   #   permalink: /papers/
   - title: divider
-  - title: blog
+  - title: Blog
     permalink: /blog/
-  - title: interests
+  - title: Interests
     permalink: /interests/
 ---

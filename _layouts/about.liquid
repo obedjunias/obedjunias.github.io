@@ -49,7 +49,7 @@ layout: default
     {% if page.announcements and page.announcements.enabled %}
       <div class="news" style="margin-top: 2rem;">
         <h2 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; border-bottom: none;">
-          <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
         </h2>
         {% include news.liquid limit=true %}
       </div>
@@ -59,7 +59,7 @@ layout: default
     {% if page.latest_posts and page.latest_posts.enabled %}
       <div class="latest-posts" style="margin-top: 2rem;">
         <h2 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; border-bottom: none;">
-          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
         </h2>
         {% include latest_posts.liquid %}
       </div>
@@ -69,7 +69,7 @@ layout: default
     {% if page.selected_papers %}
       <div class="selected-papers" style="margin-top: 2rem;">
         <h2 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; border-bottom: none;">
-          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
         </h2>
         {% include selected_papers.liquid %}
       </div>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: news
+title: News
 permalink: /news/
 description: Stay updated with my latest research publications, workshop participations, and academic announcements.
 ---

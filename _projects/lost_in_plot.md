@@ -1,7 +1,7 @@
 ---
 layout: page
-title: lost in plot - contrastive learning for movie retrieval
-description: dense retrieval system for tip-of-the-tongue movie search from vague descriptions
+title: Lost in Plot
+description: NLP course retriever for “tip of the tongue” movie search—vague plot description in, ranked titles out (contrastive training).
 img: assets/img/proj_lost_in_plot.jpg
 importance: 2
 category: nlp research, reasoning & llm safety

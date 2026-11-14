@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "scoutr: agentic football transfer intelligence platform"
-description: agentic ai transfer intelligence platform for club tactical and financial constraints
+title: ScoutR
+description: Agentic scouting demo—StatsBomb events in ChromaDB, Gemini/Claude agents reason over fit and constraints.
 img: assets/img/proj_scoutr.jpg
 importance: 2
 category: agentic ai & systems

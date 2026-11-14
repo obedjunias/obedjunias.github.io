@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: ""
 
@@ -49,7 +49,7 @@ Before grad school, I worked at Oracle as a Senior Member of Technical Staff. I 
 
 I'm applying to PhD programs for Fall 2027.
 
-### My Work includes
+### My recent work includes
 
 - **[LOGICAL-COMMONSENSEQA](/logical-csqa/) ([ACL 2026](https://aclanthology.org/2026.acl-short.61/))**, a benchmark investigating how language models compose plausibility judgments with logical constraint.
 - A follow-up on [structured compositional reasoning](https://arxiv.org/pdf/2608.12836), where I look at how to help models handle the logical combinations they struggled with in the benchmark. 

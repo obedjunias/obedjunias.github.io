@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "s-loraa: scalable multi-agent llm system"
-description: dynamic lora adapter orchestration for efficient multi-agent inference pipelines
+title: S-LoRAA (Systems for ML)
+description: Multi-agent inference with hot-swapped LoRA adapters so several specialized models share one GPU footprint.
 img: assets/img/proj_sloraa.jpg
 importance: 1
 category: agentic ai & systems

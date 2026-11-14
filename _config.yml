@@ -3,12 +3,12 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: obed
+first_name: Obed
 middle_name: 
-last_name: junias
+last_name: Junias
 contact_note: >
 description: >
-  graduate researcher at the blast lab, university of colorado boulder. specializing in interpretable reasoning and responsible machine learning.
+  Graduate researcher at the BLAST Lab, University of Colorado Boulder. Specializing in interpretable reasoning and responsible machine learning.
 footer_text: >
   powered by <a href="https://jekyllrb.com/" target="_blank">jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   hosted by <a href="https://pages.github.com/" target="_blank">github pages</a>.
@@ -88,9 +88,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: junias-blogs # blog_name will be displayed in your blog page
-blog_description: my personal blog where i share my thoughts, research and experiences. i aim to learn and grow through sharing. # blog_description will be displayed in your blog page
-blog_author: obed junias # blog_author will be displayed in your blog page
+blog_name: ""
+blog_description: ""
+blog_author: Obed Junias # blog_author will be displayed in your blog page
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -197,6 +197,7 @@ exclude:
   - vendor
   - _pages/repositories.md
   - _pages/_profiles.md
+  - _pages/projects.md
   - 
 keep_files:
   - CNAME

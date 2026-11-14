@@ -1,67 +1,18 @@
 ---
 layout: page
-title: commonsense reasoning with logical entailment trees
-description: developing benchmarks and evaluation methods for logical commonsense reasoning
+title: LOGICAL-COMMONSENSEQA
+description: Commonsense QA where each option is a logical combo of two statements; strong on AND/OR, weak on negation. Published at ACL 2026 (short papers).
 img: assets/img/proj_commonsense.jpg
 importance: 1
 category: nlp research, reasoning & llm safety
 related_publications: true
 ---
 
-**Quick Navigation:** [Overview](#overview) • [Research Progress](#research-progress) • [Research Goals](#research-goals)
+Most commonsense benchmarks ask models to pick one plausible sentence. Real judgment is often about *combinations*: two facts can each sound fine alone while the pair is impossible, or one holds only when the other does not. **LOGICAL-COMMONSENSEQA** makes that explicit. Each question has two atomic statements, and each answer applies a plausibility-level operator (AND, OR, or NEITHER/NOR) to form a compound option.
 
----
+With [Maria L. Pacheco](https://blast-cu.github.io/mlpacheco/) at the [BLAST Lab](https://blast-cu.github.io/), I built the benchmark and ran a broad model sweep (instruction-tuned, reasoning-focused, and fine-tuned models; zero-shot, few-shot, and chain-of-thought). Models were generally reasonable on conjunction and passable on disjunction. On negation-style questions, accuracy dropped quickly. Chain-of-thought often looked coherent but still landed on the wrong compound label.
 
-## overview
+That gap is what pulled me toward follow-up work on [structured compositional reasoning](https://arxiv.org/abs/2608.12836): helping models reason over these combinations instead of treating each option as a single fluent paragraph. I am also working on entailment-tree representations for the same failure modes.
 
-Developing benchmarks and reasoning methods for evaluating logical commonsense reasoning in large language models at the BLAST Lab, University of Colorado Boulder.
-
-**Timeline:** June 2025 – Present
-**Advisor:** Dr. Maria L. Pacheco, CU Boulder  
-**status:** accepted at **ACL 2026 (main conference)** [[paper]](https://arxiv.org/abs/2601.16504)
-
-## research progress
-
-### Completed Work
-
-**Benchmark Development**
-
-Created a commonsense QA benchmark dataset designed to evaluate logical reasoning capabilities:
-
-- **Logically Composed Options**: Question-answer pairs with options that require multi-fact reasoning
-- **Multi-Step Reasoning Trees**: Structured representations of reasoning chains
-- **Compositional Structure**: Questions that test compositional and logical reasoning abilities
-
-The benchmark enables systematic evaluation of how language models handle complex commonsense inference tasks that require combining multiple facts and logical steps.
-
-**Baseline Evaluation**
-
-Benchmarked reasoning quality using standard LLM prompting strategies:
-
-- **N-Shot Prompting**: Tested few-shot learning approaches with varying numbers of examples
-- **Chain-of-Thought (CoT) Prompting**: Evaluated step-by-step reasoning generation
-- **Baseline Performance**: Established baseline metrics for reasoning quality on the benchmark
-
-These baselines provide comparison points for evaluating more advanced reasoning methods.
-
-### In Progress: Advanced Reasoning Methods
-
-Currently designing and implementing structured evaluation methods:
-
-- **Neuro-Symbolic Framework**: Combining informal logic with neural approaches
-- **Logical Structure Modeling**: Tracking entailment relationships and inference chains
-- **Step-Level Evaluation**: Assessing inference quality at each reasoning step
-- **Social Consensus Integration**: Incorporating common-sense knowledge patterns
-
-## research goals
-
-This work aims to:
-
-1. Provide better tools for evaluating commonsense reasoning in LLMs
-2. Understand how models perform multi-step logical inference
-3. Bridge symbolic and neural approaches to reasoning
-4. Enable more nuanced assessment beyond traditional QA accuracy metrics
-
----
-
-*This research is conducted at the [BLAST Lab](https://blast-cu.github.io/) at CU Boulder under the supervision of Dr. Maria L. Pacheco.*
+**Timeline:** June 2025 – present  
+**Paper:** [ACL 2026 short papers](https://aclanthology.org/2026.acl-short.61/) · [project page](/logical-csqa/) · [code](https://github.com/obedjunias19/logical-csqa) · [data](https://huggingface.co/datasets/ojayy/logical-csqa)

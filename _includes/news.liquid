@@ -7,7 +7,7 @@
         style="max-height: 60vw"
       {% endif %}
     >
-      <table class="table table-sm table-borderless">
+      <table class="table table-sm table-borderless news-table">
         {% assign news = site.news | reverse %}
         {% if include.limit and page.announcements.limit %}
           {% assign news_limit = page.announcements.limit %}
@@ -16,7 +16,14 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            <th scope="row" class="news-badge-cell">
+              {% if item.badge %}
+                {% include venue_badge.liquid badge=item.badge %}
+                <span class="news-item-date">{{ item.date | date: '%b %d, %Y' }}</span>
+              {% else %}
+                <span class="news-item-date news-item-date-only">{{ item.date | date: '%b %d, %Y' }}</span>
+              {% endif %}
+            </th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
@@ -32,3 +39,42 @@
     <p>No news so far...</p>
   {% endif %}
 </div>
+<style>
+  .news-table .news-badge-cell {
+    width: 7.5rem;
+    min-width: 7.5rem;
+    vertical-align: top;
+    padding-right: 0.75rem;
+  }
+  .news .venue-badge abbr.badge {
+    display: inline-block;
+    background-color: var(--global-theme-color);
+    color: var(--global-card-bg-color) !important;
+    margin-bottom: 0.35rem;
+    font-size: 0.7rem;
+    line-height: 1.25;
+    padding: 0.45rem 0.35rem;
+    white-space: normal;
+    text-align: center;
+  }
+  .news .venue-badge abbr.badge a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .news .venue-badge abbr.badge a:hover {
+    text-decoration: none;
+    opacity: 0.9;
+  }
+  .news-item-date {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: normal;
+    color: var(--global-text-color-light);
+    line-height: 1.2;
+  }
+  .news-item-date-only {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+</style>

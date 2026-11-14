@@ -1,7 +1,7 @@
 ---
 layout: page
-title: medical ethics assessment of large language models
-description: evaluating ethical reasoning capabilities of llms in clinical contexts
+title: medical ethics vignettes with LLMs
+description: Deep NLU course project—clinical ethics scenarios and whether model answers line up with the principles they cite.
 img: assets/img/proj_medical_ethics.jpg
 importance: 2
 category: responsible ai
